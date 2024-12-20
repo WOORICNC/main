@@ -443,6 +443,9 @@
             height: 100%;
             object-fit: cover;
         }
+        .txtTop{
+            display:none;
+        }
         .txtBox-main {
             position: absolute;
             right: 50px;
@@ -512,6 +515,19 @@
                 transition:transform .3s;
                 transform:scale(1);
             }
+            .txtTop{
+                display:block;
+                position:absolute;
+                top:0;
+                left:0;
+                padding:50px;
+                letter-spacing:-0.03em;
+                font-size:21px;
+                font-weight:var(--regular);
+                color:var(--color-white);
+                transition:font-size .3s;
+                word-break:keep-all;
+            }
             &:hover,
             &:active{
                 &::before{
@@ -526,7 +542,11 @@
                 .txtBox-main{
                     transform:scale(1.03);
                 }
+                .txtTop{
+                    font-size:24px;
+                }
             }
+            
         }
     }
 }
@@ -563,13 +583,16 @@
     .mainCont01 {
         .imgBox-main {
             .txtBox-main {
-                bottom: 20px;
-                left: 20px;
+                bottom: 0;
+                left: 0;
+                padding:20px;
+                width:100%;
                 strong {
                     font-size: 25px;
                 }
                 p {
-                    display: none;
+                    word-break:keep-all;
+                    // display: none;
                 }
             }
         }
@@ -628,10 +651,32 @@
             background: url("../../images/main/ico-arrow-right-40.png") no-repeat left bottom/40px auto;
             box-sizing: content-box;
         }
+        .botWrap{
+            display:flex;
+            align-items:flex-end;
+            justify-content:space-between;
+            gap:8px;
+            @media screen and (min-width:1161px) {
+                gap:12px;
+            }
+        }
         img {
-            margin-left: auto;
             width: 80px;
             height: 80px;
+        }
+        .txtSub{
+            padding:0;
+            margin-bottom:6px;
+            height:auto;
+            line-height:1.5;
+            letter-spacing:-0.03em;
+            font-size:15px;
+            font-weight:var(--regular);
+            color:var(--gray70);
+            background:initial;
+            @media screen and (min-width:1161px) {
+                font-size:17px;
+            }
         }
     }
     .swiperBtn {
