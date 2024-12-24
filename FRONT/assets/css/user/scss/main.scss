@@ -60,6 +60,7 @@
     position: relative;
     overflow: hidden;
     height: 100vh;
+    min-height:903px;
     .swiper-slide {
         .imgBox-main {
             height: 100%;
@@ -121,6 +122,13 @@
                     flex-wrap:wrap;
                     justify-content:center;
                     gap:4px;
+                    margin:0 -20px 0;
+                    width:100vw;
+                }
+                @media screen and (max-width:767px) {
+                    flex-wrap:wrap;
+                    justify-content:center;
+                    gap:4px;
                     margin:126px -20px 0;
                     width:100vw;
                 }
@@ -130,7 +138,7 @@
                     width:calc(160px - 20px);
                     height:160px;
                     opacity:0;
-                    @media screen and (max-width:1160px) {
+                    @media screen and (max-width:1440px) {
                         content:none;
                     }
                 }
@@ -210,12 +218,12 @@
                     }
                 }
                 li:nth-child(1){
-                    @media screen and (max-width:767px) {
+                    @media screen and (max-width:1160px) {
                         margin-left:calc((100% - 228px) / 2)
                     }
                 }
                 li:nth-child(2){
-                    @media screen and (max-width:767px) {
+                    @media screen and (max-width:1160px) {
                         margin-right:calc((100% - 228px) / 2)
                     }
                 }

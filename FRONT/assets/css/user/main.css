@@ -59,6 +59,7 @@
   position: relative;
   overflow: hidden;
   height: 100vh;
+  min-height: 903px;
 }
 .visualSwiper .swiper-slide .imgBox-main {
   height: 100%;
@@ -120,6 +121,15 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 4px;
+    margin: 0 -20px 0;
+    width: 100vw;
+  }
+}
+@media screen and (max-width: 767px) {
+  .visualSwiper .swiper-slide .botWrap ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
     margin: 126px -20px 0;
     width: 100vw;
   }
@@ -131,7 +141,7 @@
   height: 160px;
   opacity: 0;
 }
-@media screen and (max-width: 1160px) {
+@media screen and (max-width: 1440px) {
   .visualSwiper .swiper-slide .botWrap ul::after {
     content: none;
   }
@@ -214,12 +224,12 @@
 .visualSwiper .swiper-slide .botWrap ul a:focus {
   background: var(--color-red);
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1160px) {
   .visualSwiper .swiper-slide .botWrap ul li:nth-child(1) {
     margin-left: calc((100% - 228px) / 2);
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1160px) {
   .visualSwiper .swiper-slide .botWrap ul li:nth-child(2) {
     margin-right: calc((100% - 228px) / 2);
   }

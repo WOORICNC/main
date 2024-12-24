@@ -97,6 +97,9 @@
         font-size: 19px;
         font-weight: 700;
         color: var(--color-white);
+        @media screen and (min-width:1161px) and (max-width:1270px) {
+            padding:0 20px;
+        }
         &:hover,
         &:focus,
         &:active {

@@ -91,6 +91,11 @@
   font-weight: 700;
   color: var(--color-white);
 }
+@media screen and (min-width: 1161px) and (max-width: 1270px) {
+  .gnb > li > a {
+    padding: 0 20px;
+  }
+}
 .gnb > li > a:hover, .gnb > li > a:focus, .gnb > li > a:active {
   font-weight: var(--bold);
   color: var(--color-red);
