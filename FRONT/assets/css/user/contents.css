@@ -2577,6 +2577,8 @@ input[disabled] {
 }
 @media screen and (min-width: 1161px) {
   .hubCont .structureWrap .wrap .circle.redCircle div {
+    position: relative;
+    z-index: 1;
     width: 240px;
     height: 240px;
   }

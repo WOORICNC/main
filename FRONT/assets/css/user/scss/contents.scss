@@ -2538,6 +2538,8 @@ input {
                         background:var(--color-red);
                         box-shadow: 2px 4px 10px 0 rgba(0, 0, 0, 0.16);
                         @media screen and (min-width:1161px) {
+                            position:relative;
+                            z-index:1;
                             width:240px;
                             height:240px;
                         }
