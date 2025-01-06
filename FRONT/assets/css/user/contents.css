@@ -5656,7 +5656,7 @@ input[disabled] {
   max-width: initial;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 .infoDetailImgWrap .swiper-button-prev {
   width: 40px;
