@@ -319,3 +319,4 @@ td.req:before,th.req:before{content:'*';margin-right:5px;color:#ff7800}
 #container .content-in {position: relative;}
 #container .copy {position: absolute; bottom: 40px; left: 50%; line-height: 1.5; letter-spacing: -0.36px; font-size: 12px; color: var(--color-base); transform: translateX(-50%);}
 .contWrap .cont {padding: 20px; border-radius: 16px; background: var(--color-white);}
+.contWrap .cont .imgBoardsImg{max-width:900px}
