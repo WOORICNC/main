@@ -10,9 +10,11 @@ $(function () {
     fn_layoutImport();
     fn_gnbAnimation();
     fn_updateZoomClass();
+    fn_skipNavMain();
     // fn_homeClick();
 })
 
+// 브라우저 줌 상태 확인
 const fn_updateZoomClass = () => {
     const zoomLevel = window.devicePixelRatio;
 
@@ -23,6 +25,7 @@ const fn_updateZoomClass = () => {
     }
 }
 
+// gnb 애니메이션
 const fn_gnbAnimation = () => {
     const frames = $('.imgWrap .layer');
 
@@ -61,8 +64,6 @@ const fn_gnbAnimation = () => {
         }
     });
 };
-
-
 
 const fn_gnb = () => {
     // 0105 gnb event
@@ -167,10 +168,10 @@ const fn_layout = () => {
     familySite.on('click', '.site', function (e) {
         e.preventDefault();
         if ($(this).hasClass('open')) {
-            $(this).removeClass('open');
+            $(this).removeClass('open').attr('aria-expanded', 'false') // 2025-01-07 aria 속성 추가
             $(this).siblings('ul').slideUp(200);
         } else {
-            $(this).addClass('open');
+            $(this).addClass('open').attr('aria-expanded', 'true'); // 2025-01-07 aria 속성 추가
             $(this).siblings('ul').slideDown(200);
         }
     });
@@ -304,6 +305,36 @@ function fn_layer(e,t,s) {
     $('#'+e).fadeIn(200).addClass('on');
     $('body, html').css({'overflow':'hidden'});
     $('#'+e).find('> .inner .layerCont').attr("tabindex",0).focus();
+
+    const $popup = $('#' + e);
+    const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+    const $focusableContent = $popup.find(focusableElements);
+    const $firstFocusableElement = $focusableContent.first();
+    const $lastFocusableElement = $focusableContent.last();
+
+    $popup.on('keydown', function (e) {
+        const isTabPressed = e.key === 'Tab' || e.keyCode === 9;
+
+        if (!isTabPressed) return;
+
+        if (e.shiftKey) {
+            // Shift + Tab
+            if ($(document.activeElement).is($firstFocusableElement)) {
+                e.preventDefault();
+                $lastFocusableElement.focus();
+            }
+        } else {
+            // Tab
+            if ($(document.activeElement).is($lastFocusableElement)) {
+                e.preventDefault();
+                $firstFocusableElement.focus();
+            }
+        }
+    });
+
+    // 팝업 활성화 시 첫 번째 포커스
+    $firstFocusableElement.focus();
+
     $(window).resize(function(){
         $('#'+e).find('> .inner').css({'width':s+'px'});
         if($(window).width() > 767){
@@ -364,4 +395,21 @@ const fn_homeClick = () =>{
           });
         }
       });
+}
+
+// 메인 / 서브 스킵 내비게이터 href값 변경 스크립트
+const fn_skipNavMain = () => {
+    // #main과 #container 요소를 순서대로 확인
+    const _skip = document.querySelector('#skipNav')
+    const _goToMain = _skip.querySelector('dd a');
+    const mainElement = document.querySelector("#main");
+    const containerElement = document.querySelector("#container");    
+    
+    if (mainElement) {
+        // #main 요소로 포커스
+        _goToMain.setAttribute('href', '#main');
+    } else if (containerElement) {
+        // #container 요소로 포커스
+        _goToMain.setAttribute('href', '#container');
+    }
 }

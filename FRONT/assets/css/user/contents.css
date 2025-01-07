@@ -1616,6 +1616,18 @@ button[class*=btn][type=button] {
     vertical-align: middle;
   }
 }
+.tableDefault tbody tr .th {
+  padding: 12px 8px;
+  font-weight: var(--bold);
+  background: var(--table-bg);
+}
+@media screen and (min-width: 1161px) {
+  .tableDefault tbody tr .th {
+    width: 200px;
+    text-align: center;
+    vertical-align: middle;
+  }
+}
 .tableDefault tbody tr td {
   padding: 18px 22px;
 }
@@ -1798,7 +1810,7 @@ button[class*=btn][type=button] {
     width: auto;
   }
   .tableDefault tbody tr td:not(:last-child) {
-    border-right: 1px solid vaR(--table-border);
+    border-right: 1px solid var(--table-border);
   }
 }
 .tableDefault tbody tr td .tableCheck {

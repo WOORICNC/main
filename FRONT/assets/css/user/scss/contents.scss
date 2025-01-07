@@ -1603,6 +1603,16 @@ button[class*="btn"][type="button"]{
                     vertical-align:middle;
                 }
             }
+            .th{
+                padding:12px 8px;
+                font-weight:var(--bold);
+                background:var(--table-bg);
+                @media screen and (min-width:1161px){
+                    width:200px;
+                    text-align:center;
+                    vertical-align:middle;
+                }
+            }
             td{
                 padding:18px 22px;
                 &:has(input),
@@ -1795,7 +1805,7 @@ button[class*="btn"][type="button"]{
                 @media screen and (min-width:1161px){
                     width:auto;
                     &:not(:last-child){
-                        border-right:1px solid vaR(--table-border);
+                        border-right:1px solid var(--table-border);
                     }
                 }
                 .tableCheck{

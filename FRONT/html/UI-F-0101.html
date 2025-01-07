@@ -24,7 +24,7 @@
 <!-- skipNav -->
 <dl id="skipNav">
     <dt>바로가기 메뉴</dt>
-    <dd><a href="#container">본문 바로가기</a></dd>
+    <dd><a href="#">본문 바로가기</a></dd>
     <dd><a href="#gnb">주메뉴 바로가기</a></dd>
     <dd><a href="#footer">풋터 바로가기</a></dd>
 </dl>
@@ -251,11 +251,15 @@
                     </ul>
                 </div>
                 <div class="familySite">
-                    <a href="" class="site">패밀리사이트</a>
+                    <!-- 2025-01-07 aria 속성 추가 -->
+                    <a href="" class="site" aria-haspopup="true" aria-expanded="false">패밀리사이트</a>
+                    <!-- // 2025-01-07 aria 속성 추가 -->
                     <ul>
-                        <li><a href="">관련사이트1</a></li>
-                        <li><a href="">관련사이트2</a></li>
-                        <li><a href="">관련사이트3</a></li>
+                        <!-- 2025-01-07 새 창 열림 속성 추가 및 안내문구 추가 -->
+                        <li><a href="" target="_blank" title="새 창 이동">관련사이트1</a></li>
+                        <li><a href="" target="_blank" title="새 창 이동">관련사이트2</a></li>
+                        <li><a href="" target="_blank" title="새 창 이동">관련사이트3</a></li>
+                        <!-- // 2025-01-07 새 창 열림 속성 추가 및 안내문구 추가 -->
                     </ul>
                 </div>
             </div>
@@ -279,9 +283,11 @@
                     <!-- // 2024-11-27 이메일 제외한 정보 전체 수정 -->
                 </div>
                 <ul class="footerSns">
-                    <li class="facebook"><a href="">페이스북 바로가기</a></li>
-                    <li class="youtube"><a href="">유튜브 바로가기</a></li>
-                    <li class="twitter"><a href="">트위터 바로가기</a></li>
+                    <!-- 2025-01-07 문구 내용 변경 / 새창이동 속성 추가 -->
+                    <li class="facebook"><a href="" target="_blank" title="새 창 이동">경남테크노파크 페이스북 바로가기</a></li>
+                    <li class="youtube"><a href="" target="_blank" title="새 창 이동">경남테크노파크 유튜브 바로가기</a></li>
+                    <li class="twitter"><a href="" target="_blank" title="새 창 이동">경남테크노파크 트위터 바로가기</a></li>
+                    <!-- // 2025-01-07 문구 내용 변경 / 새창이동 속성 추가 -->
                     <!-- 2024-11-27 인스타그램 버튼 삭제 -->
                 </ul>
             </div>

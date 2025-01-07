@@ -331,9 +331,13 @@
   margin: 0;
   background: #999;
   opacity: 1;
+  transition: all 1s;
+  transform-origin: 0%;
 }
 .visualSwiperBtn .swiper-pagination .swiper-pagination-bullet-active {
   background: var(--color-red);
+  width: 24px;
+  border-radius: 4px;
 }
 .visualSwiperBtn .visualSwiperBtnBox {
   display: flex;

@@ -22,7 +22,7 @@
     <!-- skipNav -->
     <dl id="skipNav">
         <dt>바로가기 메뉴</dt>
-        <dd><a href="#container">본문 바로가기</a></dd>
+        <dd><a href="#">본문 바로가기</a></dd>
         <dd><a href="#gnb">주메뉴 바로가기</a></dd>
         <dd><a href="#footer">풋터 바로가기</a></dd>
     </dl>
@@ -54,18 +54,18 @@
 
                 <!-- table input -->
                 <div class="tableDefault">
+                <!-- 2025-01-06 배치용 테이블 내 caption, th 제거 -->
                     <table>
-                        <caption>업종, 키워드, 재목, 내용으로 이루어진 표</caption>
                         <colgroup>
                             <col>
                             <col>
                         </colgroup>
                         <tbody>
                             <tr>
-                                <th scope="row">
+                                <td class="th" scope="row">
                                     <span class="req">필수입력</span>
                                     업종
-                                </th>
+                                </td>
                                 <td>
                                     <div class="tableCheck">
                                         <div class="checkBox">
@@ -80,7 +80,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row"><span class="req">필수입력</span>키워드</th>
+                                <td class="th" scope="row"><span class="req">필수입력</span>키워드</td>
                                 <td>
                                     <div class="tableCheck">
                                         <div class="checkBox">
@@ -191,19 +191,20 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row"><span class="req">필수입력</span>제목</th>
+                                <td class="th" scope="row"><span class="req">필수입력</span>제목</td>
                                 <td>
                                     <input type="text" placeholder="제목" title="제목">
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row"><span class="req">필수입력</span>내용</th>
+                                <td class="th" scope="row"><span class="req">필수입력</span>내용</td>
                                 <td>
                                     <textarea title="textarea" title="내용"></textarea>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
+                <!-- // 2025-01-06 배치용 테이블 내 caption, th 제거 -->
                 </div>
                 <!-- // table input -->
 
