@@ -46,10 +46,12 @@
                             <strong>Step 1</strong>
                             <p>이용약관 동의</p>
                         </li>
-                        <li class="step2 curr">
+                        <!-- 2025-01-07 현재 페이지 의미하는 속성 추가 -->
+                        <li class="step2 curr" aria-current="page">
                             <strong>Step 2</strong>
                             <p>정보입력</p>
                         </li>
+                        <!-- // 2025-01-07 현재 페이지 의미하는 속성 추가 -->
                         <li class="step3">
                             <strong>Step 3</strong>
                             <p>회원가입</p>
@@ -178,8 +180,8 @@
                                                 <input type="text" title="필수 입력 우편번호" disabled>
                                                 <button type="button" class="btn btnRed sm">우편번호검색</button>
                                             </div>
-                                            <input type="text" title="필수 입력 주소" disabled>
-                                            <input type="text" title="필수 입력 상세주소">
+                                            <input type="text" title="필수 입력 본점소재지 주소" disabled>
+                                            <input type="text" title="필수 입력 본점소재지 상세주소">
                                             <!-- 2025-01-07 대체텍스트 추가(필수 입력) -->
                                         </div>
                                         <!--// flex -->
@@ -191,11 +193,11 @@
                                         <!-- flex -->
                                         <div class="flex col">
                                             <div class="flex zipCode">
-                                                <input type="text" title="우편번호" disabled>
+                                                <input type="text" title="경남 소재지 우편번호" disabled>
                                                 <button type="button" class="btn btnRed sm">우편번호검색</button>
                                             </div>
-                                            <input type="text" title="주소" disabled>
-                                            <input type="text" title="상세주소">
+                                            <input type="text" title="경남 소재지 주소" disabled>
+                                            <input type="text" title="경남 소재지 상세주소">
                                         </div>
                                         <!--// flex -->
                                     </td>
@@ -206,11 +208,11 @@
                                         <div class="inputWrap">
                                             <div class="phone">
                                                 <!-- 2025-01-07 대체텍스트 추가(필수 입력) -->
-                                                <input type="text" title="필수 입력 연락처 지역 번호">
+                                                <input type="text" title="필수 입력 대표 전화번호 지역 번호">
                                                 <span>-</span>
-                                                <input type="text" title="필수 입력 연락처 중간자리">
+                                                <input type="text" title="필수 입력 대표 전화번호 중간자리">
                                                 <span>-</span>
-                                                <input type="text" title="필수 입력 연락처 뒷자리">
+                                                <input type="text" title="필수 입력 대표 전화번호 뒷자리">
                                                 <!-- // 2025-01-07 대체텍스트 추가(필수 입력) -->
                                             </div>
                                         </div>
@@ -222,12 +224,12 @@
                                         <div class="inputWrap">
                                             <div class="inputBox email">
                                                 <!-- 2025-01-07 대체텍스트 추가(필수 입력) -->
-                                                <input type="text" title="필수 입력 이메일 주소 입력">
+                                                <input type="text" title="필수 입력 대표 이메일 주소 입력">
                                                 <!-- // 2025-01-07 대체텍스트 추가(필수 입력) -->
                                             </div>
                                             <div class="inputBox email">
                                                 <!-- 2025-01-07 대체텍스트 추가(필수 입력) -->
-                                                <input type="text" title="필수 입력 도메인 직접 입력">
+                                                <input type="text" title="필수 입력 대표 이메일 도메인 직접 입력">
                                                 <!-- // 2025-01-07 대체텍스트 추가(필수 입력) -->
                                             </div>
                                             <div class="inputBox email">
@@ -253,12 +255,12 @@
                                         <div class="inputWrap">
                                             <div class="inputBox email">
                                                 <!-- 2025-01-07 대체텍스트 추가(필수 입력) -->
-                                                <input type="text" title="필수 입력 이메일 주소 입력">
+                                                <input type="text" title="필수 입력 담당자 이메일 주소 입력">
                                                 <!-- // 2025-01-07 대체텍스트 추가(필수 입력) -->
                                             </div>
                                             <div class="inputBox email">
                                                 <!-- 2025-01-07 대체텍스트 추가(필수 입력) -->
-                                                <input type="text" title="필수 입력 도메인 직접 입력">
+                                                <input type="text" title="필수 입력 담당자 이메일 도메인 직접 입력">
                                                 <!-- // 2025-01-07 대체텍스트 추가(필수 입력) -->
                                             </div>
                                             <div class="inputBox email">

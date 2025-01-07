@@ -35,7 +35,7 @@ $(function() {
             clickable: true,
             renderBullet: function (index, className) {
                 const labels = ['슬라이드 1', '슬라이드 2', '슬라이드 3'];
-                return `<span class="${className}"><i class="hide">${labels[index]}</i></span>`;
+                return `<span class="${className}"><i class="hide">${labels[index] + '이동'}</i></span>`;
             },
         },
         navigation: {
@@ -72,7 +72,7 @@ $(function() {
     $('.swiper-button-stop').on('click', function(){
         if(sw == 0){
             visualSwiper.autoplay.stop();
-            $(this).addClass('start').text('시작');
+            $(this).addClass('start').text('재생');
             sw = 1;
         }else{
             visualSwiper.autoplay.start();

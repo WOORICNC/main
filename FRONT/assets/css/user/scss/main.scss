@@ -986,14 +986,18 @@
                 justify-content: flex-end;
                 gap: 20px;
                 li {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    padding: 0 10px;
                     border-radius: 20px;
                     width: calc(33.333% - 40px);
                     height: 200px;
                     background: rgba(0, 0, 0, 0.50);
+                    a{
+                        display:flex;
+                        align-items:center;
+                        justify-content:center;
+                        padding: 0 10px;
+                        width:100%;
+                        height:100%;
+                    }
                 }
             }
         }
