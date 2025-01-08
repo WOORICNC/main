@@ -2854,9 +2854,13 @@ input[disabled] {
   }
 }
 .bridgeCont .imgBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
   margin: 0 0 20px;
   border-radius: 24px;
+  background: #464646;
 }
 @media screen and (min-width: 1161px) {
   .bridgeCont .imgBox {
@@ -2864,21 +2868,10 @@ input[disabled] {
     margin: 56px 0 0;
   }
 }
-.bridgeCont .imgBox.mainBox {
-  background: url(../../images/visual-main-bridge-img-mo.png) no-repeat center center/contain;
-}
-@media screen and (min-width: 1161px) {
-  .bridgeCont .imgBox.mainBox {
-    background: url(../../images/visual-main-bridge-img.png) no-repeat center center/contain;
-  }
-}
-.bridgeCont .imgBox.subBox {
-  background: url(../../images/visual-sub-bridge-img-mo.png) no-repeat center center/contain;
-}
-@media screen and (min-width: 1161px) {
-  .bridgeCont .imgBox.subBox {
-    background: url(../../images/visual-sub-bridge-img.png) no-repeat center center/contain;
-  }
+.bridgeCont .imgBox img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
 }
 .bridgeCont .txtBold {
   display: block;
