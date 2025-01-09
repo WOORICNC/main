@@ -163,9 +163,9 @@
                                 <tr>
                                     <th scope="row"><span class="req">필수입력</span>설립일자</th>
                                     <td>
-                                        <div class="date w320">
+                                        <div id="dateSelector" class="date w320">
                                             <!-- 2025-01-07 대체텍스트 추가(필수 입력) -->
-                                            <input type="text" title="필수 입력 설립일자" placeholder="YY-MM-DD">
+                                            <input type="text" class="dateInput start" title="필수 입력 설립일자" placeholder="YY-MM-DD">
                                             <!-- // 2025-01-07 대체텍스트 추가(필수 입력) -->
                                         </div>
                                     </td>
@@ -473,6 +473,39 @@
     <script src="../assets/js/jquery-ui.js"></script>
     <script src="../assets/js/common.js"></script>
     <script src="../assets/js/main.js"></script>
+    
+    <!-- 데이터피커 & 타임피커 -->
+    <script src="../assets/js/datepair.min.js"></script>
+    <script src="../assets/js/jquery.datepair.min.js"></script>
+    <script type="module" src="../assets/js/jquery.timepicker.min.js"></script>
+    <script src="../assets/js/bootstrap-datepicker.js"></script>
+    <!--// 데이터피커 & 타임피커 -->
+    <script>
+        $(document).ready(()=>{
+            $('#dateSelector .timeInput').timepicker({
+            });
+            $('#dateSelector .dateInput.start').datepicker({
+                format: "yyyy-mm-dd",
+                todayHighlight:true,
+                orientation:'bottom',
+                autoclose:true,
+            }).on('changeDate', function (e) {
+                // 시작 날짜 선택 시 종료 날짜의 최소 날짜를 설정
+                $('#dateSelector .dateInput.end').datepicker('setStartDate', e.date);
+            });
+            $('#dateSelector .dateInput.end').datepicker({
+                format: 'yyyy-mm-dd',
+                todayHighlight:true,
+                autoclose: true
+            }).on('changeDate', function (e) {
+                // 종료 날짜 선택 시 시작 날짜의 최대 날짜를 설정할 수 있음 (선택 사항)
+                $('#startDate').datepicker('setEndDate', e.date);
+            });
+            $('#dateSelector').datepair({
+                
+            });
+        })
+    </script>
 </body>
 
 </html>
