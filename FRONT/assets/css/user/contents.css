@@ -1511,6 +1511,10 @@ button[class*=btn][type=button] {
   font-weight: var(--bold);
   color: var(--color-red);
 }
+.paging .pageBox .page strong a {
+  font-weight: inherit;
+  color: inherit;
+}
 .paging .pageBox .page * {
   display: block;
   width: 30px;
@@ -4825,6 +4829,7 @@ input[disabled] {
 }
 .matchChat .companyWrap .compInfo div {
   position: relative;
+  width: 100%;
 }
 .matchChat .companyWrap .compInfo div img {
   width: 40px;
@@ -4855,6 +4860,7 @@ input[disabled] {
   font-size: 17px;
   font-weight: var(--regular);
   color: var(--gray70);
+  text-align: center;
 }
 .matchChat .companyWrap .compLoca {
   margin: 16px 0 0;
@@ -6439,6 +6445,9 @@ input[disabled] {
   }
 }
 /* 오시는 길 */
+.mapInfoWrap {
+  position: relative;
+}
 .mapInfoWrap .map {
   position: relative;
   border-radius: 16px 16px 0 0;

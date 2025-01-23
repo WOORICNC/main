@@ -1504,6 +1504,10 @@ button[class*="btn"][type="button"]{
                 border-bottom: 2px solid var(--color-red);
                 font-weight: var(--bold);
                 color: var(--color-red);
+                a{
+                    font-weight:inherit;
+                    color:inherit;
+                }
             }
             * {
                 display: block;
@@ -4651,7 +4655,8 @@ input {
             gap: 10px;
             margin:8px 0 0;
             div{
-                position:relative;                
+                position:relative;   
+                width:100%;             
                 img{
                     width:40px;
                     @media screen and (min-width:1161px) {
@@ -4677,6 +4682,7 @@ input {
                     font-size:17px;
                     font-weight:var(--regular);
                     color:var(--gray70);
+                    text-align:center;
                 }
             }
         }
@@ -6268,6 +6274,7 @@ input {
 
 /* 오시는 길 */
 .mapInfoWrap {
+    position:relative;
     .map {
         position:relative;
         border-radius: 16px 16px 0 0;
