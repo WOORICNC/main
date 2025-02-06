@@ -173,8 +173,26 @@ $(function(){
                                                     </div>
                                                 </td>
                                             </tr>
+                                            <!-- 2025-02-06 - 추가 -->
                                             <tr>
-                                                <th scope="row" rowspan="4">직장</th>
+                                                <th scope="row" rowspan="5">직장</th>
+                                                <th scope="row">지역 구분</th>
+                                                <td colspan="4">
+                                                    <!-- checkboxWrap -->
+                                                    <div class="checkboxWrap">
+                                                        <span class="checkbox">
+                                                            <input type="radio" name="chk01" id="chk0101" checked="">
+                                                            <label for="chk0101">지역 내</label>
+                                                        </span>
+                                                        <span class="checkbox">
+                                                            <input type="radio" name="chk01" id="chk0102">
+                                                            <label for="chk0102">지역 외</label>
+                                                        </span>
+                                                    </div>
+                                                    <!--// checkboxWrap -->
+                                                </td>
+                                            </tr>
+                                            <tr>
                                                 <th scope="row">직장명</th>
                                                 <td colspan="2">
                                                     <input type="text" title="직장명">
@@ -184,6 +202,7 @@ $(function(){
                                                     <input type="text" title="직위(직급)">
                                                 </td>
                                             </tr>
+                                            <!--// 2025-02-06 - 추가 -->
                                             <tr>
                                                 <th scope="row">주소</th>
                                                 <td colspan="4">

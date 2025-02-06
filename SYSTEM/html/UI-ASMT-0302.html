@@ -122,6 +122,13 @@ $(function(){
                         <div class="contWrap">
                             <!-- cont -->
                             <div class="cont">
+                                <!-- tableTop -->
+                                <div class="tableTop">
+                                    <div class="rt">
+                                        <button type="button" class="btn btnNavy">과제평가 종료</button>
+                                    </div>
+                                </div>
+                                <!--// tableTop -->
                                 <!-- rowTable -->
                                 <div class="rowTable">
                                     <table>
@@ -134,85 +141,50 @@ $(function(){
                                         <tbody>
                                             <tr>
                                                 <th scope="row"><span class="req">필수입력</span>공고종류</th>
-                                                <td colspan="3">
-                                                    <select name="" id="" title="공고종류">
-                                                        <option value="">선택</option>
-                                                        <option value="">전체</option>
-                                                        <option value="">사업평가</option>
-                                                        <option value="">용역평가</option>
-                                                    </select>
-                                                </td>
+                                                <td colspan="3">용역평가</td>
                                             </tr>
                                             <tr>
                                                 <th scope="row"><span class="req">필수입력</span>공고번호</th>
-                                                <td colspan="3">
-                                                    <input type="text" title="공고번호">
-                                                </td>
+                                                <td colspan="3">제 1234-01호</td>
                                             </tr>
                                             <tr>
                                                 <th scope="row"><span class="req">필수입력</span>공고명</th>
-                                                <td colspan="3">
-                                                    <input type="text" title="공고명">
-                                                </td>
+                                                <td colspan="3">2024 구축 용역</td>
                                             </tr>
                                             <tr>
                                                 <th scope="row"><span class="req">필수입력</span>공고게시일</th>
-                                                <td>
-                                                    <p class="date"><input type="text" title="날짜" placeholder="YY-MM-DD"></p>
-                                                </td>
+                                                <td>2024-10-10</td>
                                                 <th scope="row"><span class="req">필수입력</span>평가일</th>
-                                                <td>
-                                                    <p class="date"><input type="text" title="날짜" placeholder="YY-MM-DD"></p>
-                                                </td>
+                                                <td>2024-10-12</td>
                                             </tr>
                                             <tr>
                                                 <th scope="row">부서</th>
-                                                <td>
-                                                    <input type="text" title="부서">
-                                                </td>
+                                                <td>정보산업진흥본부</td>
                                                 <th scope="row"><span class="req">필수입력</span>연락처</th>
-                                                <td>
-                                                    <div class="flex">
-                                                        <input type="text" title="전화번호 앞번호" class="w100">
-                                                        <span>-</span>
-                                                        <input type="text" title="전화번호 중간번호" class="w100">
-                                                        <span>-</span>
-                                                        <input type="text" title="전화번호 뒷번호" class="w100">
-                                                    </div>
-                                                </td>
+                                                <td>055-123-1234</td>
                                             </tr>
                                             <tr>
                                                 <th scope="row"><span class="req">필수입력</span>담당자</th>
-                                                <td>
-                                                    <input type="text" title="담당자">
-                                                </td>
+                                                <td>홍길동</td>
                                                 <th scope="row"><span class="req">필수입력</span>이메일</th>
-                                                <td>
-                                                    <div class="flex">
-                                                        <input type="text" title="이메일 아이디">
-                                                        <span>@</span>
-                                                        <input type="text" title="이메일 도메인">
-                                                    </div>
-                                                </td>
+                                                <td>aaaa@aaa.aaa</td>
                                             </tr>
                                             <tr>
                                                 <th scope="row">평가위원 인원수</th>
-                                                <td>
-                                                    <div class="flex">
-                                                        <input type="text" title="평가위원 인원수">
-                                                        <span>명</span>
-                                                    </div>
-                                                </td>
+                                                <td>5명</td>
                                                 <th scope="row">참관인 인원수</th>
-                                                <td>
-                                                    <div class="flex">
-                                                        <input type="text" title="참관인 인원수">
-                                                        <span>명</span>
-                                                    </div>
-                                                </td>
+                                                <td>1</td>
                                             </tr>
                                             <tr>
                                                 <th scope="row"><span class="req">필수입력</span>공고문</th>
+                                                <td colspan="3">2024 구축 용역 공고문.hwp</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">첨부파일</th>
+                                                <td colspan="3">2024 구축 용역 제안요청서.hwp</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">업체별 위원별 <br />평가표 결과자료</th>
                                                 <td colspan="3">
                                                     <!-- fileWrap -->
                                                     <div class="fileWrap addArea" max="3">
@@ -233,7 +205,7 @@ $(function(){
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <th scope="row">첨부파일</th>
+                                                <th scope="row">평가위원장 <br />평가표 결과자료</th>
                                                 <td colspan="3">
                                                     <!-- fileWrap -->
                                                     <div class="fileWrap addArea" max="3">
@@ -260,10 +232,7 @@ $(function(){
                                 <!-- btnBottom -->
                                 <div class="btnBottom">
                                     <div class="lt">
-                                        <button type="button" class="btn btnGray">취소</button>
-                                    </div>
-                                    <div class="rt">
-                                        <button type="button" class="btn btnNavy">저장</button>
+                                        <button type="button" class="btn btnlNavy">목록</button>
                                     </div>
                                 </div>
                                 <!--// btnBottom -->
