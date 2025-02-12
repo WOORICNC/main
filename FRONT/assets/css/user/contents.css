@@ -7394,6 +7394,11 @@ table tbody tr td .dateSelector {
 .reservSchedulWrap .rightCont {
   flex: 1 0 auto;
 }
+@media screen and (min-width: 1161px) {
+  .reservSchedulWrap .rightCont tbody th {
+    width: 264px;
+  }
+}
 .reservSchedulWrap .calendarWrap {
   padding: 10px 24px;
   margin: 0 auto 24px;
@@ -7494,6 +7499,11 @@ table tbody tr td .dateSelector {
   font-weight: var(--bold);
   border-color: var(--color-red);
 }
+@media screen and (min-width: 1161px) {
+  .reservSchedulWrap .infoListBox {
+    padding: 20px;
+  }
+}
 
 .dateSelector .dateInput {
   position: absolute;
@@ -7503,10 +7513,18 @@ table tbody tr td .dateSelector {
   height: 1px;
   opacity: 0;
 }
+.dateSelector .dateInput:focus + .datepicker {
+  outline: 3px solid var(--color-black);
+}
 .dateSelector .datepicker {
   position: relative;
   width: auto;
   border-style: none;
+}
+@media screen and (min-width: 1161px) {
+  .dateSelector .datepicker {
+    padding: 0;
+  }
 }
 .dateSelector .datepicker table {
   max-width: 432px;
@@ -7554,6 +7572,10 @@ table tbody tr td .dateSelector {
   border-style: none;
   text-align: center;
   vertical-align: middle;
+  line-height: 1.5;
+  font-size: 17px;
+  font-weight: var(--regular);
+  color: var(--color-dark);
 }
 .dateSelector .datepicker table tbody tr td.today, .dateSelector .datepicker table tbody tr td.today.disabled, .dateSelector .datepicker table tbody tr td.today:hover {
   position: relative;
@@ -7566,6 +7588,8 @@ table tbody tr td .dateSelector {
 }
 .dateSelector .datepicker table tbody tr td.active, .dateSelector .datepicker table tbody tr td.active.disabled, .dateSelector .datepicker table tbody tr td.active.disabled:hover, .dateSelector .datepicker table tbody tr td.active:hover {
   position: relative;
+  font-weight: var(--bold);
+  color: var(--color-white);
   background: url(../../images/bg-dateselector-active.svg) no-repeat center center/contain;
 }
 .dateSelector .datepicker table tbody tr td.disabled, .dateSelector .datepicker table tbody tr td.new, .dateSelector .datepicker table tbody tr td.old {

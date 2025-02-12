@@ -59,7 +59,7 @@
                         <!-- calendarWrap -->
                         <div  class="calendarWrap">
                             <div id="dateSelector" class="dateSelector">
-                                <input type="text" class="dateInput start" title="필수 입력 시작날짜 선택" />
+                                <input type="text" class="dateInput start" title="필수 입력 날짜 선택" />
                             </div>                        
                             <div class="selectorInfoWrap">
                                 <div class="selected"><span class="txt">선택한 날짜</span></div>
@@ -137,17 +137,19 @@
                         <!-- table input -->
                         <div class="tableDefault inputMax">
                             <table>
-                                <caption>기업명, 예약자, 연락처, 이메일, 이용목적, 참여인원, 날짜선택, 시간으로 이루어진 표</caption>
+                                <caption>사업자 등록번호, 기업명, 예약자, 연락처, 이메일, 이용목적, 참여인원, 날짜선택, 시간으로 이루어진 표</caption>
                                 <colgroup>
                                     <col>
                                     <col>
                                 </colgroup>
                                 <tbody>
                                     <tr>
+                                        <th scope="row"><span class="req">필수입력</span>사업자 등록번호</th>
+                                        <td>123-12-12345</td>
+                                    </tr>
+                                    <tr>
                                         <th scope="row"><span class="req">필수입력</span>기업명</th>
-                                        <td>
-                                            AA 주식회사
-                                        </td>
+                                        <td>AA 주식회사</td>
                                     </tr>
                                     <tr>
                                         <th scope="row"><span class="req">필수입력</span>예약자</th>
@@ -240,142 +242,14 @@
     <script src="../assets/js/jquery-ui.js"></script>
     <!-- 데이터피커 & 타임피커 -->
     <script src="../assets/js/bootstrap-datepicker.js"></script>
-    <!-- <script src="../assets/js/bootstrap-datepicker.ko.min.js"></script> -->
+    <script src="../assets/js/bootstrap-datepicker.ko.min.js"></script>
     <!--// 데이터피커 & 타임피커 -->
     <script src="../assets/js/common.js"></script>
     <script src="../assets/js/main.js"></script>
     <script>
-        // $(document).ready(() => {
-        //     let isKeyboardNavigating = false; // 키보드 탐색 여부 상태 저장
-
-        //     // 대체 텍스트 및 caption 추가
-        //     const subTextAppend = () => {
-        //         const _calendar = $('#dateSelector table');
-        //         _calendar.prepend('<caption class="hide">월, 화, 수, 목, 금, 토, 일이 포함된 달력</caption>');
-        //         _calendar.find('.prev').text('이전 달 선택');
-        //         _calendar.find('.next').text(`다음 달 선택`);
-        //     };
-
-        //     // 일자 title 추가
-        //     const appendTexthandelr = (el, txt) => {
-        //         $(`#dateSelector .day${el}`).each(function () {
-        //             let _day = $(this);
-        //             _day.attr('title', txt);
-        //         });
-        //     };
-
-        //     // **🌟 새로 그려진 td에 tabindex 추가 (키보드 탐색 가능하도록)**
-        //     const addTabIndexToDays = () => {
-        //         $('#dateSelector .day').attr('tabindex', '0'); // 모든 날짜 셀에 tabindex 추가
-        //     };
-
-        //     // **🌟 키보드 이동 감지 (탐색 중이면 리렌더링 방지)**
-        //     $(document).on('keydown', '#dateSelector .day', function (e) {
-        //         isKeyboardNavigating = true; // 키보드 이동 시작
-        //         let current = $(this);
-        //         let target = null;
-
-        //         switch (e.key) {
-        //             case 'ArrowRight': // 오른쪽 이동
-        //                 target = current.next('.day:not(.disabled)');
-        //                 break;
-        //             case 'ArrowLeft': // 왼쪽 이동
-        //                 target = current.prev('.day:not(.disabled)');
-        //                 break;
-        //             case 'ArrowDown': // 아래로 이동 (7칸 뒤)
-        //                 target = current.parent().next().find('.day').eq(current.index());
-        //                 break;
-        //             case 'ArrowUp': // 위로 이동 (7칸 앞)
-        //                 target = current.parent().prev().find('.day').eq(current.index());
-        //                 break;
-        //             case 'Enter': // 엔터 입력 시 선택
-        //                 current.click();
-        //                 return;
-        //         }
-
-        //         if (target && target.length) {
-        //             target.focus(); // 이동한 요소에 포커스 설정
-        //         }
-
-        //         e.preventDefault();
-        //     });
-
-        //     // 년월 포맷팅 + 키보드 이동 중이면 실행 막기
-        //     const updateDatePickerHeader = () => {
-        //         if (isKeyboardNavigating) return; // 🌟 키보드 이동 중이면 업데이트 실행 X
-
-        //         $('.datepicker-switch').each(function () {
-        //             let text = $(this).text();
-        //             let parts = text.split("년");
-        //             if (parts.length === 2) {
-        //                 let year = parts[0];
-        //                 let month = parts[1].replace("월", "");
-        //                 $(this).text(`${year}.${month}`);
-        //             }
-        //         });
-
-        //         $('#dateSelector table td').on('click', function () {
-        //             if ($(this).attr('title', '선택불가')) return;
-        //         });
-
-        //         appendTexthandelr('.disabled', '선택불가');
-        //         appendTexthandelr('.today', '오늘');
-        //         appendTexthandelr('.new', '다음달');
-        //         appendTexthandelr('.old', '이전달');
-        //         appendTexthandelr('.active', '선택됨');
-
-        //         addTabIndexToDays(); // 🌟 새로 그려진 달력에도 tabindex 추가
-        //     };
-
-        //     $('#dateSelector').datepicker({
-        //         format: "yyyy-mm-dd",
-        //         todayHighlight: true,
-        //         orientation: 'bottom',
-        //         autoclose: true,
-        //         startDate: new Date(),
-        //         language: "ko",
-        //     });
-
-        //     // **연/월 선택 기능 비활성화**
-        //     $('.datepicker-switch').on('click', function (event) {
-        //         event.stopPropagation(); // 기본 클릭 이벤트 막기
-        //     });
-
-        //     // **이벤트 위임 방식으로 캘린더 이동 감지 (prev/next 버튼 클릭 시)**
-        //     $(document).on('click', '.datepicker .prev, .datepicker .next', function () {
-        //         setTimeout(() => {
-        //             isKeyboardNavigating = false; // 🌟 탐색 모드 해제
-        //             updateDatePickerHeader();
-        //         }, 10);
-        //     });
-
-        //     // **MutationObserver로 자동 감지 (더 부드러운 방식)**
-        //     const observer = new MutationObserver(() => {
-        //         isKeyboardNavigating = false; // 🌟 탐색 모드 해제
-        //         updateDatePickerHeader();
-        //     });
-
-        //     observer.observe(document.body, { childList: true, subtree: true });
-
-        //     addTabIndexToDays(); // **최초 로딩 시 tabindex 적용**
-        // });
-
         $(document).ready(() => {
-            $('#dateSelector').datepicker({
-                format: "yyyy.mm.dd",
-                todayHighlight:true,
-                orientation:'bottom',
-                autoclose:true,
-                startDate:new Date(),
-                language: "ko",
-                templates : {
-                    leftArrow: '이전 달',
-                    rightArrow: '다음 달'
-                },
-            });
-            // 년월 포맷팅 + 키보드 이동 중이면 실행 막기
+            // 년월 포맷팅
             const updateDatePickerHeader = () => {
-
                 $('.datepicker-switch').each(function () {
                     let text = $(this).text();
                     let parts = text.split("년");
@@ -386,6 +260,43 @@
                     }
                 });
             };
+
+            // 달력 호출
+            $('#dateSelector').datepicker({
+                format: "yyyy.mm",
+                todayHighlight:true,
+                orientation:'bottom',
+                autoclose:true,
+                startDate:new Date(),
+                language:'ko',
+                templates : {
+                    leftArrow: '이전 달',
+                    rightArrow: '다음 달'
+                },
+            });
+
+            // 테이블 로드 후 동작
+            const _findTable = setInterval(()=>{
+                if($('#dateSelector table').length > 0) {
+                    let _Table = $('#dateSelector table');
+                    _Table.prepend('<caption class="hide">월, 화, 수, 목, 금, 토, 일이 포함된 달력</caption>');
+                    // _Table.find('th.prev, th.next').attr('tabindex', '0');
+                    clearInterval(_findTable);
+                }
+            }, 100);
+
+            // **연/월 선택 기능 비활성화**
+            $('.datepicker-switch').on('click', function (event) {
+                event.stopPropagation(); // 기본 클릭 이벤트 막기
+            });
+
+            // **MutationObserver로 자동 감지 (더 부드러운 방식)**
+            const observer = new MutationObserver(() => {
+                isKeyboardNavigating = false; // 🌟 탐색 모드 해제
+                updateDatePickerHeader();
+            });
+
+            observer.observe(document.body, { childList: true, subtree: true });
         })
 
     </script>

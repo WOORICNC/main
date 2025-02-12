@@ -7327,6 +7327,13 @@ table{
     }
     .rightCont{
         flex:1 0 auto;
+        tbody{
+            th{
+                @media screen and (min-width:1161px) {
+                    width:264px;
+                }
+            }
+        }
     }
     .calendarWrap{
         padding:10px 24px;
@@ -7424,6 +7431,11 @@ table{
             border-color:var(--color-red);
         }
     }
+    .infoListBox{
+        @media screen and (min-width:1161px) {
+            padding:20px;
+        }
+    }
 }
 .dateSelector{
     .dateInput{
@@ -7433,11 +7445,17 @@ table{
         width:1px;
         height:1px;
         opacity:0;
+        &:focus + .datepicker{
+            outline:3px solid var(--color-black);    
+        }
     }
     .datepicker{
-        position:relative;
+        position:relative;        
         width:auto;
         border-style:none;
+        @media screen and (min-width:1161px) {
+            padding:0;
+        }
         table{
             max-width:432px;
             width:100%;
@@ -7484,6 +7502,10 @@ table{
                         border-style:none;
                         text-align:center;
                         vertical-align:middle;
+                        line-height:1.5;
+                        font-size:17px;
+                        font-weight:var(--regular);
+                        color:var(--color-dark);
                         &.today,
                         &.today.disabled,
                         &.today:hover{
@@ -7502,6 +7524,8 @@ table{
                         &.active.disabled:hover,
                         &.active:hover{
                             position:relative;
+                            font-weight:var(--bold);
+                            color:var(--color-white);
                             background:url(../../images/bg-dateselector-active.svg) no-repeat center center / contain;
                         }
                         &.disabled,
