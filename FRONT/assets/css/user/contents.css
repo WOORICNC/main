@@ -5731,10 +5731,7 @@ input[disabled] {
 }
 @media screen and (min-width: 1161px) {
   .infoDetailWrap li > div {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 40px;
+    margin: 40px 0;
   }
 }
 @media screen and (min-width: 1161px) {
