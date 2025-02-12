@@ -5638,15 +5638,34 @@ input[disabled] {
   }
 }
 
+@media screen and (min-width: 1161px) {
+  .facilitiesWrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    margin: 0 auto 40px;
+  }
+}
+@media screen and (min-width: 1161px) {
+  .facilitiesWrap .infoListWrap {
+    flex: 1 0 auto;
+  }
+}
+
 .infoDetailImgWrap {
-  margin: 0 auto 64px;
-  width: 100%;
-  max-width: 1380px;
-  height: 240px;
+  margin: 0 auto 24px;
+  width: calc(100vw - 32px);
+  max-width: 358px;
+  height: calc(100vw - 32px);
+  max-height: 358px;
 }
 @media screen and (min-width: 1161px) {
   .infoDetailImgWrap {
-    height: 440px;
+    flex: 0 0 auto;
+    margin: 0;
+    width: 520px;
+    height: 520px;
   }
 }
 .infoDetailImgWrap .swiper-slide {
@@ -5655,12 +5674,6 @@ input[disabled] {
   justify-content: center;
   overflow: hidden;
   border-radius: 20px;
-  height: 240px;
-}
-@media screen and (min-width: 1161px) {
-  .infoDetailImgWrap .swiper-slide {
-    height: 440px;
-  }
 }
 .infoDetailImgWrap .swiper-slide img {
   display: block;
@@ -5704,8 +5717,7 @@ input[disabled] {
   margin: 0 0 20px;
 }
 .infoDetailWrap li > div {
-  padding: 24px 0;
-  border-bottom: 1px solid var(--gray30);
+  margin: 24px 0 0;
 }
 @media screen and (min-width: 1161px) {
   .infoDetailWrap li > div {
@@ -5721,13 +5733,24 @@ input[disabled] {
   }
 }
 .infoDetailWrap li:first-child > div {
-  padding: 0 0 24px;
+  margin: 0;
 }
 .infoDetailWrap li:last-child > div {
   border-bottom: none;
 }
+.infoDetailWrap li .infoTit {
+  margin: 0 0 16px;
+  line-height: 1.5;
+  letter-spacing: -0.03em;
+  font-size: 20px;
+  font-weight: var(--bold);
+  color: var(--color-red);
+}
+.infoDetailWrap .txtDotList {
+  padding: 0;
+}
 .infoDetailWrap .txtDotList li {
-  margin: 0 0 4px;
+  margin: 0 0 10px;
 }
 
 /* 교육수료증 발급 > 사원 제안하기 > 사업공모안내 > 교육수료증 발급 */
@@ -7343,6 +7366,7 @@ table tbody tr td .dateSelector {
   }
 }
 
+/* datepicker - 공통 */
 .datepicker table tbody tr td.today, .datepicker table tbody tr td.today.disabled, .datepicker table tbody tr td.today:hover, .datepicker table tbody tr td.today:hover:hover {
   color: var(--color-red);
   background: var(--table-bg);
@@ -7353,6 +7377,202 @@ table tbody tr td .dateSelector {
 }
 .datepicker table tbody tr td.active, .datepicker table tbody tr td.active.disabled, .datepicker table tbody tr td.active.disabled:hover, .datepicker table tbody tr td.active:hover:hover, .datepicker table tbody tr td.active.active {
   background: var(--color-red);
+}
+
+/* datepicker - 시설예약 신청 */
+@media screen and (min-width: 1161px) {
+  .reservSchedulWrap {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 60px;
+  }
+}
+.reservSchedulWrap .leftCont {
+  flex: 0 1 auto;
+}
+.reservSchedulWrap .rightCont {
+  flex: 1 0 auto;
+}
+.reservSchedulWrap .calendarWrap {
+  padding: 10px 24px;
+  margin: 0 auto 24px;
+  border-radius: 8px;
+  border: 1px solid var(--gray30);
+}
+.reservSchedulWrap .selectorInfoWrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 32px;
+  padding: 24px 0;
+  border-top: 1px solid var(--gray30);
+}
+.reservSchedulWrap .selectorInfoWrap div {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.reservSchedulWrap .selectorInfoWrap div::before {
+  display: block;
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  box-sizing: border-box;
+}
+.reservSchedulWrap .selectorInfoWrap div.selected::before {
+  background: var(--color-red);
+}
+.reservSchedulWrap .selectorInfoWrap div.today::before {
+  border: 1px solid var(--color-red);
+}
+.reservSchedulWrap .selectorInfoWrap div .txt {
+  line-height: 1.4;
+  font-size: 17px;
+  font-weight: var(--regular);
+  color: var(--color-black);
+}
+.reservSchedulWrap .timeSelecWrap {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+  margin: 0 0 64px;
+}
+@media screen and (min-width: 1161px) {
+  .reservSchedulWrap .timeSelecWrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0;
+  }
+}
+.reservSchedulWrap .timeSelecWrap input[type=radio] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+}
+.reservSchedulWrap .timeSelecWrap .radioBtn {
+  width: calc(50% - 5px);
+}
+.reservSchedulWrap .timeSelecWrap .timeSelect {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 48px;
+  line-height: 1.5;
+  font-size: 17px;
+  font-weight: var(--regular);
+  color: var(--color-dark);
+  border-radius: 8px;
+  border: 1px solid var(--color-dark);
+  cursor: pointer;
+}
+@media screen and (min-width: 1161px) {
+  .reservSchedulWrap .timeSelecWrap .timeSelect {
+    width: 153px;
+  }
+}
+.reservSchedulWrap .timeSelecWrap input[type=radio]:focus + .timeSelect {
+  outline: 2px solid var(--color-black);
+}
+.reservSchedulWrap .timeSelecWrap input[type=radio]:disabled + .timeSelect {
+  color: var(--gray60);
+  background: var(--gray30);
+  border-color: #8E8E8E;
+}
+.reservSchedulWrap .timeSelecWrap input[type=radio]:checked + .timeSelect {
+  background: #FFF6F7;
+  color: var(--color-red);
+  font-weight: var(--bold);
+  border-color: var(--color-red);
+}
+
+.dateSelector .dateInput {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+.dateSelector .datepicker {
+  position: relative;
+  width: auto;
+  border-style: none;
+}
+.dateSelector .datepicker table {
+  max-width: 432px;
+  width: 100%;
+  border-style: none;
+}
+.dateSelector .datepicker table thead tr {
+  border-style: none;
+}
+.dateSelector .datepicker table thead th {
+  padding: 0;
+  height: 80px;
+  border-style: none;
+  background: none;
+  vertical-align: middle;
+}
+.dateSelector .datepicker table thead th.dow {
+  height: 72px;
+}
+.dateSelector .datepicker table thead .datepicker-switch {
+  position: relative;
+  font-size: 24px;
+  font-weight: var(--bold);
+}
+.dateSelector .datepicker table thead .datepicker-switch:hover, .dateSelector .datepicker table thead .datepicker-switch:active {
+  background: initial;
+}
+.dateSelector .datepicker table thead .prev {
+  text-indent: -9999px;
+  background: url(../../images/icon/ico-dateselector-left-bk-24.svg) no-repeat center left/contain;
+}
+.dateSelector .datepicker table thead .next {
+  text-indent: -9999px;
+  background: url(../../images/icon/ico-dateselector-right-bk-24.svg) no-repeat center left/contain;
+}
+.dateSelector .datepicker table tbody {
+  border-style: none;
+}
+.dateSelector .datepicker table tbody tr {
+  border-style: none;
+}
+.dateSelector .datepicker table tbody tr td {
+  padding: 0;
+  height: 72px;
+  border-style: none;
+  text-align: center;
+  vertical-align: middle;
+}
+.dateSelector .datepicker table tbody tr td.today, .dateSelector .datepicker table tbody tr td.today.disabled, .dateSelector .datepicker table tbody tr td.today:hover {
+  position: relative;
+  color: var(--color-dark);
+  background: url(../../images/bg-dateselector-today.svg) no-repeat center center/contain;
+}
+.dateSelector .datepicker table tbody tr td.today.disabled:hover, .dateSelector .datepicker table tbody tr td.today.disabled.day, .dateSelector .datepicker table tbody tr td.today.disabled.day:hover {
+  color: var(--gray50);
+  background: rgba(216, 216, 216, 0.4823529412);
+}
+.dateSelector .datepicker table tbody tr td.active, .dateSelector .datepicker table tbody tr td.active.disabled, .dateSelector .datepicker table tbody tr td.active.disabled:hover, .dateSelector .datepicker table tbody tr td.active:hover {
+  position: relative;
+  background: url(../../images/bg-dateselector-active.svg) no-repeat center center/contain;
+}
+.dateSelector .datepicker table tbody tr td.disabled, .dateSelector .datepicker table tbody tr td.new, .dateSelector .datepicker table tbody tr td.old {
+  color: var(--gray40);
+}
+.dateSelector .datepicker table tbody tr td.focused, .dateSelector .datepicker table tbody tr td:focus {
+  outline: 3px solid vaR(--color-black);
 }
 
 /* 에러페이지 */

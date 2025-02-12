@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+    
+    <meta name="format-detection" content="telephone=no, address=no, email=no">
+    <!-- E : mobile -->
+    <title>시설예약신청 < 시설예약 < 디지털 혁신 지원서비스 < 경남디지털혁신튜브</title>
+    <link rel="stylesheet" href="../assets/css/user/style.css" />
+    <!-- <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script src="js/selectivizr.js">
+-->
+    <!--[if lte IE 9]>
+</script>
+<![endif]-->
+</head>
+
+<body>
+    <!-- skipNav -->
+    <dl id="skipNav">
+        <dt>바로가기 메뉴</dt>
+        <dd><a href="#">본문 바로가기</a></dd>
+        <dd><a href="#gnb">주메뉴 바로가기</a></dd>
+        <dd><a href="#footer">풋터 바로가기</a></dd>
+    </dl>
+    <!-- //skipNav -->
+    <!-- wrap -->
+    <div id="wrap">
+        <!-- header -->
+        <div id="headerImport">
+        </div>
+        <!--// header -->
+
+        <div id="container">
+            <!-- sitemap -->
+            <div class="sitemap">
+                <ul>
+                    <li class="home"><a href="javascript:void(0);">홈</a></li>
+                    <li><a href="javscript:void(0)">디지털 혁신 지원서비스</a></li>
+                    <li><a href="javscript:void(0)">시설예약</a></li>
+                    <li><a href="javscript:void(0)">신청</a></li>
+                </ul>
+            </div>
+            <!-- // sitemap -->
+
+            <div class="content">
+                <!-- titL -->
+                <div class="titL">
+                    <h2 class="">시설예약 신청</h2>
+                </div>
+                <!-- // titL -->
+
+                <div class="reservSchedulWrap">
+                    <!-- leftCont -->
+                    <div class="leftCont">
+                        <!-- calendarWrap -->
+                        <div  class="calendarWrap">
+                            <div id="dateSelector" class="dateSelector">
+                                <input type="text" class="dateInput start" title="필수 입력 시작날짜 선택" />
+                            </div>                        
+                            <div class="selectorInfoWrap">
+                                <div class="selected"><span class="txt">선택한 날짜</span></div>
+                                <div class="today"><span class="txt">오늘</span></div>
+                            </div>
+                        </div>
+                        <!-- // calendarWrap -->
+
+                        <div class="timeSelecWrap">
+                            <div class="radioBtn">
+                                <input type="radio" name="timeSlot" id="time1" disabled>
+                                <label for="time1" class="timeSelect">09:00 ~ 10:00</label>
+                            </div>
+                            <div class="radioBtn">
+                                <input type="radio" name="timeSlot" id="time2">
+                                <label for="time2" class="timeSelect">10:00 ~ 11:00</label>
+                            </div>
+                            <div class="radioBtn">
+                                <input type="radio" name="timeSlot" id="time3" checked>
+                                <label for="time3" class="timeSelect">11:00 ~ 12:00</label>
+                            </div>
+                            <div class="radioBtn">
+                                <input type="radio" name="timeSlot" id="time4">
+                                <label for="time4" class="timeSelect">11:00 ~ 12:00</label>
+                            </div>
+                            <div class="radioBtn">
+                                <input type="radio" name="timeSlot" id="time5">
+                                <label for="time5" class="timeSelect">12:00 ~ 13:00</label>
+                            </div>
+                            <div class="radioBtn">
+                                <input type="radio" name="timeSlot" id="time6">
+                                <label for="time6" class="timeSelect">13:00 ~ 14:00</label>
+                            </div>
+                            <div class="radioBtn">
+                                <input type="radio" name="timeSlot" id="time7">
+                                <label for="time7" class="timeSelect">14:00 ~ 15:00</label>
+                            </div>
+                            <div class="radioBtn">
+                                <input type="radio" name="timeSlot" id="time8">
+                                <label for="time8" class="timeSelect">15:00 ~ 16:00</label>
+                            </div>
+                            <div class="radioBtn">
+                                <input type="radio" name="timeSlot" id="time9">
+                                <label for="time9" class="timeSelect">16:00 ~ 17:00</label>
+                            </div>
+                            <div class="radioBtn">
+                                <input type="radio" name="timeSlot" id="time10">
+                                <label for="time10" class="timeSelect">17:00 ~ 18:00</label>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!-- // leftCont -->
+
+                    <div class="rightCont">
+                        <!-- infoListBox -->
+                        <div class="infoListBox">
+                            <ul class="descDeft tag">
+                                <li>
+                                    <p class="icoTime lg">
+                                        <strong>이용시간</strong>
+                                        <span>2025-02-27(목)</span>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="icoCal lg">
+                                        <strong>예약 시간</strong>
+                                        <span>12:00 ~ 13:00</span>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- // infoListBox -->
+
+                        <!-- table input -->
+                        <div class="tableDefault inputMax">
+                            <table>
+                                <caption>기업명, 예약자, 연락처, 이메일, 이용목적, 참여인원, 날짜선택, 시간으로 이루어진 표</caption>
+                                <colgroup>
+                                    <col>
+                                    <col>
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row"><span class="req">필수입력</span>기업명</th>
+                                        <td>
+                                            AA 주식회사
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><span class="req">필수입력</span>예약자</th>
+                                        <td>
+                                            <div class="inputWrap">
+                                                <input type="text" title="필수 입력 예약자명">
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><span class="req">필수입력</span>연락처</th>
+                                        <td>
+                                            <div class="inputWrap">
+                                                <div class="phone">
+                                                    <input type="text" title="필수 입력 연락처 지역 번호">
+                                                    <span>-</span>
+                                                    <input type="text" title="필수 입력 연락처 중간자리">
+                                                    <span>-</span>
+                                                    <input type="text" title="필수 입력 연락처 뒷자리">
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><span class="req">필수입력</span>이메일</th>
+                                        <td>
+                                            <div class="inputWrap">
+                                                <div class="inputBox email">
+                                                    <input type="text" title="필수 입력 이메일 주소 입력">
+                                                </div>
+                                                <div class="inputBox email">
+                                                    <input type="text" placeholder="직접 입력" title="필수 입력 도메인 직접 입력">
+                                                </div>
+                                                <div class="inputBox email">
+                                                    <select title="도메인">
+                                                        <option>naver.com</option>
+                                                        <option>hanmail.com</option>
+                                                        <option>gmail.com</option>
+                                                        <option>nate.com</option>
+                                                        <option>daum.net</option>
+                                                        <option>직접입력</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row"><span class="req">필수입력</span>이용목적
+                                        </th>
+                                        <td>
+                                            <input type="text" title="필수 입력 이용목적">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <span class="req">필수입력</span>참여인원</th>
+                                        <td>
+                                            <div class="flex">
+                                                <input type="text" title="필수 입력 참여인원" class="w320 txtr">
+                                                <span>명</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="descDeft sm infoTxtSub mt10">
+                                <p class="noteSymbol">기본 정보 ‘시설예약 내역’에서 예약내역 확인 및 취소 할 수 있습니다.</p>
+                            </div>
+                        </div>
+                        <!-- // table input -->
+                    </div>
+                </div>
+                <div class="btnBox half resize sideRight">
+                    <a href="javascript:void(0)" class="btn btnDefault">취소</a>
+                    <a href="javascript:void(0)" class="btn btnRed">예약신청</a>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- footer -->
+        <div id="footerImport">
+        </div>
+        <!--// footer -->
+    </div>
+    <!--// wrap -->
+    <script src="../assets/js/jquery-3.7.1.js"></script>
+    <script src="../assets/js/swiper.js"></script>
+    <script src="../assets/js/jquery.mCustomScrollbar.js"></script>
+    <script src="../assets/js/jquery-ui.js"></script>
+    <!-- 데이터피커 & 타임피커 -->
+    <script src="../assets/js/bootstrap-datepicker.js"></script>
+    <!-- <script src="../assets/js/bootstrap-datepicker.ko.min.js"></script> -->
+    <!--// 데이터피커 & 타임피커 -->
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script>
+        // $(document).ready(() => {
+        //     let isKeyboardNavigating = false; // 키보드 탐색 여부 상태 저장
+
+        //     // 대체 텍스트 및 caption 추가
+        //     const subTextAppend = () => {
+        //         const _calendar = $('#dateSelector table');
+        //         _calendar.prepend('<caption class="hide">월, 화, 수, 목, 금, 토, 일이 포함된 달력</caption>');
+        //         _calendar.find('.prev').text('이전 달 선택');
+        //         _calendar.find('.next').text(`다음 달 선택`);
+        //     };
+
+        //     // 일자 title 추가
+        //     const appendTexthandelr = (el, txt) => {
+        //         $(`#dateSelector .day${el}`).each(function () {
+        //             let _day = $(this);
+        //             _day.attr('title', txt);
+        //         });
+        //     };
+
+        //     // **🌟 새로 그려진 td에 tabindex 추가 (키보드 탐색 가능하도록)**
+        //     const addTabIndexToDays = () => {
+        //         $('#dateSelector .day').attr('tabindex', '0'); // 모든 날짜 셀에 tabindex 추가
+        //     };
+
+        //     // **🌟 키보드 이동 감지 (탐색 중이면 리렌더링 방지)**
+        //     $(document).on('keydown', '#dateSelector .day', function (e) {
+        //         isKeyboardNavigating = true; // 키보드 이동 시작
+        //         let current = $(this);
+        //         let target = null;
+
+        //         switch (e.key) {
+        //             case 'ArrowRight': // 오른쪽 이동
+        //                 target = current.next('.day:not(.disabled)');
+        //                 break;
+        //             case 'ArrowLeft': // 왼쪽 이동
+        //                 target = current.prev('.day:not(.disabled)');
+        //                 break;
+        //             case 'ArrowDown': // 아래로 이동 (7칸 뒤)
+        //                 target = current.parent().next().find('.day').eq(current.index());
+        //                 break;
+        //             case 'ArrowUp': // 위로 이동 (7칸 앞)
+        //                 target = current.parent().prev().find('.day').eq(current.index());
+        //                 break;
+        //             case 'Enter': // 엔터 입력 시 선택
+        //                 current.click();
+        //                 return;
+        //         }
+
+        //         if (target && target.length) {
+        //             target.focus(); // 이동한 요소에 포커스 설정
+        //         }
+
+        //         e.preventDefault();
+        //     });
+
+        //     // 년월 포맷팅 + 키보드 이동 중이면 실행 막기
+        //     const updateDatePickerHeader = () => {
+        //         if (isKeyboardNavigating) return; // 🌟 키보드 이동 중이면 업데이트 실행 X
+
+        //         $('.datepicker-switch').each(function () {
+        //             let text = $(this).text();
+        //             let parts = text.split("년");
+        //             if (parts.length === 2) {
+        //                 let year = parts[0];
+        //                 let month = parts[1].replace("월", "");
+        //                 $(this).text(`${year}.${month}`);
+        //             }
+        //         });
+
+        //         $('#dateSelector table td').on('click', function () {
+        //             if ($(this).attr('title', '선택불가')) return;
+        //         });
+
+        //         appendTexthandelr('.disabled', '선택불가');
+        //         appendTexthandelr('.today', '오늘');
+        //         appendTexthandelr('.new', '다음달');
+        //         appendTexthandelr('.old', '이전달');
+        //         appendTexthandelr('.active', '선택됨');
+
+        //         addTabIndexToDays(); // 🌟 새로 그려진 달력에도 tabindex 추가
+        //     };
+
+        //     $('#dateSelector').datepicker({
+        //         format: "yyyy-mm-dd",
+        //         todayHighlight: true,
+        //         orientation: 'bottom',
+        //         autoclose: true,
+        //         startDate: new Date(),
+        //         language: "ko",
+        //     });
+
+        //     // **연/월 선택 기능 비활성화**
+        //     $('.datepicker-switch').on('click', function (event) {
+        //         event.stopPropagation(); // 기본 클릭 이벤트 막기
+        //     });
+
+        //     // **이벤트 위임 방식으로 캘린더 이동 감지 (prev/next 버튼 클릭 시)**
+        //     $(document).on('click', '.datepicker .prev, .datepicker .next', function () {
+        //         setTimeout(() => {
+        //             isKeyboardNavigating = false; // 🌟 탐색 모드 해제
+        //             updateDatePickerHeader();
+        //         }, 10);
+        //     });
+
+        //     // **MutationObserver로 자동 감지 (더 부드러운 방식)**
+        //     const observer = new MutationObserver(() => {
+        //         isKeyboardNavigating = false; // 🌟 탐색 모드 해제
+        //         updateDatePickerHeader();
+        //     });
+
+        //     observer.observe(document.body, { childList: true, subtree: true });
+
+        //     addTabIndexToDays(); // **최초 로딩 시 tabindex 적용**
+        // });
+
+        $(document).ready(() => {
+            $('#dateSelector').datepicker({
+                format: "yyyy.mm.dd",
+                todayHighlight:true,
+                orientation:'bottom',
+                autoclose:true,
+                startDate:new Date(),
+                language: "ko",
+                templates : {
+                    leftArrow: '이전 달',
+                    rightArrow: '다음 달'
+                },
+            });
+            // 년월 포맷팅 + 키보드 이동 중이면 실행 막기
+            const updateDatePickerHeader = () => {
+
+                $('.datepicker-switch').each(function () {
+                    let text = $(this).text();
+                    let parts = text.split("년");
+                    if (parts.length === 2) {
+                        let year = parts[0];
+                        let month = parts[1].replace("월", "");
+                        $(this).text(`${year}.${month}`);
+                    }
+                });
+            };
+        })
+
+    </script>
+</body>
+
+</html>

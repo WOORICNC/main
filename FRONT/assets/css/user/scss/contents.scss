@@ -5431,13 +5431,31 @@ input {
         }
     }
 }
-.infoDetailImgWrap{
-    margin:0 auto 64px;
-    width:100%;
-    max-width:1380px;
-    height:240px;
+.facilitiesWrap{
     @media screen and (min-width:1161px) {
-        height:440px;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        gap:32px;
+        margin:0 auto 40px;
+    }
+    .infoListWrap{
+        @media screen and (min-width:1161px) {
+            flex:1 0 auto;
+        }
+    }
+}
+.infoDetailImgWrap{
+    margin:0 auto 24px;
+    width:calc(100vw - 32px);
+    max-width:358px;
+    height:calc(100vw - 32px);
+    max-height:358px;
+    @media screen and (min-width:1161px) {
+        flex:0 0 auto;
+        margin:0;
+        width:520px;
+        height:520px;
     }
     .swiper-slide{
         display:flex;
@@ -5445,9 +5463,7 @@ input {
         justify-content:center;
         overflow:hidden;
         border-radius:20px;
-        height:240px;
         @media screen and (min-width:1161px) {
-            height:440px;
         }
         img{
             display:block;
@@ -5495,9 +5511,8 @@ input {
         }
     }
     li{
-        > div{
-            padding:24px 0;
-            border-bottom:1px solid var(--gray30);
+        > div{          
+            margin:24px 0 0; 
             @media screen and (min-width:1161px) {
                 display:flex;
                 align-items:flex-start;
@@ -5512,7 +5527,7 @@ input {
         }
         &:first-child{
             > div{
-                padding:0 0 24px;
+                margin:0;
             }
         }
         &:last-child{
@@ -5520,10 +5535,19 @@ input {
                 border-bottom:none;
             }
         }
+        .infoTit{
+            margin:0 0 16px;
+            line-height:1.5;
+            letter-spacing:-0.03em;
+            font-size:20px;
+            font-weight:var(--bold);
+            color:var(--color-red);
+        }
     }
     .txtDotList{
+        padding:0;
         li{
-            margin:0 0 4px;
+            margin:0 0 10px;
         }
     }
 }
@@ -7256,6 +7280,8 @@ table{
         }
     }
 }
+
+/* datepicker - 공통 */
 .datepicker{
     table{
         tbody{
@@ -7284,6 +7310,212 @@ table{
                     }
                 }
             }
+        }
+    }
+}
+
+/* datepicker - 시설예약 신청 */
+.reservSchedulWrap{
+    @media screen and (min-width:1161px) {
+        display:flex;
+        align-items:flex-start;
+        justify-content:space-between;
+        gap:60px;
+    }
+    .leftCont{
+        flex:0 1 auto;
+    }
+    .rightCont{
+        flex:1 0 auto;
+    }
+    .calendarWrap{
+        padding:10px 24px;
+        margin:0 auto 24px;
+        border-radius:8px;
+        border:1px solid var(--gray30);
+    }
+    .selectorInfoWrap{
+        display:flex;
+        align-items:center;
+        justify-content:flex-start;
+        gap:32px;
+        padding:24px 0;
+        border-top:1px solid var(--gray30);
+        div{
+            display:inline-flex;
+            align-items:center;
+            justify-content:flex-start;
+            gap:10px;
+            &::before{
+                display:block;
+                content:"";
+                width:20px;
+                height:20px;
+                border-radius:100%;
+                box-sizing:border-box;
+            }
+            &.selected::before{
+                background:var(--color-red);
+            }
+            &.today::before{
+                border:1px solid var(--color-red);
+            }
+            .txt{
+                line-height:1.4;
+                font-size:17px;
+                font-weight:var(--regular);
+                color:var(--color-black);
+            }
+        }
+    }
+    .timeSelecWrap{
+        position:relative;
+        display:flex;
+        flex-wrap:wrap;
+        align-items:flex-start;
+        justify-content:flex-start;
+        gap:10px;
+        margin:0 0 64px;
+        @media screen and (min-width:1161px) {
+            display:grid;
+            grid-template-columns:repeat(3, 1fr);
+            margin:0;
+        }
+        input[type=radio]{
+            position:absolute;
+            top:0;
+            left:0;
+            z-index:-1;
+            opacity:0;
+        }
+        .radioBtn{
+            width:calc(50% - 5px);
+        }
+        .timeSelect{
+            display:inline-flex;
+            flex-wrap:wrap;
+            align-items:center;
+            justify-content:center;
+            width:100%;
+            height:48px;
+            line-height:1.5;
+            font-size:17px;
+            font-weight:var(--regular);
+            color:var(--color-dark);
+            border-radius:8px;
+            border:1px solid var(--color-dark);
+            cursor:pointer;
+            @media screen and (min-width:1161px) {
+                width:153px;
+            }
+        }
+        input[type=radio]:focus + .timeSelect{
+            outline:2px solid var(--color-black);
+        }
+        input[type=radio]:disabled + .timeSelect{
+            color:var(--gray60);
+            background:var(--gray30);
+            border-color:#8E8E8E;
+        }
+        input[type=radio]:checked + .timeSelect{
+            background:#FFF6F7;
+            color:var(--color-red);
+            font-weight:var(--bold);
+            border-color:var(--color-red);
+        }
+    }
+}
+.dateSelector{
+    .dateInput{
+        position:absolute;
+        top:-9999px;
+        left:-9999px;
+        width:1px;
+        height:1px;
+        opacity:0;
+    }
+    .datepicker{
+        position:relative;
+        width:auto;
+        border-style:none;
+        table{
+            max-width:432px;
+            width:100%;
+            border-style:none;
+            thead{
+                tr{
+                    border-style:none;
+                }
+                th{                    
+                    padding:0;
+                    height:80px;
+                    border-style:none;
+                    background:none;
+                    vertical-align: middle;
+                    &.dow{
+                        height:72px;
+                    }
+                }
+                .datepicker-switch{
+                    position:relative;
+                    font-size:24px;
+                    font-weight:var(--bold);
+                    &:hover,
+                    &:active{
+                        background:initial;
+                    }
+                }
+                .prev{
+                    text-indent:-9999px;
+                    background:url(../../images/icon/ico-dateselector-left-bk-24.svg) no-repeat center left / contain;
+                }
+                .next{
+                    text-indent:-9999px;
+                    background:url(../../images/icon/ico-dateselector-right-bk-24.svg) no-repeat center left / contain;
+                }
+            }
+            tbody{
+                border-style:none;
+                tr{
+                    border-style:none;
+                    td{                        
+                        padding:0;
+                        height:72px;
+                        border-style:none;
+                        text-align:center;
+                        vertical-align:middle;
+                        &.today,
+                        &.today.disabled,
+                        &.today:hover{
+                            position:relative;
+                            color:var(--color-dark);
+                            background:url(../../images/bg-dateselector-today.svg) no-repeat center center / contain;
+                        }        
+                        &.today.disabled:hover,
+                        &.today.disabled.day,
+                        &.today.disabled.day:hover{
+                            color:var(--gray50);
+                            background:#d8d8d87b
+                        }
+                        &.active,
+                        &.active.disabled,
+                        &.active.disabled:hover,
+                        &.active:hover{
+                            position:relative;
+                            background:url(../../images/bg-dateselector-active.svg) no-repeat center center / contain;
+                        }
+                        &.disabled,
+                        &.new,
+                        &.old{
+                            color:var(--gray40);
+                        }
+                        &.focused,
+                        &:focus{
+                            outline:3px solid vaR(--color-black);
+                        }
+                    }
+                }
+            }            
         }
     }
 }
