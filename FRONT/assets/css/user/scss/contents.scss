@@ -7537,6 +7537,26 @@ table{
                         &:focus{
                             outline:3px solid vaR(--color-black);
                         }
+                        &.today::before{
+                            position:absolute;
+                            top:0;
+                            left:0;
+                            display:block;
+                            content:"오늘";
+                            width:1px;
+                            height:1px;
+                            opacity:0;
+                        }
+                        &.active::before{
+                            position:absolute;
+                            top:0;
+                            left:0;
+                            display:block;
+                            content:"선택됨";
+                            width:1px;
+                            height:1px;
+                            opacity:0;
+                        }
                     }
                 }
             }            
