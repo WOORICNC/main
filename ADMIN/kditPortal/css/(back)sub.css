@@ -1,0 +1,187 @@
+/*>>>>>>>>>> 공통 <<<<<<<<<<*/
+/* 타이틀 & 네비게이션 */
+.titArea {display: flex; align-items: center; justify-content: space-between; flex-wrap: nowrap; margin-bottom: 20px; border-bottom: 3px solid var(--color-primary);}
+.titArea .tit {display: flex; align-items: center; gap: 8px;}
+.titArea .tit .cont-tit {line-height: 1.5; letter-spacing: -0.84px; font-size: 28px; color: var(--color-input);}
+.titArea .tit .caution_txt {letter-spacing: -0.48px; font-size: 16px; color: var(--color-base);}
+.location {display: flex; align-items: center; gap: 22px}
+.location li {position: relative; font-size: 13px; color: var(--color-base);}
+.location li:first-child {width: 32px; height: 32px; text-indent: -9999px; background: url("../../img/admin/ico-home.svg") no-repeat center/100% auto;}
+.location li:last-child {font-weight: 700; color: var(--color-primary);}
+.location li + li:before {content: ""; position: absolute; top: 0; left: -14px; width: 6px; height: 100%; background: url("../../img/admin/ico-arrow-nav.svg") no-repeat center/6px auto;}
+
+/* 버튼 */
+.btn {display: inline-block; padding: 0 12px; border-radius: 4px; min-width: 80px; text-align: center; line-height: 34px; font-size: 16px; font-weight: 700; cursor: pointer;}
+.btnS {line-height: 30px; font-size: 14px;}
+
+/* 버튼 색상 */
+.btnBlue {border: 1px solid #0F53F5; color: #fff; background: #0F53F5;}
+.btnNavy {border: 1px solid var(--color-primary); color: var(--color-white); background: var(--color-primary);} 
+.btnGray {border: 1px solid var(--color-gray); color: var(--color-white); background: var(--color-gray);} 
+.btnRed {border: 1px solid var(--color-red); color: var(--color-white); background: var(--color-red);} 
+.btnlNavy {border: 1px solid var(--color-primary); color: var(--color-primary); background: var(--color-white);} 
+.btnltNavy {border: 1px solid var(--color-primary); color: var(--color-primary); background: transparent;}
+
+/* 버튼 정렬 */
+.btn_wrap {display: flex; justify-content: center; position: relative; margin-top: 20px;}
+.btn_wrap > div {display: flex; gap: inherit;}
+.btn_wrap > .left {display: flex; gap: 8px; margin-right: auto;}
+.btn_wrap > .right {display: flex; gap: 8px; margin-left: auto;}
+.btn_wrap .page_nation {position: absolute; top: 0; left: 50%; margin: 0 ; transform: translateX(-50%);}
+
+/* 상세 테이블 */
+.rowTable {border-top: 2px solid var(--color-input);}
+.rowTable table {table-layout:fixed}
+.rowTable table th,
+.rowTable table td {padding: 6px 20px; border-bottom: 1px solid var(--border-color); height: 48px; font-size: 16px; color: var(--color-base);}
+.rowTable table th {vertical-align: middle; background: #F7F7F4;}
+
+/* 입력 테이블 */
+.inputTable {border-top: 2px solid var(--color-input);}
+.inputTable table {table-layout:fixed; width: 100%;}
+.inputTable table th,
+.inputTable table td {padding: 6px 8px; border-bottom: 1px solid var(--border-color); height: 48px; font-size: 16px; color: var(--color-base);}
+.inputTable table th {vertical-align: middle; background: #F7F7FA;}
+.inputTable table th label.star {display: inline-block; position: relative; padding-left: 10px;}
+.inputTable table th label.star:before {content: "필수입력"; position: absolute; top: 0; left: 0; width: 8px; height: 24px; text-indent: -9999px; background: url("../../img/admin/ico-required.svg") no-repeat center left/8px auto;}
+
+/* 데이터 테이블 */
+.colTable {position: relative; overflow: auto; border-top: 2px solid var(--color-input); border-bottom: 1px solid var(--border-color); max-height: 434px;}
+.colTable table {table-layout: fixed; width: 100%; }
+.colTable table th,
+.colTable table td {padding: 8px; text-align: center; vertical-align: middle; color: var(--color-base);}
+.colTable table thead th {position: sticky; top: 0; background: #F7F7FA;}
+.colTable table thead th:before {display: block; content: ""; position: absolute; bottom: 0; left: 0; right: 0; border-bottom: 1px solid var(--border-color);}
+.colTable table tbody tr + tr td {border-top: 1px solid var(--border-color);}
+.colTable table tbody a {display: block; text-decoration: underline; color: var(--color-primary);}
+.mCS_img_loaded {width: 200px; height: 80px; object-fit: cover;}
+
+/* 테이블 건수 */
+.list_cnt {display: inline-block; position: relative; margin-bottom: 10px; padding-right: 18px; line-height: 1.5; letter-spacing: -0.45px; font-size: 15px; color: var(--color-placeholder);}
+.list_cnt:after {content: "건"; position: absolute; top: 0; right: 0;}
+.list_cnt .cnt_num {display: inline-block; font-weight: 700; color: #0F53F5;}
+
+/* 인풋 */
+/* 인풋&체크박스&라디오 */
+select {overflow: hidden !important; text-overflow: ellipsis; white-space: nowrap; padding: 0 32px 0 12px; border: 1px solid var(--border-color); border-radius: var(--border-radius); width: 240px; line-height: 34px; font-size: 16px; color: var(--color-base); background: var(--color-white) url("../../img/admin/ico-select.svg") no-repeat center right 12px/8px auto; appearance: none; -webkit-appearance: none; -moz-appearance: none;}
+input:not(.checkbox input, .btn, .void input, .date input, .ipt_datepicker) {padding: 0 12px; border: 1px solid var(--border-color); border-radius: var(--border-radius); width: 240px; line-height: 34px; font-size: 16px; color: var(--color-base); background: var(--color-white);}
+.checkboxWrap {overflow: hidden; margin: -4px -10px;}
+.checkboxWrap > * {float: left; margin: 4px 10px;}
+.checkboxWrap.radio .checkbox {width: inherit;}
+.checkbox {display: inline-block; position: relative; width: 166px;}
+.checkbox input {position: absolute; top: 0; left: 0; z-index: -1; width: 100%; height: 100%; opacity: 0;}
+.checkbox input[type=checkbox] + label {display: inline-block; position: relative; padding-left: 24px; line-height: 36px; cursor: pointer;}
+.checkbox input[type=checkbox] + label:before {display: block; content: ""; position: absolute; top: 50%; left: 0; width: 20px; height: 20px; background: url("../../img/admin/ico-checkbox.svg") no-repeat center/20px auto; transform: translate(0, -50%); -webkit-transform: translate(0, -50%); -moz-transform: translate(0, -50%); transition: background-color 0.2s; -webkit-transition: background-color 0.2s; -moz-transition: background-color 0.2s;}
+.checkbox input[type=checkbox]:checked + label:before {background: url("../../img/admin/ico-checkbox-on.svg") no-repeat center/20px auto;}
+.checkbox input[type=radio] + label {display: inline-block; position: relative; padding-left: 26px; line-height: 36px; cursor: pointer;}
+.checkbox input[type=radio] + label:before {display: block; content: ""; position: absolute; top: 50%; left: 0; width: 22px; height: 22px; background: url("../../img/admin/ico-radio.svg") no-repeat center/22px auto; transform: translate(0, -50%); -webkit-transform: translate(0, -50%); -moz-transform: translate(0, -50%); transition: background-color 0.2s; -webkit-transition: background-color 0.2s; -moz-transition: background-color 0.2s;}
+.checkbox input[type=radio]:checked + label:before {background: url("../../img/admin/ico-radio-on.svg") no-repeat center/22px auto;}
+.checkbox.only {width: auto;}
+.checkbox.only input + label {text-indent: -9999px;}
+.checkbox.only input[type=checkbox] + label {padding-left: 20px;}
+
+/* 파일 */
+.file_list ul li + li {margin-top: 8px;}
+.fileSelBox {display: flex; align-items: center; gap: 8px}
+.fileBox {position: relative; padding-left: 88px;}
+.fileBox:before {display: block; content: "파일선택"; position: absolute; top: 0; left: 0; padding: 0 12px; border: 1px solid #707070; border-radius: var(--border-radius); text-align: center; line-height: 34px; font-size: var(--font-input); color: var(--color-white); background: #707070; box-sizing: border-box;}
+.fileBox input[type=file] {position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer}
+.fileBox input[type=file]::-webkit-file-upload-button {cursor: pointer}
+.fileBox input[type=text] {overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.fileListDelBtn {width: 24px; height: 24px; text-indent: -9999px; background: url("../../img/admin/btn-del.svg") no-repeat center/100% auto;}
+.fileAddBtn {width: 24px; height: 24px; text-indent: -9999px; background: url("../../img/admin/btn-add.svg") no-repeat center/100% auto;}
+.fileDelBtn {width: 24px; height: 24px; text-indent: -9999px; background: url("../../img/admin/btn-del.svg") no-repeat center/100% auto;}
+
+/* 검색영역 */
+.titArea + .search_box {margin-top: 20px;}
+.search_box {overflow: hidden; margin: 40px 0 20px;}
+.search_box .sb_tit {float: left; letter-spacing: -0.72px; font-size: 24px; font-weight: 700; color: var(--color-input);}
+.search_box .sb_in {float: right; display: flex; gap: 8px;}
+.seachWrap {display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px;}
+.seachWrap span {display: inline-block; font-size: 16px; color: var(--color-input);}
+
+/* 페이징 */
+.page_nation {display: flex; align-items: center; justify-content: center; gap: 8px !important; margin-top: 20px}
+.page_nation * {width: 32px; text-align: center; line-height: 32px; font-size: 15px; color: var(--color-placeholder);}
+.page_nation .active {border-radius: 50%; font-weight: 700; color: var(--color-white); background: var(--color-primary);}
+.page_nation .arrow {height: 32px;}
+.page_nation .pprev {background: url("../../img/admin/btn-first.svg")}
+.page_nation .prev {background: url("../../img/admin/btn-prev.svg")}
+.page_nation .next {background: url("../../img/admin/btn-next.svg")}
+.page_nation .nnext {background: url("../../img/admin/btn-last.svg")} 
+
+/* 폼 */
+.flex {display: flex; gap: 8px; flex-wrap: wrap;}
+.tel {display: flex; align-items: center; gap: 8px;}
+.tel input,
+.tel select {width: 64px !important;}
+.email {display: flex; align-items: center; gap: 8px;}
+.email input,
+.email select {width: 200px !important;}
+.address {display: flex; flex-direction: column; gap: 4px;}
+.address .btn {width: 130px !important;}
+.date {display: flex; gap: 8px; padding: 0 32px 0 12px; border: 1px solid var(--border-color); border-radius: var(--border-radius); width: 290px; line-height: 34px; background: url("../../img/admin/ico-cal.svg") no-repeat center right 12px/20px auto;}
+.date input {flex: 1 !important; border: 0 !important; width: 80px !important;}
+.ipt_datepicker {padding: 0 32px 0 12px; border: 1px solid var(--border-color); border-radius: var(--border-radius); width: 140px; line-height: 34px; background: var(--color-white) url("../img/ico-cal.svg") no-repeat center right 12px/20px auto;}
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {border-color: var(--color-primary) !important; background: var(--color-primary) !important;}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {border-color: var(--color-point) !important; background: var(--color-point) !important;}
+
+/* 사이즈 */
+.w100 {width: 100px !important}
+.w120 {width: 120px !important}
+.w184 {width: 184px !important}
+.w320 {width: 320px !important}
+.w500 {width: 500px !important}
+.wfull {width: 100% !important}
+
+/* 텍스트 */
+.cBlue {color: var(--color-blue) !important;}
+
+/* 레이어팝업 */
+#d_pop,
+#d_pop .popup_in,
+#d_pop_alert .popup_in
+#d_pop_msg .popup_in {width: 400px;}
+.popup_in {position: relative; z-index: 100; border-radius: 20px; background: var(--color-white);}
+.pop_tit {position: absolute; top: 0; left: 30px; padding: 20px 30px 12px 0; border-bottom: 1px solid var(--border-color); width: calc(100% - 60px); line-height: 24px; letter-spacing: -0.66px; font-size: 22px; font-weight: 700; color: var(--color-input);}
+.pop_cont {padding: 78px 30px 40px;}
+.pop_txt {line-height: 1.5; letter-spacing: -0.48px; font-size: 16px; color: var(--color-base);}
+.btnClosePop {position: absolute; top: 20px; right: 30px; width: 24px; height: 24px; text-indent: -9999px; background: url("../img/btn-close-pop.svg") no-repeat center;}
+.tcenter {display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 30px;}
+#d_pop_alert .pop_tit {display: none;}
+#d_pop_alert .pop_cont {padding: 64px 30px 40px;}
+/* 레이어팝업 */
+.layerPop {display: none; position: fixed; top: 0; left: 0; z-index: 1000; width: 100%; height: 100%; background: rgba(0,0,0,0.70);}
+.layerPop > .inner {overflow: hidden; position: fixed; top: 50%; left: 50%; padding: 65px 0 0; border-radius: 20px; max-width: 90%; max-height: 90%; background: #fff; transform: translate(-50%, -50%) scale(0); -webkit-transform: translate(-50%, -50%) scale(0); -moz-tansform: translate(-50%, -50%) scale(0); transition: all 0.2s; -webkit-transition: all 0.2s; -moz-transition: all 0.2s; box-sizing: border-box;}
+.layerPop > .inner .tit {display: block; position: absolute; top: 0; right: 30px; left: 30px; padding: 20px 30px 20px 0; border-bottom: 1px solid var(--border-color); line-height: 24px; font-size: 22px; font-weight: 700; color: var(--color-base); background: var(--color-white);}
+.layerPop > .inner .cont {overflow-y: auto; padding: 20px 30px 40px;}
+.layerPop > .inner .cont > p {line-height:1.5; font-size: 16px; color: var(--color-base);}
+.layerPop > .inner > a {display: block; position: absolute; top: 20px; right: 30px; width: 24px; height: 24px; text-indent: -9999px; background: url("../img/btn-close-pop.svg") no-repeat center;}
+.layerPop.on > .inner {transform: translate(-50%, -50%) scale(1); -webkit-transform: translate(-50%, -50%) scale(1); -moz-transform: translate(-50%, -50%) scale(1);}
+.layerPop.alert > .inner {padding: 44px 0 0;}
+.layerPop.alert > .inner .cont > p {text-align: center;}
+/* 버튼 정렬 */
+.layerPop .btnBottom {display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 30px;}
+.layerPop .btnBottom button {min-width: 80px;}
+
+/*>>>>>>>>>> 페이지 <<<<<<<<<<*/
+/* 게시판관리 */
+#imgBoardsImg {width: 360px}
+.vod_list {display: grid; gap: 32px 24px; grid-template-columns: repeat(4, auto); padding: 24px 0; border-top: 2px solid var(--color-input);}
+.vod_list .vod {position: relative;}
+.vod_list .vod .checkbox {position: absolute; top: 16px; left: 16px;}
+.vod_list .tit a {display: block; line-height: 1.5; font-size:18px; color: var(--color-input);}
+.vod_list .vodInfo {display: flex; gap: 8px; margin-top: 4px; font-size: 16px; line-height: 1.5; letter-spacing: -0.48px; color: var(--color-placeholder);}
+
+/* 알림마당 */
+.graphWrap {display: grid; gap: 32px; grid-template-columns: repeat(3, auto);}
+.graphBox {display: flex; flex-direction: column; gap: 10px; padding: 24px; border-radius: 10px; /* height: 234px; */ background: var(--color-white);}
+.graphBox p {line-height: 1.5; font-size:22px; font-weight: 700; color: var(--color-input);}
+
+/* 팝업관리 */
+.btnOrder {display: flex; gap: 8px; align-items: center; justify-content: center;}
+.btnOrder button {padding: 0; border: 0; width: 20px; height: 20px; text-indent: -9999px; cursor: pointer;}
+.btnDown {background: url("../../img/admin/btn-down.svg") no-repeat center/100% auto;}
+.btnBottom {background: url("../../img/admin/btn-down-ten.svg") no-repeat center/100% auto;}
+.btnUp {background: url("../../img/admin/btn-up.svg") no-repeat center/100% auto;}
+.btnTop {background: url("../../img/admin/btn-up-ten.svg") no-repeat center/100% auto;}

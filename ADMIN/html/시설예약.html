@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<title>경남 디지털혁신거점 관리자</title>
+<link rel="stylesheet" href="../kditPortal/css/import.css" />
+<script src="../kditPortal/js/jquery-3.7.1.js"></script>
+<script src="../kditPortal/js/jquery.mCustomScrollbar.js"></script>
+<script src="../kditPortal/js/index.global.js"></script>
+<script src="../kditPortal/js/common.js"></script>
+<!--[if lte IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+
+<body>
+<!-- wrapper -->
+<div id="wrapper">
+    <!-- header -->
+    <div id="header">
+        <div class="inner">
+            <h1><a href="/kditPortal/admin/dashboard/Dashboard.do">경남 디지털혁신거점 GYUNGNAM DIGITAL INNOVATION HUB</a></h1>
+            <!-- util -->
+            <div class="util">
+                <a href="#" class="tid"><img src="/kditPortal/img/admin/ico_man.png" alt=""><strong>퍼블관리자</strong> 님</a>
+                <a href="/kditPortal/logout.do" class="mybtn">로그아웃</a>
+            </div>
+            <!--// util -->
+        </div>
+    </div>
+    <!--// header -->
+
+    
+    <!-- gnb -->
+    <div id="gnb">
+        <div class="left">
+            <div class="left-in">
+                <!-- lnb -->
+                <ul class="lnb">
+                    <li class="lnb-one l1 subin curr"><!-- 현재 메뉴의 경우 curr -->
+                        <a href="#" class="lnb-onea"><span>코드관리</span></a>
+                        <ul class="smenu">
+                            <li class="curr"><a href="/kditPortal/admin/code/codeList.do">코드관리</a></li>
+                        </ul>
+                    </li>
+                    <li class="lnb-one l2 subin ">
+                        <a href="#" class="lnb-onea"><span>권한관리</span></a>
+                        <ul class="smenu">
+                            <li><a href="/kditPortal/admin/auth/authList.do">권한관리</a></li>
+                        </ul>
+                    </li>
+                    <li class="lnb-one l3 subin ">
+                        <a href="#" class="lnb-onea"><span>사용자관리</span></a>
+                        <ul class="smenu">
+                            <li><a href="/kditPortal/admin/member/userList.do">일반사용자 관리</a></li>
+                            <li><a href="/kditPortal/admin/member/adminList.do">관리자 관리</a></li>
+                            <li><a href="/kditPortal/admin/member/adminList.do">평가위원회 관리</a></li>
+                        </ul>
+                    </li>
+                    <li class="lnb-one l4 subin ">
+                        <a href="#" class="lnb-onea"><span>메뉴관리</span></a>
+                        <ul class="smenu">
+                            <li><a href="/kditPortal/admin/menu/menuList.do">메뉴관리</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="lnb-one l6 subin ">
+                        <a href="#" class="lnb-onea"><span>게시판관리</span></a>
+                        <ul class="smenu">
+                            <li><a href="/kditPortal/admin/boardMng/boardMngList.do">게시판 관리</a></li>
+                        </ul>
+                    </li>
+                    <li class="lnb-one l6 subin ">
+                        <a href="#" class="lnb-onea"><span>게시판</span></a>
+                        <ul class="smenu">
+                            <li><a href="/kditPortal/admin/board/txtBoard/list.do">일반 게시판</a></li>
+                            <li><a href="/kditPortal/admin/board/imgBoard/list.do">이미지 게시판</a></li>
+                            <li><a href="/kditPortal/admin/board/eduBoard/list.do">교육 게시판</a></li>
+                        </ul>
+                    </li>
+                    <li class="lnb-one l7 subin ">
+                        <a href="#" class="lnb-onea"><span>표준화 관리</span></a>
+                        <ul class="smenu">
+                            <li><a href="/kditPortal/admin/std/word/wordList.do">표준 단어</a></li>
+                            <li><a href="/kditPortal/admin/std/term/termList.do">표준 용어</a></li>
+                            <li><a href="/kditPortal/admin/std/domain/domainList.do">표준 도메인</a></li>
+                            <li><a href="/kditPortal/admin/std/history/historyList.do">표준 이력 관리</a></li>
+                        </ul>
+                    </li>
+                    <li class="lnb-one l8 subin ">
+                        <a href="#" class="lnb-onea"><span>LAKE관리</span></a>
+                        <ul class="smenu">
+                            <li><a href="/kditPortal/admin/lake/category/categoryList.do">카테고리 관리</a></li>
+                            <li><a href="/kditPortal/admin/lake/infoSys/infoSysList.do">정보시스템 관리</a></li>
+                            <li><a href="/kditPortal/admin/lake/database/dbList.do">데이터베이스 관리</a></li>
+                            <li><a href="/kditPortal/admin/lake/dataSet/tableList.do">데이터 셋 관리</a></li>
+                        </ul>
+                    </li>
+                    <li class="lnb-one l8 subin ">
+                        <a href="#" class="lnb-onea"><span>알림마당</span></a>
+                        <ul class="smenu">
+                            <li><a href="/kditPortal/admin/lake/category/categoryList.do">시설예약현황</a></li>
+                            <li><a href="/kditPortal/admin/lake/infoSys/infoSysList.do">시설정보관리</a></li>
+                            <li><a href="/kditPortal/admin/exlleEnt/exlleEntList.do">우수기업관리</a></li>
+                            <li><a href="/kditPortal/admin/lake/dataSet/tableList.do">우수기술관리</a></li>
+                        </ul>
+                    </li>
+
+
+
+
+                </ul>
+                <!--// lnb -->
+            </div>
+        </div>
+        <!--// left -->
+        <button type="button" class="btnMenu">메뉴 닫기</button>
+        <script type="text/javascript">
+            var colorList = ['#5470c6', '#91cc75', '#fac858', '#ee6666', '#73c0de', '#3ba272', '#fc8452', '#9a60b4', '#ea7ccc', '#5470c6', '#91cc75', '#fac858', '#ee6666', '##73c0de'];
+            var lineChartColor = new Array();
+            var cpuUsagePieChart;
+            var memUsagePieChart;
+            var diskUsagePieChart;
+            var cpuColorList = ['#0000FF', '#DDDDDD'];
+            var memColorList = ['#009900', '#DDDDDD'];
+            var diskColorList = ['#FF9900', '#DDDDDD'];
+
+            //관리서버 사용률
+            function getServerMng(hostId) {
+
+                var params = new Object();
+                params.hostId = hostId;
+                var json = JSON.stringify(params);
+
+                $.ajax({
+                    type: "POST",
+                    url: "/kditPortal/admin/dashboard/getServerMng.do",
+                    data: JSON.stringify(params),
+                    dataType: "text",
+                    success: function (result) {
+
+                        if (result) {
+                            //cpu
+                            setUsagePieChart(result.cpuUtilization, "cpu");
+                            $("#cpuRate").text(result.cpuUtilization[0].useVal + "%");
+
+                            //memory
+                            setUsagePieChart(result.memUtilization, "mem");
+                            $("#memRate").text(result.memUtilization[0].useVal + "%");
+
+                            //disk
+                            setUsagePieChart(result.diskUtilization, "disk");
+                            $("#diskRate").text(result.diskUtilization[0].useVal + "%");
+
+                            for (var i = 0; i < result.getServerMngTot.length; i++) {
+
+                                if (result.getServerMngTot[i].se == "CPUs Number") {
+                                    $("#cpuTitle").text("CPU (총 : " + result.getServerMngTot[i].msrmtVl + " )");
+                                } else if (result.getServerMngTot[i].se == "Total Memory") {
+                                    $("#memTitle").text("메모리 (총 : " + result.getServerMngTot[i].msrmtVl + " )");
+                                } else if (result.getServerMngTot[i].se == "Total Disk") {
+                                    $("#diskTitle").text("디스크 (총 : " + result.getServerMngTot[i].msrmtVl + " )");
+                                }
+                            }
+                            $("#totServerCnt").text(result.totServerCnt + "대");
+                        }
+                    }
+                });
+            };
+
+
+
+            function setUsagePieChart(result, se) {
+
+                //차트 삭제
+                if (se == "cpu") {
+                    if (cpuUsagePieChart) {
+                        cpuUsagePieChart.clear();
+                    }
+                } else if (se == "mem") {
+                    if (memUsagePieChart) {
+                        memUsagePieChart.clear();
+                    }
+                } else if (se == "disk") {
+                    if (diskUsagePieChart) {
+                        diskUsagePieChart.clear();
+                    }
+                }
+
+                var itemData = new Array();
+
+                itemData.push({ value: result[0].useVal, name: "사용" });
+                itemData.push({ value: result[0].nonUseVal, name: "미사용" });
+                var serieseNm = result[0].name;
+                var color;
+
+                if (se == "cpu") {
+                    var dom = document.getElementById("cpuUsagePieChart");
+                    cpuUsagePieChart = echarts.init(dom);
+                    color = cpuColorList;
+                } else if (se == "mem") {
+                    var dom = document.getElementById("memUsagePieChart");
+                    memUsagePieChart = echarts.init(dom);
+                    color = memColorList;
+                } else if (se == "disk") {
+                    var dom = document.getElementById("diskUsagePieChart");
+                    diskUsagePieChart = echarts.init(dom);
+                    color = diskColorList;
+                }
+
+                var app = {};
+                var option;
+                option = {
+                    tooltip: {
+                        trigger: 'item'
+                    },
+                    color: color,
+                    series: [
+                        {
+                            name: serieseNm,
+                            type: 'pie',
+                            radius: ['30%', '90%'],
+                            avoidLabelOverlap: false,
+                            itemStyle: {
+                                borderRadius: 10,
+                                borderColor: '#fff',
+                                borderWidth: 2
+                            },
+                            label: {
+                                show: false,
+                                position: 'center'
+                            },
+                            data: itemData
+                        }
+                    ]
+                };
+
+                if (option && typeof option === 'object') {
+                    if (se == "cpu") {
+                        cpuUsagePieChart.setOption(option);
+                    } else if (se == "mem") {
+                        memUsagePieChart.setOption(option);
+                    } else if (se == "disk") {
+                        diskUsagePieChart.setOption(option);
+                    }
+                }
+
+                if (se == "cpu") {
+                    window.addEventListener('resize', cpuUsagePieChart.resize);
+                } else if (se == "mem") {
+                    window.addEventListener('resize', memUsagePieChart.resize);
+                } else if (se == "disk") {
+                    window.addEventListener('resize', diskUsagePieChart.resize);
+                }
+            };
+
+            // 전체 바 차트
+            function setBarChart() {
+
+                var itemName = new Array();
+                var itemData = new Array();
+
+                var listTotalData = new Array();
+
+
+                var dom = document.getElementById('dataSetChart');
+                var myChart = echarts.init(dom, null, {
+                    renderer: 'canvas',
+                    useDirtyRect: false
+                });
+                var app = {};
+
+                for (var j = 0; j < colorList.length; j++) {
+                    lineChartColor.push(colorList[j]);
+                }
+
+                var option;
+
+                option = {
+                    color: lineChartColor,
+                    tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
+                    grid: { left: 0, top: 0, right: 0, bottom: 80 },
+                    xAxis: [{ type: 'category', data: itemName, axisTick: { alignWithLabel: true } }],
+                    yAxis: [{ type: 'value' }],
+                    series: [{ name: '건수', type: 'bar', barWidth: '60%', data: itemData }]
+                };
+
+
+                if (option && typeof option === 'object') {
+                    myChart.setOption(option);
+                }
+
+                window.addEventListener('resize', myChart.resize);
+            }
+
+            // 전체파이 차트
+            function setPieChart(dataClctSe) {
+                //수집현황(00001 : API, 00002 : SNS, 00003 : 뉴스)
+                var dom;
+
+                var itemName = new Array();
+                var itemData = new Array();
+                var seriesNm;
+                if (dataClctSe == "00001") {
+                    dom = document.getElementById('dataColctSttusRatioApi');
+
+
+
+                    seriesNm = "OPENAPI 수집";
+
+                }
+                else if (dataClctSe == "00002") {
+                    dom = document.getElementById('dataColctSttusRatioNews');
+
+                    seriesNm = "뉴스 수집";
+                }
+                else if (dataClctSe == "00003") {
+                    dom = document.getElementById('dataColctSttusRatioSns');
+
+                    seriesNm = "SNS 수집";
+                }
+                var myChart = echarts.init(dom, null, {
+                    renderer: 'canvas',
+                    useDirtyRect: false
+                });
+                var app = {};
+
+                var option;
+
+                option = {
+                    tooltip: { trigger: 'item' },
+                    legend: { top: '5%', left: 'center' },
+                    series: [
+                        {
+                            name: seriesNm,
+                            type: 'pie',
+                            radius: ['30%', '70%'],
+                            avoidLabelOverlap: false,
+                            itemStyle: {
+                                borderRadius: 10,
+                                borderColor: '#fff',
+                                borderWidth: 2
+                            },
+                            color: ["#009efb", "#FF0000"],
+                            grid: {
+                                left: '1%',
+                                right: '2%',
+                                bottom: '3%',
+                                containLabel: true
+                            },
+                            label: {
+                                show: false,
+                                position: 'center'
+                            },
+                            emphasis: {
+                                label: {
+                                    show: true,
+                                    fontSize: 20,
+                                    fontWeight: 'bold'
+                                }
+                            },
+                            labelLine: {
+                                show: false
+                            },
+                            data: itemData
+                        }
+                    ]
+                };
+
+                if (option && typeof option === 'object') {
+                    myChart.setOption(option);
+                }
+
+                window.addEventListener('resize', myChart.resize);
+            }
+
+        </script>
+
+
+        
+    </div>
+    <!--// gnb -->
+
+    <!-- container -->
+    <div id="container">
+        <!-- content-in -->
+        <div class="content-in">
+            <!-- titArea -->
+            <div class="titArea">
+                <div class="tit">
+                    <h2 class="cont-tit">코드 관리</h2>
+                    <div class="caution_txt">코드 관리작업을 수행할 수 있습니다.</div>
+                </div>
+                <ol class="location">
+                    <li>KDIT 포털</li>
+                    <li>코드관리</li>
+                    <li>코드관리</li>
+                </ol>
+            </div>
+            <!--// titArea -->
+            <!-- search_box -->
+            <div class="search_box">
+                <div class="sb_tit">상위 코드</div>
+                <div class="sb_in">
+                    <input type="text" class="input w184" name="codeId" id="codeId" placeholder="상위코드값" title="상위코드값">
+                    <input type="text" class="input" name="groupCodeNm" id="groupCodeNm" placeholder="코드이름" title="코드이름">
+                    <input type="text" class="input w320" name="groupCodeDc" id="groupCodeDc" placeholder="코드설명" title="코드설명">
+                    <button class="btn btnNavy" id="reg">상위코드등록</button>
+                </div>
+            </div>
+            <!--// search_box -->
+            <!-- contWrap -->
+            <div class="contWrap">
+                <!-- cont -->
+                <div class="cont">
+                    <p class="subTit">시설예약 현황표</p>
+                    <div id="calendar"></div>
+                    <style>
+                    #calendar {margin-top: -33px;}
+                    .headerToolBar {display: flex; align-items: center; gap: 16px;}
+                    .headerToolBar .fc-toolbar-title {line-height: 24px; font-size: 18px; color: var(--color-input);}
+                    .headerToolBar .fc-prev-button {width: 24px; height: 24px; background: url("../kditPortal/img/250212/ico-prev.svg") no-repeat center/100% auto;}
+                    .headerToolBar .fc-prev-button span {display: none;}
+                    .headerToolBar .fc-next-button {width: 24px; height: 24px; background: url("../kditPortal/img/250212/ico-next.svg") no-repeat center/100% auto;}
+                    .headerToolBar .fc-next-button span {display: none;}
+                    .fc-license-message {display: none;}
+                    .fc-button-group {display: flex; gap: 8px;}
+                    .fc-button-group .fc-button {border: 1px solid var(--color-primary) !important; border-radius: 4px !important; width: 80px; height: 36px; font-size: 16px; font-weight: 700; color: var(--color-primary) !important; background: #fff;}
+                    .fc-button-group .fc-button.fc-button-active {background: var(--color-primary); color: var(--color-white) !important; background: var(--color-primary) !important;}
+                    .fc-direction-ltr .fc-toolbar > * > :not(:first-child) {margin-left: 0;}
+                    .fc .fc-button-primary:not(:disabled).fc-button-active,
+                    .fc .fc-button-primary:not(:disabled):active,
+                    .fc .fc-button-primary:hover {background-color: #fff;}
+                    .fc .fc-toolbar.fc-header-toolbar {margin-bottom: 12px;}
+                    .fc .fc-scrollgrid-liquid {border-top: 2px solid var(--color-black);}
+                    .fc .fc-datagrid-cell-cushion {width: 100%; text-align: center; color: #454545; background: #F7F7FA;}
+                    .fc .fc-timeline-slot-minor {border-style: none;}
+                    .fc .fc-datagrid-cell-cushion {height: 100%}
+                    .fc-h-event {border: 0; border-left: 3px solid #0F53F5; border-radius: 4px; background: #F2F2F6;}
+                    .fc-h-event .fc-event-main {font-size: 16px; font-weight: 500; color: var(--color-input) !important;}
+                    .fc-datagrid-cell-cushion.fc-scrollgrid-sync-inner {display: flex; align-items: center; justify-content: center;}
+                    .fc-datagrid-header {height: 32px !important; min-height: 32px !important; line-height: 32px !important;}
+                    .fc-datagrid-body tr {height: 72px !important;}
+                    .fc-datagrid-cell-frame {height: 100% !important;}
+                    .fc-timeline-slot-cushion.fc-scrollgrid-sync-inner {display: block; width: 100%;}
+                    .fc-timegrid-body {height: auto !important; min-height: unset !important;}
+                    .fc-scrollgrid {height: auto !important;}
+                    .fc-scrollgrid-sync-table col {min-width: 70px !important;}
+
+                    .event-time {font-size: 14px; color: var(--color-blue);}
+                    .fc-timeline-event {margin: 8px !important; padding: 0 12px !important; height: 56px !important;}
+                    .fc-timeline-event:not(.fc-event-start)::before {position: absolute; left: 0;}
+                    .fc-timeline-event:not(.fc-event-end)::after {position: absolute; right: 12px;}
+                    .fc .fc-timeline-overlap-enabled .fc-timeline-lane-frame .fc-timeline-events {padding-bottom: 0 !important; height: 72px !important;}
+                    </style>
+                    <script>
+
+                        document.addEventListener('DOMContentLoaded', function () {
+                            var calendarEl = document.getElementById('calendar');
+
+                            var calendar = new FullCalendar.Calendar(calendarEl, {
+                                locale: 'ko', // 언어 선택
+                                // now: '2025-02-12', // 지정 날짜
+                                timeZone: 'local', // 오늘 날짜
+                                height: 'auto',
+                                selectable: true,
+                                selectHelper: true,
+                                editable: true, // enable draggable events
+                                aspectRatio: 1.8,
+                                scrollTime: '00:00', // undo default 6am scrollTime
+                                headerToolbar: {
+                                    left: '',
+                                    center: 'prev title next',
+                                    right: 'resourceTimelineDay,timeGridWeek'
+                                },
+                                initialView: 'resourceTimelineDay',
+                                views: {
+                                    resourceTimelineDay: {
+                                        buttonText: '일간'
+                                    },
+                                    timeGridWeek: {
+                                        buttonText: '주간'
+                                    },
+                                },
+                                resourceAreaWidth: '140px',
+                                resourceAreaHeaderContent: '예약시설',
+                                resources: [
+                                    { id: 'a', title: '회의실'},
+                                    { id: 'b', title: '회의실2'},
+                                    { id: 'c', title: '공용공간'},
+                                ],
+                                events: [
+                                    { id: '1', resourceId: 'a', start: '2025-02-12T02:00:00', end: '2025-02-12T06:00:00', title: 'A 주식회사'},
+                                    { id: '2', resourceId: 'b', start: '2025-02-12T05:00:00', end: '2025-02-12T22:00:00', title: 'B 주식회사'},
+                                    { id: '3', resourceId: 'c', start: '2025-02-12', end: '2025-02-14', title: 'C 주식회사'},
+                                ],
+                                
+                                // viewDidMount: function (view) {
+                                //     let calendarView = calendar.view.type; // 현재 뷰 가져오기
+                                //     let titleElement = document.querySelector('.fc-toolbar-title'); // 제목 요소 가져오기
+
+                                //     if (calendarView === 'resourceTimelineDay') {
+                                //         // 일간 보기: 단일 날짜 표시
+                                //         let start = new Date(calendar.view.currentStart); // 날짜 객체 변환
+                                //         let formattedDate = formatDate(start);
+                                //         titleElement.innerText = formattedDate;
+                                //     } else {
+                                //         // 주간 보기: YYYY.MM.DD ~ YYYY.MM.DD 형식
+                                //         let start = new Date(calendar.view.currentStart);
+                                //         let end = new Date(calendar.view.currentEnd);
+                                //         end.setDate(end.getDate() - 1); // 하루 빼기
+
+                                //         let formattedStart = formatDate(start);
+                                //         let formattedEnd = formatDate(end);
+                                //         titleElement.innerText = `${formattedStart} ~ ${formattedEnd}`;
+                                //     }
+                                // },
+
+                                eventContent: function(arg) {
+                                    // 이벤트 시작 & 종료 시간 포맷 변환 (HH:mm)
+                                    let startTime = new Date(arg.event.start).toLocaleTimeString('ko-KR', { hour: '2-digit', minute: '2-digit', hour12: false });
+                                    let endTime = new Date(arg.event.end).toLocaleTimeString('ko-KR', { hour: '2-digit', minute: '2-digit', hour12: false });
+
+                                    // 새로운 HTML 구조 반환
+                                    return {
+                                        html: `<div class="custom-event-content">
+                                                <p class="event-title">${arg.event.title}</p>
+                                                <p class="event-time">${startTime} ~ ${endTime}</p>
+                                            </div>`
+                                    };
+                                },
+
+                                
+
+
+
+                                select: function (arg) {
+                                    console.log(
+                                        'select callback',
+                                        arg.startStr,
+                                        arg.endStr,
+                                        arg.resource ? arg.resource.id : '(no resource)'
+                                    );
+                                },
+                                dateClick: function (arg) {
+                                    console.log(
+                                        'dateClick',
+                                        arg.date,
+                                        arg.resource ? arg.resource.id : '(no resource)'
+                                    );
+                                }
+                            });
+
+                            // 날짜 포맷팅 함수
+                            // function formatDate(date) {
+                            //     if (!(date instanceof Date)) {
+                            //         date = new Date(date); // 날짜 객체로 변환
+                            //     }
+                            //     let year = date.getFullYear();
+                            //     let month = String(date.getMonth() + 1).padStart(2, '0'); // 월 두 자리
+                            //     let day = String(date.getDate()).padStart(2, '0'); // 일 두 자리
+                            //     return `${year}.${month}.${day}`;
+                            // }
+
+                            
+
+                            calendar.render();
+
+                            document.getElementById('select-G').addEventListener('click', function () {
+                                calendar.select({
+                                    start: '2025-02-12T02:00:00',
+                                    end: '2025-02-12T07:00:00',
+                                    resourceId: 'g'
+                                });
+                            });
+
+                            document.getElementById('select-unspecified').addEventListener('click', function () {
+                                calendar.select('2025-02-12T02:00:00', '2025-02-12T07:00:00');
+                            });
+
+                        });
+
+                        
+                        $(function(){
+                            console.log('aaa');
+                            $('.fc-toolbar-title').parent().addClass('headerToolBar');
+                            
+                        });
+                        
+                        setTimeout(function(){
+                            console.log('bbb');
+                        }, 1000);
+                    </script>
+                  
+                </div>
+                <!--// cont -->
+            </div>
+            <!--// contWrap -->
+        </div>
+        <!--// content-in -->
+        <p class="copy">COPYRIGHT © 2024. ALL RIGHTS RESERVED.</p>
+    </div>
+    <!--// container -->
+</div>
+<!--// wrapper -->
+</body>
+</html>
