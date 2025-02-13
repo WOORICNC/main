@@ -127,25 +127,26 @@ const fn_gnb = () => {
         }))
     } else if ($(window).width() > 1160) {
         gnb.find(' > li > a').on('mouseenter hover focus', ((e) => {
-            const depth = $(e.currentTarget).parent('li').find('.gnbOpen');
+            // const depth = $(e.currentTarget).parent('li').find('.gnbOpen');
             $('#header').addClass('scroll');
-            gnb.addClass('open');
-            $(e.currentTarget).parent('li').siblings().find('.gnbOpen').removeClass('active').find('a').attr('tabindex', '-1');
-            $(e.currentTarget).parent('li').siblings().find('.gnbOpen').find('.layer').removeClass('layerShow');
-            depth.addClass('active').find('a').removeAttr('tabindex');
-            depth.find('.layer').addClass('layerShow')
+            // depth.addClass('active')
+            gnb.addClass('open').find('.layer').addClass('layerShow');
+            // $(e.currentTarget).parent('li').siblings().find('.gnbOpen').removeClass('active').find('a').attr('tabindex', '-1');
+            // $(e.currentTarget).parent('li').siblings().find('.gnbOpen').find('.layer').removeClass('layerShow');
+            // depth.addClass('active').find('a').removeAttr('tabindex');
+            // depth.find('.layer').addClass('layerShow')
         }))
-        gnb.find('.gnbOpen').on('mouseleave focusout', ((e) => {
-            if(!$('#container').length > 0){
-                $('#header').removeClass('scroll');
-            }
-            setTimeout(() => {
-                if (!gnb.find(':focus').length) {
-                    gnb.removeClass('open').find('.gnbOpen.active').removeClass('active').find('a').attr('tabindex', '-1');
-                    gnb.removeClass('open').find('.gnbOpen .layer').removeClass('layerShow');
-                }
-            }, 50); // 지연 시간 추가
-        }))
+        // gnb.find('.gnbOpen').on('mouseleave focusout', ((e) => {
+        //     if(!$('#container').length > 0){
+        //         $('#header').removeClass('scroll');
+        //     }
+        //     setTimeout(() => {
+        //         if (!gnb.find(':focus').length) {
+        //             gnb.removeClass('open').find('.gnbOpen.active').removeClass('active').find('a').attr('tabindex', '-1');
+        //             gnb.removeClass('open').find('.gnbOpen .layer').removeClass('layerShow');
+        //         }
+        //     }, 50); // 지연 시간 추가
+        // }))
     }
 }
 
