@@ -7391,7 +7391,7 @@ table{
             grid-template-columns:repeat(3, 1fr);
             margin:0;
         }
-        input[type=radio]{
+        input[type=checkbox]{
             position:absolute;
             top:0;
             left:0;
@@ -7419,15 +7419,15 @@ table{
                 width:153px;
             }
         }
-        input[type=radio]:focus + .timeSelect{
+        input[type=checkbox]:focus + .timeSelect{
             outline:2px solid var(--color-black);
         }
-        input[type=radio]:disabled + .timeSelect{
+        input[type=checkbox]:disabled + .timeSelect{
             color:var(--gray60);
             background:var(--gray30);
             border-color:#8E8E8E;
         }
-        input[type=radio]:checked + .timeSelect{
+        input[type=checkbox]:checked + .timeSelect{
             background:#FFF6F7;
             color:var(--color-red);
             font-weight:var(--bold);

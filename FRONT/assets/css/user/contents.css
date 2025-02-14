@@ -7462,7 +7462,7 @@ table tbody tr td .dateSelector {
     margin: 0;
   }
 }
-.reservSchedulWrap .timeSelecWrap input[type=radio] {
+.reservSchedulWrap .timeSelecWrap input[type=checkbox] {
   position: absolute;
   top: 0;
   left: 0;
@@ -7492,15 +7492,15 @@ table tbody tr td .dateSelector {
     width: 153px;
   }
 }
-.reservSchedulWrap .timeSelecWrap input[type=radio]:focus + .timeSelect {
+.reservSchedulWrap .timeSelecWrap input[type=checkbox]:focus + .timeSelect {
   outline: 2px solid var(--color-black);
 }
-.reservSchedulWrap .timeSelecWrap input[type=radio]:disabled + .timeSelect {
+.reservSchedulWrap .timeSelecWrap input[type=checkbox]:disabled + .timeSelect {
   color: var(--gray60);
   background: var(--gray30);
   border-color: #8E8E8E;
 }
-.reservSchedulWrap .timeSelecWrap input[type=radio]:checked + .timeSelect {
+.reservSchedulWrap .timeSelecWrap input[type=checkbox]:checked + .timeSelect {
   background: #FFF6F7;
   color: var(--color-red);
   font-weight: var(--bold);
