@@ -31,15 +31,26 @@
 }
 @media screen and (min-width: 1161px) {
   .headerArn {
+    gap: 4px;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1720px) {
+  .headerArn {
     gap: 32px;
   }
 }
 .headerArn h1 a {
   display: block;
-  width: 263px;
+  width: 131.5px;
   height: 38px;
   text-indent: -9999px;
   background: url(../../images/common/logo.svg) no-repeat center center/contain;
+}
+@media screen and (min-width: 1720px) {
+  .headerArn h1 a {
+    width: 263px;
+  }
 }
 .headerArn .util {
   display: flex;
@@ -103,9 +114,11 @@
 .gnb {
   display: flex;
 }
-.gnb > li {
-  flex: 1 1 calc((100vw - 263px - 150px) / 6);
-  max-width: 250px;
+@media screen and (min-width: 1161px) {
+  .gnb > li {
+    flex: 1 1 calc((100vw - 263px - 150px) / 6);
+    max-width: 250px;
+  }
 }
 .gnb > li > a {
   display: block;
@@ -186,9 +199,13 @@
     width: 100vw;
     height: 0;
     transition: height 0.3s;
+    background: #fff;
   }
   .gnb.open::before {
     height: 340px;
+  }
+  .gnb:has(.zoomIn).open::before {
+    height: 400px;
   }
 }
 .gnb .gnbOpen {
@@ -234,12 +251,11 @@
     flex-shrink: 0;
     position: fixed;
     top: 100px;
-    left: 0;
+    left: -120px;
     overflow: hidden;
     display: flex;
     width: 395px;
     height: 0;
-    background: #fff;
     transition: height 0.3s;
   }
   .gnb .gnbOpen .imgWrap::after {
@@ -252,6 +268,11 @@
     height: 0%;
     z-index: 10;
     background: var(--table-border);
+  }
+}
+@media screen and (min-width: 1720px) {
+  .gnb .gnbOpen .imgWrap {
+    left: 0;
   }
 }
 @media screen and (min-width: 1161px) {
@@ -317,9 +338,26 @@
     justify-content: center;
     width: 100%;
     line-height: 1.2;
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 600;
+    white-space: wrap;
+    word-break: keep-all;
   }
+}
+@media screen and (min-width: 1720px) {
+  .gnb .gnbOpen .depth02 > li > a {
+    font-size: 17px;
+  }
+}
+.gnb .gnbOpen .depth02 > li > a.withFile {
+  gap: 4px;
+}
+.gnb .gnbOpen .depth02 > li > a.withFile::after {
+  display: block;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: url(../../images/common/ico-out-link-lg-20.svg) no-repeat center center/contain;
 }
 .gnb .gnbOpen .depth02 > li:hover > a, .gnb .gnbOpen .depth02 > li:focus > a {
   color: var(--color-red);
@@ -331,6 +369,7 @@
 }
 @media screen and (min-width: 1161px) {
   .gnb .gnbOpen .depth03 li {
+    line-height: 1;
     text-align: center;
   }
 }
@@ -353,6 +392,14 @@
     font-size: 15px;
     border: 1px solid transparent;
     box-sizing: border-box;
+    white-space: wrap;
+    word-break: keep-all;
+  }
+}
+@media screen and (min-width: 1720px) {
+  .gnb .gnbOpen .depth03 li a {
+    line-height: 1.1;
+    white-space: nowrap;
   }
 }
 .gnb .gnbOpen .depth03 li:hover a, .gnb .gnbOpen .depth03 li:focus a {
@@ -372,14 +419,17 @@
 }
 @media screen and (min-width: 1161px) {
   .gnb.open .gnbOpen.zoomIn {
-    height: 460px;
+    height: 400px;
   }
 }
 .gnb.open .imgWrap {
   height: 340px;
 }
 .gnb.open .imgWrap::before {
-  height: 340px;
+  height: 100%;
+}
+.gnb.open .zoomIn .imgWrap {
+  height: 400px;
 }
 
 /* GNB ANIMATION */
@@ -388,9 +438,20 @@
   top: 40px;
   right: 75px;
   line-height: 1.4;
+  text-align: left;
   letter-spacing: -0.02em;
   font-size: 28px;
   font-weight: var(--bold);
+}
+@media screen and (max-width: 1720px) {
+  .imgWrap .sideTit {
+    width: 131.5px;
+    right: 120px;
+    line-height: 1.2;
+    font-size: 20px;
+    word-break: keep-all;
+    white-space: wrap;
+  }
 }
 .imgWrap [class*=layer] {
   opacity: 0;
