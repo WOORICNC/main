@@ -47,6 +47,11 @@
   text-indent: -9999px;
   background: url(../../images/common/logo.svg) no-repeat center center/contain;
 }
+@media screen and (min-width: 1440px) {
+  .headerArn h1 a {
+    width: 180px;
+  }
+}
 @media screen and (min-width: 1720px) {
   .headerArn h1 a {
     width: 263px;
@@ -353,11 +358,18 @@
   gap: 4px;
 }
 .gnb .gnbOpen .depth02 > li > a.withFile::after {
+  flex-shrink: 0;
   display: block;
   content: "";
   width: 20px;
   height: 20px;
   background: url(../../images/common/ico-out-link-lg-20.svg) no-repeat center center/contain;
+}
+@media screen and (max-width: 1161px) {
+  .gnb .gnbOpen .depth02 > li > a.withFile::after {
+    width: 24px;
+    height: 24px;
+  }
 }
 .gnb .gnbOpen .depth02 > li:hover > a, .gnb .gnbOpen .depth02 > li:focus > a {
   color: var(--color-red);
@@ -964,10 +976,10 @@
     border-bottom: 1px solid var(--border-color);
   }
 }
-@media screen and (max-width: 1320px) {
+@media screen and (max-width: 1720px) {
   .depth01 > li > a {
     white-space: nowrap;
-    font-size: 17px;
+    font-size: 16px;
   }
   .headerArn .util {
     flex-wrap: wrap;
