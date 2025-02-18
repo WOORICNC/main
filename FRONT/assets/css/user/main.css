@@ -759,7 +759,7 @@
 }
 .mainCont03 .swiper-scrollbar {
   bottom: 10px;
-  left: 0;
+  left: calc(100vw - 100%);
   border-radius: 6px;
   height: 3px;
   background: #FEF2F3;
@@ -770,7 +770,10 @@
 
 @media screen and (min-width: 1720px) {
   .mainCont03 .insightSwiper {
+    padding-left: calc((var(--right) - 9px) * 1);
+    padding-right: 40px;
     margin-right: calc((var(--right) - 9px) * -1);
+    margin-left: calc((var(--right) - 9px) * -1);
   }
 }
 @media (max-width: 1160px) {
@@ -794,14 +797,14 @@
   }
   .mainCont03 .insightSwiper {
     margin: -190px -20px 0;
-    padding: 190px 20px 80px;
+    padding: 102px 20px 80px;
   }
   .mainCont03 .insightSwiper .swiperBtn {
-    top: 0;
+    top: 48px;
     right: 20px;
   }
   .mainCont03 .swiper-slide {
-    width: 340px !important;
+    width: 320px !important;
   }
   .mainCont03 .swiper-slide:not(:last-child) {
     margin: 0;

@@ -917,7 +917,7 @@ button[class*=btn][type=button] {
     margin: 0 0 80px;
   }
 }
-.titL h2 {
+.titL * {
   line-height: 1.5;
   letter-spacing: -0.03em;
   font-size: 32px;
@@ -925,11 +925,11 @@ button[class*=btn][type=button] {
   color: var(--color-dark);
 }
 @media screen and (min-width: 1161px) {
-  .titL h2 {
+  .titL * {
     font-size: 40px;
   }
 }
-.titL.narrow h2 {
+.titL.narrow * {
   margin-bottom: 32px;
 }
 
@@ -1627,6 +1627,7 @@ button[class*=btn][type=button] {
 }
 @media screen and (min-width: 1161px) {
   .tableDefault tbody tr .th {
+    border-right: 1px solid var(--table-border);
     width: 200px;
     text-align: center;
     vertical-align: middle;
@@ -1894,6 +1895,14 @@ button[class*=btn][type=button] {
 @media screen and (min-width: 1161px) {
   .tableDefault tbody tr .hMin240 {
     min-height: 216px;
+  }
+}
+.tableDefault tbody tr .hMin120 {
+  min-height: 82px;
+}
+@media screen and (min-width: 1161px) {
+  .tableDefault tbody tr .hMin120 {
+    min-height: 120px;
   }
 }
 @media screen and (min-width: 1161px) {
@@ -3163,7 +3172,6 @@ input[disabled] {
 .card .titWrap {
   margin: 0 24px;
   padding: 16px 0 20px;
-  border-bottom: 1px solid var(--gray30);
 }
 @media screen and (min-width: 1161px) {
   .card .titWrap {
