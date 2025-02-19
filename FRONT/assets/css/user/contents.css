@@ -1620,6 +1620,14 @@ button[class*=btn][type=button] {
     vertical-align: middle;
   }
 }
+@media screen and (min-width: 1161px) {
+  .tableDefault tbody tr:has(.th + .th) .th {
+    width: 150px;
+  }
+}
+.tableDefault tbody tr .th:first-child:not(:has([rowspa="2"])) {
+  width: 150px;
+}
 .tableDefault tbody tr .th {
   padding: 12px 8px;
   font-weight: var(--bold);
@@ -2386,28 +2394,19 @@ input[disabled] {
 /* custom */
 /* 디지털 혁신 인프라 > 혁신거점 허브 */
 .hubCont .imgTit {
-  background: url(../../images/bg-hub-img-title-mo.png) no-repeat #000 center center/cover;
-}
-@media screen and (min-width: 767px) {
-  .hubCont .imgTit {
-    background: url(../../images/bg-hub-img-title.png) no-repeat #000 center center/cover;
-  }
+  background: url(../../images/bg-hub-img-title.png) no-repeat #000 center center/cover;
 }
 .hubCont .structureWrap {
   position: relative;
   margin: 0 -16px 0;
-  padding: 64px 16px;
-  background: url(../../images/bg-hub-circle-mo.png) no-repeat top center/cover;
 }
 @media screen and (min-width: 1161px) {
   .hubCont .structureWrap {
     margin: 0 auto;
-    padding: 80px 0 0;
     background: initial;
   }
   .hubCont .structureWrap::before {
     display: block;
-    content: "";
     position: absolute;
     top: 0;
     left: 50%;
@@ -2424,19 +2423,15 @@ input[disabled] {
     transform: initial;
   }
 }
-.hubCont .structureWrap .wrap {
-  border-radius: 40px;
-  background: #fff;
-}
 @media screen and (min-width: 1161px) {
   .hubCont .structureWrap .wrap {
-    padding: 78px 0;
+    padding: 0 0 78px;
   }
 }
 .hubCont .structureWrap .wrap .circleList {
   position: relative;
   z-index: 0;
-  padding: 314px 20px 45px;
+  padding: 270px 20px 45px;
 }
 @media screen and (min-width: 1161px) {
   .hubCont .structureWrap .wrap .circleList {
@@ -2565,7 +2560,7 @@ input[disabled] {
 }
 .hubCont .structureWrap .wrap .circle.redCircle {
   position: absolute;
-  top: 44px;
+  top: 0;
   left: 50%;
   display: flex;
   align-items: center;
@@ -2672,7 +2667,12 @@ input[disabled] {
   }
 }
 .hubCont .targetInfoWrap .titWrap {
-  margin-bottom: 20px;
+  margin: 0 0 20px;
+}
+@media screen and (min-width: 1161px) {
+  .hubCont .targetInfoWrap .titWrap {
+    margin: 0 0 40px;
+  }
 }
 .hubCont .targetInfoWrap .titTxt {
   line-height: 1.5;
@@ -2693,6 +2693,7 @@ input[disabled] {
 @media screen and (min-width: 1161px) {
   .hubCont .targetInfoWrap ul {
     padding: 0;
+    margin: 0;
   }
 }
 .hubCont .targetInfoWrap b {
@@ -2738,8 +2739,7 @@ input[disabled] {
   align-items: flex-start;
   justify-content: space-between;
   gap: 16px;
-  margin: 0 0 64px;
-  padding: 0 0 40px;
+  padding: 0;
 }
 @media screen and (min-width: 1161px) {
   .hubCont .cardList {
@@ -7663,4 +7663,9 @@ table tbody tr td .dateSelector {
   font-size: 17px;
   font-weight: var(--regular);
   color: var(--text-color);
+}
+
+.pdfCont {
+  width: 100%;
+  height: auto;
 }

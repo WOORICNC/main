@@ -1607,6 +1607,14 @@ button[class*="btn"][type="button"]{
                     vertical-align:middle;
                 }
             }
+            &:has(.th + .th) .th{
+                @media screen and (min-width:1161px) {
+                    width:150px;
+                }
+            }
+            .th:first-child:not(:has([rowspa="2"])){
+                width:150px;
+            }
             .th{
                 padding:12px 8px;
                 font-weight:var(--bold);
@@ -2347,23 +2355,20 @@ input {
 /* 디지털 혁신 인프라 > 혁신거점 허브 */
 .hubCont{
     .imgTit{
-        background:url(../../images/bg-hub-img-title-mo.png) no-repeat #000 center center / cover;
-        @media screen and (min-width:767px){
             background:url(../../images/bg-hub-img-title.png) no-repeat #000 center center / cover;
-        }
     }
     .structureWrap{
         position:relative;
         margin:0 -16px 0;
-        padding:64px 16px;
-        background:url(../../images/bg-hub-circle-mo.png) no-repeat top center / cover;
+        // padding:64px 16px;
+        // background:url(../../images/bg-hub-circle-mo.png) no-repeat top center / cover;
         @media screen and (min-width:1161px) {
             margin:0 auto;
-            padding:80px 0 0;
+            // padding:80px 0 0;
             background:initial;
             &::before{
                 display:block;
-                content:"";
+                // content:"";
                 position:absolute;
                 top:0;
                 left:calc(50%);
@@ -2379,15 +2384,15 @@ input {
             }
         }
         .wrap{
-            border-radius:40px;
-            background:#fff;
+            // border-radius:40px;
+            // background:#fff;
             @media screen and (min-width:1161px) {
-                padding:78px 0;
+                padding:0 0 78px;
             }
             .circleList{
                 position:relative;
                 z-index:0;
-                padding:314px 20px 45px;  
+                padding:270px 20px 45px;  
                 @media screen and (min-width:1161px) {
                     display:flex;
                     align-items:center;
@@ -2523,7 +2528,7 @@ input {
                 }
                 &.redCircle{
                     position:absolute;
-                    top:44px;
+                    top:0;
                     left:50%;
                     display:flex;
                     align-items:center;
@@ -2622,7 +2627,10 @@ input {
     }
     .targetInfoWrap{
         .titWrap{
-            margin-bottom:20px;
+            margin:0 0 20px;
+            @media screen and (min-width:1161px) {
+                margin:0 0 40px;
+            }
         }
         .titTxt{
             line-height:1.5;
@@ -2639,6 +2647,7 @@ input {
             padding-left:20px;
             @media screen and (min-width:1161px) {
                 padding:0;
+                margin:0;
             }
         }
         b{
@@ -2683,8 +2692,7 @@ input {
         align-items:flex-start;
         justify-content:space-between;
         gap:16px;
-        margin:0 0 64px;
-        padding:0 0 40px;
+        padding:0;
         @media screen and (min-width:1161px) {
             gap:0 24px;
         }
@@ -7600,4 +7608,10 @@ table{
         font-weight:var(--regular);
         color:var(--text-color);
     }
+}
+
+// 컨텐츠 영역 가로 100%를 차지하는 pdf 영역
+.pdfCont{
+    width:100%;
+    height:auto;
 }

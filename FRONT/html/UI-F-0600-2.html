@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+    
+    <meta name="format-detection" content="telephone=no, address=no, email=no">
+    <!-- E : mobile -->
+    <title>우수기업 < 디지털 우수기업 및 기술 소개 < 알림마당 < 경남디지털혁신튜브</title>
+    <link rel="stylesheet" href="../assets/css/user/style.css" />
+    <!-- <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script src="js/selectivizr.js">
+-->
+    <!--[if lte IE 9]>
+</script>
+<![endif]-->
+</head>
+
+<body>
+    <!-- skipNav -->
+    <dl id="skipNav">
+        <dt>바로가기 메뉴</dt>
+        <dd><a href="#">본문 바로가기</a></dd>
+        <dd><a href="#gnb">주메뉴 바로가기</a></dd>
+        <dd><a href="#footer">풋터 바로가기</a></dd>
+    </dl>
+    <!-- //skipNav -->
+    <!-- wrap -->
+    <div id="wrap">
+        <!-- header -->
+        <div id="headerImport">
+        </div>
+        <!--// header -->
+
+        <div id="container">
+            <!-- sitemap -->
+            <div class="sitemap">
+                <ul>
+                    <li class="home"><a href="javascript:void(0);">홈</a></li>
+                    <li><a href="javscript:void(0)">알림마당</a></li>
+                    <li><a href="javscript:void(0)">디지털 우수기업 및 기술 소개</a></li>
+                </ul>
+            </div>
+            <!-- // sitemap -->
+
+            <div class="content">
+                <!-- titL -->
+                <div class="titL">
+                    <h2 class="">우수사례</h2>
+                </div>
+                <!-- // titL -->
+
+                <div class="pdfCont">
+                    <!-- 작업 시 하기 div 삭제 후 진행 -->
+                    <div style="display:flex;align-items:center;justify-content:center;height:1090px;background:var(--gray5);color:var(--gray60);font-size:40px;font-weight:var(--bold);">PDF 영역</div>
+                </div>
+                
+                <div class="btnBox">
+                    <a href="javascript:void(0);" class="btn btnDefault full pcReFill">목록</a>
+                </div>
+            </div>            
+        </div>
+
+        <!-- footer -->
+        <div id="footerImport">
+        </div>
+        <!--// footer -->
+    </div>
+    <!--// wrap -->
+    <script src="../assets/js/jquery-3.7.1.js"></script>
+    <script src="../assets/js/swiper.js"></script>
+    <script src="../assets/js/jquery.mCustomScrollbar.js"></script>
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script>
+        $(document).ready(()=>{
+            $('.star').on('click', ((e)=>{
+                $(e.currentTarget).toggleClass('on');
+                if($(e.currentTarget).hasClass('on')){
+                    $(e.currentTarget).text('즐겨찾기 해제');
+                }else{
+                    $(e.currentTarget).text('즐겨찾기 등록');
+                }
+            }))
+        })
+    </script>
+</body>
+
+</html>
