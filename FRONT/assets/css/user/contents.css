@@ -101,6 +101,10 @@ h3 {
   margin-top: 10px !important;
 }
 
+.mb16 {
+  margin-bottom: 16px !important;
+}
+
 .mb20 {
   margin-bottom: 20px;
 }
@@ -2865,12 +2869,7 @@ input[disabled] {
   padding: 10px 0 40px;
 }
 .bridgeCont .imgTit {
-  background: url(../../images/bg-bridge-img-title-mo.png) no-repeat #000 center center/cover;
-}
-@media screen and (min-width: 767px) {
-  .bridgeCont .imgTit {
-    background: url(../../images/bg-bridge-img-title.png) no-repeat #000 center center/cover;
-  }
+  background: url(../../images/bg-bridge-img-title.png) no-repeat #000 center center/cover;
 }
 .bridgeCont .imgBox {
   display: flex;
@@ -2918,10 +2917,49 @@ input[disabled] {
   }
 }
 
-@media screen and (min-width: 1161px) {
-  .infoCont .wrap {
-    flex-direction: row-reverse;
+.photoContList {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 0;
+}
+@media screen and (min-width: 1720px) {
+  .photoContList {
+    flex-wrap: nowrap;
   }
+}
+
+.officePhotoCont .photoWrap {
+  flex: 1 1 calc((100% - 20px) / 2);
+  margin: 0;
+  max-width: 238px;
+}
+.officePhotoCont .photoWrap .txt {
+  margin: 0 0 16px;
+}
+.officePhotoCont .photoWrap img {
+  display: block;
+}
+
+.conferencePhotoCont .photoContList {
+  display: block;
+}
+@media screen and (min-width: 1161px) {
+  .conferencePhotoCont .photoContList {
+    display: flex;
+  }
+}
+.conferencePhotoCont .photoWrap {
+  flex: 1 1 calc((100% - 18px) / 2);
+  max-width: 494px;
+}
+.conferencePhotoCont .photoWrap .txt {
+  margin: 0 0 16px;
+}
+.conferencePhotoCont .photoWrap img {
+  display: block;
 }
 
 /* 디지털 혁신 인프라 > SW 미래채움 */

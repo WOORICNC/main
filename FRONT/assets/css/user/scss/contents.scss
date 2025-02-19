@@ -78,7 +78,8 @@ h3 {
 /* margin */
 .m0{margin:0!important}
 .mb8{margin-bottom:8!important}
-.mt10{margin-top:10px!important;}
+.mt10{margin-top:10px!important}
+.mb16{margin-bottom:16px!important}
 .mb20{margin-bottom:20px}
 .mb24{margin-bottom:24px}
 .mb40{margin-bottom:40px!important}
@@ -2804,10 +2805,7 @@ input {
         padding:10px 0 40px;
     }
     .imgTit{
-        background:url(../../images/bg-bridge-img-title-mo.png) no-repeat #000 center center / cover;
-        @media screen and (min-width:767px){
-            background:url(../../images/bg-bridge-img-title.png) no-repeat #000 center center / cover;
-        }
+        background:url(../../images/bg-bridge-img-title.png) no-repeat #000 center center / cover;
     }
     .imgBox{
         display:flex;
@@ -2849,10 +2847,52 @@ input {
         }
     }
 }
+.photoContList{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:flex-start;
+    justify-content:flex-start;
+    gap:20px;
+    padding:0;
+    @media screen and (min-width:1720px) {
+        flex-wrap:nowrap;
+    }
+}
+.officePhotoCont{
+    .photoWrap{
+        flex:1 1 calc((100% - 20px) / 2);  
+        margin:0;      
+        max-width:238px;
+        .txt{
+            margin:0 0 16px;
+        }
+        img{
+            display:block;
+        }
+    }
+}
+.conferencePhotoCont{
+    .photoContList{
+        display:block;
+        @media screen and (min-width:1161px) {
+            display:flex;
+        }
+    }
+    .photoWrap{
+        flex:1 1 calc((100% - 18px) / 2);  
+        max-width:494px;
+        .txt{
+            margin:0 0 16px;
+        }
+        img{
+            display:block;
+        }
+    }
+}
+
 .infoCont{
     .wrap{
         @media screen and (min-width:1161px){
-            flex-direction:row-reverse;
         }
     }
 }
