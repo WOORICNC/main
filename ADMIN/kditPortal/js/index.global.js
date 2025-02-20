@@ -7171,7 +7171,7 @@ var FullCalendar = (function (exports) {
     function refineRenderProps$4(raw) {
         let { date, dateEnv, dateProfile, isMonthStart } = raw;
         let dayMeta = getDateMeta(date, raw.todayRange, null, dateProfile);
-        let dayNumberText = raw.showDayNumber ? (dateEnv.format(date, isMonthStart ? raw.monthStartFormat : DAY_NUM_FORMAT)) : '';
+        let dayNumberText = raw.showDayNumber ? (dateEnv.format(date, isMonthStart ? raw.monthStartFormat : DAY_NUM_FORMAT).replace("일","")) : '';
         return Object.assign(Object.assign(Object.assign({ date: dateEnv.toDate(date), view: raw.viewApi }, dayMeta), { isMonthStart,
             dayNumberText }), raw.extraRenderProps);
     }
@@ -7699,7 +7699,7 @@ var FullCalendar = (function (exports) {
             prevYear: 'prev year',
             nextYear: 'next year',
             year: 'year',
-            today: '오늘',
+            today: 'today',
             month: 'month',
             week: 'week',
             day: 'day',
@@ -7710,7 +7710,7 @@ var FullCalendar = (function (exports) {
         closeHint: 'Close',
         timeHint: 'Time',
         eventHint: 'Event',
-        allDayText: '종일',
+        allDayText: 'all-day',
         moreLinkText: 'more',
         noEventsText: 'No events to display',
     };
@@ -7718,14 +7718,14 @@ var FullCalendar = (function (exports) {
         // Includes things we don't want other locales to inherit,
         // things that derive from other translatable strings.
         buttonHints: {
-            prev: '이전 날짜로 이동', // Previous $0
-            next: '다음 날짜로 이동', // Next $0
+            prev: 'Previous $0',
+            next: 'Next $0',
             today(buttonText, unit) {
                 return (unit === 'day')
-                    ? '오늘 날짜로 이동' // Today
+                    ? 'Today'
                     : `This ${buttonText}`;
             },
-        }, viewHint: '$0', navLinkHint: 'Go to $0', moreLinkHint(eventCnt) { // '$0 view'
+        }, viewHint: '$0 view', navLinkHint: 'Go to $0', moreLinkHint(eventCnt) {
             return `Show ${eventCnt} more event${eventCnt === 1 ? '' : 's'}`;
         } });
     function organizeRawLocales(explicitRawLocales) {

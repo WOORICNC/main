@@ -1,5 +1,5 @@
-/*>>>>>>>>>> 공통 <<<<<<<<<<*/
-/* 타이틀 & 네비게이션 */
+/*>>>>>>>>>> ê³µí†µ <<<<<<<<<<*/
+/* íƒ€ì´í‹€ & ë„¤ë¹„ê²Œì´ì…˜ */
 .titArea {
     display: flex;
     align-items: center;
@@ -62,14 +62,7 @@
     background: url("../../img/admin/ico-arrow-nav.svg") no-repeat center/6px auto;
 }
 
-.subTit {
-    line-height: 1.5;
-    font-size: 22px;
-    font-weight: 700;
-    color: var(--color-input);
-}
-
-/* 버튼 */
+/* ë²„íŠ¼ */
 .btn {
     display: inline-block;
     padding: 0 12px;
@@ -87,7 +80,7 @@
     font-size: 14px;
 }
 
-/* 버튼 색상 */
+/* ë²„íŠ¼ ìƒ‰ìƒ */
 .btnBlue {
     border: 1px solid #0F53F5;
     color: #fff;
@@ -124,7 +117,7 @@
     background: transparent;
 }
 
-/* 버튼 정렬 */
+/* ë²„íŠ¼ ì •ë ¬ */
 .btn_wrap {
     display: flex;
     justify-content: center;
@@ -157,7 +150,7 @@
     transform: translateX(-50%);
 }
 
-/* 상세 테이블 */
+/* ìƒì„¸ í…Œì´ë¸” */
 .rowTable {
     border-top: 2px solid var(--color-input);
 }
@@ -179,7 +172,7 @@
     background: #F7F7F4;
 }
 
-/* 입력 테이블 */
+/* ìž…ë ¥ í…Œì´ë¸” */
 .inputTable {
     border-top: 2px solid var(--color-input);
     padding-top: 8px;
@@ -210,7 +203,7 @@
 }
 
 .inputTable table th label.star:before {
-    content: "필수입력";
+    content: "í•„ìˆ˜ìž…ë ¥";
     position: absolute;
     top: 0;
     left: 0;
@@ -220,7 +213,7 @@
     background: url("../../img/admin/ico-required.svg") no-repeat center left/8px auto;
 }
 
-/* 데이터 테이블 */
+/* ë°ì´í„° í…Œì´ë¸” */
 .colTable {
     position: relative;
     overflow: auto;
@@ -272,7 +265,7 @@
     object-fit: cover;
 }
 
-/* 테이블 건수 */
+/* í…Œì´ë¸” ê±´ìˆ˜ */
 .list_cnt {
     display: inline-block;
     position: relative;
@@ -285,7 +278,7 @@
 }
 
 .list_cnt:after {
-    content: "건";
+    content: "ê±´";
     position: absolute;
     top: 0;
     right: 0;
@@ -297,8 +290,8 @@
     color: #0F53F5;
 }
 
-/* 인풋 */
-/* 인풋&체크박스&라디오 */
+/* ì¸í’‹ */
+/* ì¸í’‹&ì²´í¬ë°•ìŠ¤&ë¼ë””ì˜¤ */
 select {
     overflow: hidden !important;
     text-overflow: ellipsis;
@@ -427,7 +420,7 @@ input:not(.checkbox input, .btn, .void input, .date input, .ipt_datepicker) {
     padding-left: 20px;
 }
 
-/* 파일 */
+/* íŒŒì¼ */
 .file_list ul li + li {
     margin-top: 8px;
 }
@@ -445,7 +438,7 @@ input:not(.checkbox input, .btn, .void input, .date input, .ipt_datepicker) {
 
 .fileBox:before {
     display: block;
-    content: "파일선택";
+    content: "íŒŒì¼ì„ íƒ";
     position: absolute;
     top: 0;
     left: 0;
@@ -501,7 +494,7 @@ input:not(.checkbox input, .btn, .void input, .date input, .ipt_datepicker) {
     background: url("../../img/admin/btn-del.svg") no-repeat center/100% auto;
 }
 
-/* 검색영역 */
+/* ê²€ìƒ‰ì˜ì—­ */
 .titArea + .search_box {
     margin-top: 20px;
 }
@@ -538,7 +531,7 @@ input:not(.checkbox input, .btn, .void input, .date input, .ipt_datepicker) {
     color: var(--color-input);
 }
 
-/* 페이징 */
+/* íŽ˜ì´ì§• */
 .page_nation {
     display: flex;
     align-items: center;
@@ -582,7 +575,7 @@ input:not(.checkbox input, .btn, .void input, .date input, .ipt_datepicker) {
     background: url("../../img/admin/btn-last.svg")
 }
 
-/* 폼 */
+/* í¼ */
 .flex {
     display: flex;
     gap: 8px;
@@ -655,7 +648,7 @@ input:not(.checkbox input, .btn, .void input, .date input, .ipt_datepicker) {
     background: var(--color-point) !important;
 }
 
-/* 사이즈 */
+/* ì‚¬ì´ì¦ˆ */
 .w100 {
     width: 100px !important
 }
@@ -680,12 +673,12 @@ input:not(.checkbox input, .btn, .void input, .date input, .ipt_datepicker) {
     width: 100% !important
 }
 
-/* 텍스트 */
+/* í…ìŠ¤íŠ¸ */
 .cBlue {
     color: var(--color-blue) !important;
 }
 
-/* 레이어팝업 */
+/* ë ˆì´ì–´íŒì—… */
 #d_pop, #d_pop .popup_in, #d_pop_alert .popup_in #d_pop_msg .popup_in {
     width: 400px;
 }
@@ -748,7 +741,7 @@ input:not(.checkbox input, .btn, .void input, .date input, .ipt_datepicker) {
     padding: 64px 30px 40px;
 }
 
-/* 레이어팝업 */
+/* ë ˆì´ì–´íŒì—… */
 .layerPop {
     display: none;
     position: fixed;
@@ -830,7 +823,7 @@ input:not(.checkbox input, .btn, .void input, .date input, .ipt_datepicker) {
     text-align: center;
 }
 
-/* 버튼 정렬 */
+/* ë²„íŠ¼ ì •ë ¬ */
 .layerPop .btnBottom {
     display: flex;
     align-items: center;
@@ -844,8 +837,8 @@ input:not(.checkbox input, .btn, .void input, .date input, .ipt_datepicker) {
     min-width: 80px;
 }
 
-/*>>>>>>>>>> 페이지 <<<<<<<<<<*/
-/* 게시판관리 */
+/*>>>>>>>>>> íŽ˜ì´ì§€ <<<<<<<<<<*/
+/* ê²Œì‹œíŒê´€ë¦¬ */
 #imgBoardsImg {
     width: 360px
 }
@@ -885,7 +878,7 @@ input:not(.checkbox input, .btn, .void input, .date input, .ipt_datepicker) {
     color: var(--color-placeholder);
 }
 
-/* 알림마당 */
+/* ì•Œë¦¼ë§ˆë‹¹ */
 .graphWrap {
     display: grid;
     gap: 32px;
@@ -909,7 +902,7 @@ input:not(.checkbox input, .btn, .void input, .date input, .ipt_datepicker) {
     color: var(--color-input);
 }
 
-/* 팝업관리 */
+/* íŒì—…ê´€ë¦¬ */
 .btnOrder {
     display: flex;
     gap: 8px;
@@ -947,6 +940,43 @@ input:not(.checkbox input, .btn, .void input, .date input, .ipt_datepicker) {
 .cnctInfo .lt {display: flex; flex-direction: column; gap: 8px;}
 .cnctInfo .rt {display: flex; gap: 16px;}
 .cnctInfo p {position: relative; padding-left: 28px; line-height: 24px; font-size: 16px; color: var(--color-input);}
-.cnctInfo p:before {content: ""; position: absolute; top: 0; left: 0; width: 24px; height: 24px; background: url("../../img/admin/ico-info.svg") no-repeat center/100% auto;}
+.cnctInfo p:before {content: ""; position: absolute; top: 0; left: 0; width: 24px; height: 24px; background: url("이미경로수정필요/ico-info.svg") no-repeat center/100% auto;}
 .cnctInfo span {line-height: 1.5; font-size: 15px; color: #717171;}
 .cnctInfo a {text-decoration: underline; color: var(--color-primary);}
+
+/* 시설예약 */
+.calendarWrap {position: relative; padding-top: 76px;}
+.calendarWrap .search_box {position: absolute; top: 20px; left: 0; margin: 0;}
+#calendar {border-top: 2px solid var(--color-input);}
+.headerToolBar {display: flex; align-items: center; gap: 16px; position: absolute; top: 26px; left: 50%; transform: translateX(-50%); -ms-transform: translateX(-50%); -moz-transform: translateX(-50%); -webkit-transform: translateX(-50%);}
+.headerToolBar button {border-color: var(--border-color) !important;}
+.headerToolBar .fc-toolbar-title {line-height: 24px; font-size: 20px; font-weight: 500; color: var(--color-input);}
+.headerToolBar .fc-prev-button {width: 24px; height: 24px; background: url("이미경로수정필요/ico-prev.svg") no-repeat center/100% auto;}
+.headerToolBar .fc-prev-button span {display: none;}
+.headerToolBar .fc-next-button {width: 24px; height: 24px; background: url("이미경로수정필요/ico-next.svg") no-repeat center/100% auto;}
+.headerToolBar .fc-next-button span {display: none;}
+.fc .fc-button-primary:not(:disabled).fc-button-active,
+.fc .fc-button-primary:not(:disabled):active,
+.fc .fc-button-primary:hover {background-color: #fff;}
+.fc .fc-toolbar.fc-header-toolbar {margin-bottom: 0;}
+.fc .fc-more-popover .fc-popover-body {padding: 8px; min-width: 280px;}
+.fc .fc-daygrid-body-unbalanced .fc-daygrid-day-events {position: absolute !important;}
+.fc .fc-daygrid-day-number {padding: 0 !important;}
+.fc .fc-daygrid-day-top {height: 19px;}
+.fc .fc-daygrid-day.fc-day-today {position: relative; background: var(--bg-input);}
+.fc .fc-daygrid-day.fc-day-today:before {content: ""; position: absolute; top: 0; left: 0; border: 1px solid red; width: 100%; height: 100%;}
+.fc-theme-standard .fc-scrollgrid {border-left: 0;}
+.fc-theme-standard td,
+.fc-theme-standard th {border-left: 0; border-right: 0;}
+.fc-direction-ltr .fc-toolbar > * > :not(:first-child) {margin-left: 0;}
+.fc-col-header-cell {height: 48px; line-height: 48px; color: var(--color-base); background: #F7F7FA !important;}
+.fc-daygrid-day-top {flex-direction: row !important;}
+.fc-daygrid-day-number {color: var(--color-base);}
+.fc-daygrid-day-frame {padding: 8px;}
+.fc-daygrid-day {min-height: 128px;}
+.fc-daygrid-event-dot {border: 3px solid var(--color-blue) !important; border-radius: 50% !important;}
+.fc-daygrid-more-link.fc-more-link {font-size: 14px; color: var(--color-base);}
+.fc-event-time {font-size: 14px; color: var(--color-base);}
+.fc-event-title {font-size: 14px; font-weight: 500; color: var(--color-input);}
+.fc-direction-ltr .fc-daygrid-event .fc-event-time {margin-right: 4px;}
+.fc-license-message {display: none;}
