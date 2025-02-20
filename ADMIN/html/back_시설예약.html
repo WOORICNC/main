@@ -419,100 +419,134 @@
                 <!-- cont -->
                 <div class="cont">
                     <p class="subTit">시설예약 현황표</p>
-                    <!-- calendarWrap -->
-                    <div class="calendarWrap">
-                        <!-- search_box -->
-                        <div class="search_box">
-                            <div class="sb_tit">
-                                <select class="">
-                                        <option value="">회의실1</option>
-                                        <option value="">회의실2</option>
-                                        <option value="">회의실3</option>
-                                </select>
-                            </div>
-                        </div>
-                        <!--// search_box -->
-                        <div id="calendar"></div>
-                    </div>
-                    <!--// calendarWrap -->
+                    <div id="calendar"></div>
+                    <style>
+                    #calendar {margin-top: -33px;}
+                    .headerToolBar {display: flex; align-items: center; gap: 16px; position: absolute; left: 50%; transform: translateX(-50%); -ms-transform: translateX(-50%); -moz-transform: translateX(-50%); -webkit-transform: translateX(-50%);}
+                    .headerToolBar .fc-toolbar-title {line-height: 24px; font-size: 18px; color: var(--color-input);}
+                    .headerToolBar .fc-prev-button {width: 24px; height: 24px; background: url("../kditPortal/img/250212/ico-prev.svg") no-repeat center/100% auto;}
+                    .headerToolBar .fc-prev-button span {display: none;}
+                    .headerToolBar .fc-next-button {width: 24px; height: 24px; background: url("../kditPortal/img/250212/ico-next.svg") no-repeat center/100% auto;}
+                    .headerToolBar .fc-next-button span {display: none;}
+                    .fc-license-message {display: none;}
+                    .fc-button-group {display: flex; gap: 8px;}
+                    .fc-button-group .fc-button {border: 1px solid var(--color-primary) !important; border-radius: 4px !important; width: 80px; height: 36px; font-size: 16px; font-weight: 700; color: var(--color-primary) !important; background: #fff;}
+                    .fc-button-group .fc-button.fc-button-active {background: var(--color-primary); color: var(--color-white) !important; background: var(--color-primary) !important;}
+                    .fc-direction-ltr .fc-toolbar > * > :not(:first-child) {margin-left: 0;}
+                    .fc .fc-button-primary:not(:disabled).fc-button-active,
+                    .fc .fc-button-primary:not(:disabled):active,
+                    .fc .fc-button-primary:hover {background-color: #fff;}
+                    .fc .fc-toolbar.fc-header-toolbar {margin-bottom: 12px;}
+                    .fc .fc-scrollgrid-liquid {border-top: 2px solid var(--color-black);}
+                    .fc .fc-datagrid-cell-cushion {width: 100%; text-align: center; color: #454545; background: #F7F7FA;}
+                    .fc .fc-timeline-slot-minor {border-style: none;}
+                    .fc .fc-datagrid-cell-cushion {height: 100%}
+                    .fc-h-event {border: 0; border-left: 3px solid #0F53F5; border-radius: 4px; background: #F2F2F6;}
+                    .fc-h-event .fc-event-main {font-size: 16px; font-weight: 500; color: var(--color-input) !important;}
+                    .fc-datagrid-cell-cushion.fc-scrollgrid-sync-inner {display: flex; align-items: center; justify-content: center;}
+                    .fc-datagrid-header {height: 72px !important; min-height: 72px !important; line-height: 72px !important;}
+                    .fc-datagrid-body tr {height: 72px !important;}
+                    .fc-datagrid-cell-frame {height: 100% !important;}
+                    .fc-timeline-slot-cushion.fc-scrollgrid-sync-inner {display: block; width: 100%;}
+                    .fc-timegrid-body {height: auto !important; min-height: unset !important;}
+                    .fc-scrollgrid {height: auto !important;}
+                    .fc-scrollgrid-sync-table col {min-width: 70px !important;}
+
+                    .event-title {overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+                    .event-time {overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 14px; color: var(--color-blue);}
+                    .fc-timeline-event {margin: 8px !important; padding: 0 12px !important; height: 56px !important;}
+                    .fc-timeline-event:not(.fc-event-start)::before {position: absolute; left: 0;}
+                    .fc-timeline-event:not(.fc-event-end)::after {position: absolute; right: 12px;}
+                    .fc .fc-timeline-overlap-enabled .fc-timeline-lane-frame .fc-timeline-events {padding-bottom: 0 !important; height: 72px !important;}
+                    .fc-view-harness.fc-view-harness-passive {border-top: 2px solid var(--color-black);}
+
+                    .moreView {position: relative; overflow: hidden;}
+                    .tooptip {position: absolute; top: 60px; left: 50%; z-index: 10; padding: 10px 12px; border-radius: 4px; width: max-content; min-width: 120px; background: var(--color-white); box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.20); transform: translateX(-50%); -ms-transform: translateX(-50%); -moz-transform: translateX(-50%); -webkit-transform: translateX(-50%);}
+                    .tooptip .tit {font-size: 16px; color: var(--color-input);}
+                    .tooptip .time {font-size: 14px; color: #454545;}
+                    </style>
                     <script>
-                        document.addEventListener('DOMContentLoaded', function() {
+                        document.addEventListener('DOMContentLoaded', function () {
                             var calendarEl = document.getElementById('calendar');
                             var calendar = new FullCalendar.Calendar(calendarEl, {
+                                initialView: 'resourceTimelineDay', // 타임라인
                                 locale: 'ko', // 언어 선택
-                                dayMaxEvents: 3,
-                                height: 834,
+                                // now: '2025-02-14', // 지정 날짜
+                                timeZone: 'local', // 오늘 날짜
+                                height: 'auto', // 캘린더 높이
+                                slotMinTime: '09:00', // 첫번째 시간대 설정
+                                slotMaxTime: '19:00', // 마지막 시간대 설정
+                                
                                 headerToolbar: {
                                     left: '',
                                     center: 'prev title next',
-                                    right: ''
+                                    right: 'resourceTimelineDay,resourceTimelineWeek'
                                 },
-                                titleFormat: function(date) { // 'YYYY.MM' 형식
-                                    let year = date.date.year;
-                                    let month = String(date.date.month + 1).padStart(2, '0'); // 2자리로 변환
-                                    return `${year}.${month}`;
+                                views: {
+                                    resourceTimelineDay: {
+                                        buttonText: '일간'
+                                    },
+                                    resourceTimelineWeek: {
+                                        buttonText: '주간',
+                                        titleFormat: function (info) {
+                                            // 시작 날짜와 종료 날짜를 원하는 형식으로 변환
+                                            let start = new Date(info.start.marker);
+                                            let end = new Date(info.end.marker);
+                                            end.setDate(end.getDate() - 1); // FullCalendar는 end 날짜를 하루 더 잡기 때문에 조정
+                                            
+                                            // 원하는 포맷 (YYYY년 MM월 DD일 ~ YYYY년 MM월 DD일)
+                                            let startStr = start.getFullYear() + '년 ' + (start.getMonth() + 1) + '월 ' + start.getDate() + '일';
+                                            let endStr = end.getFullYear() + '년 ' + (end.getMonth() + 1) + '월 ' + end.getDate() + '일';
+                                            return startStr + ' ~ ' + endStr;
+                                        }
+                                    }
                                 },
-                                events: [
-                                    {
-                                        title: 'A주식회사',
-                                        start: '2025-02-17T10:00:00',
-                                        end: '2025-02-17T12:00:00'
-                                    },
-                                    {
-                                        title: 'A주식회사',
-                                        start: '2025-02-17T15:00:00'
-                                    },
-                                    {
-                                        title: 'A주식회사',
-                                        start: '2025-02-17T16:00:00',
-                                        end: '2025-02-17T18:00:00'
-                                    },
-                                    {
-                                        title: 'B주식회사',
-                                        start: '2025-02-17T16:00:00'
-                                    },
-                                    {
-                                        title: 'C주식회사',
-                                        start: '2025-02-17T16:00:00'
-                                    },
+                                resourceAreaHeaderContent: '예약시설',
+                                resourceAreaWidth: '140px',
+                                resources: [
+                                    { id: 'a', title: '회의실'},
+                                    { id: 'b', title: '회의실2'},
+                                    { id: 'c', title: '공용공간'},
                                 ],
-                                eventContent: function (arg) {
+                                events: [
+                                    { id: '1', resourceId: 'a', start: '2025-02-14T09:00', end: '2025-02-14T11:00', title: 'A 주식회사'},
+                                    { id: '2', resourceId: 'b', start: '2025-02-14T10:00', end: '2025-02-14T11:00', title: 'B 주식회사aaaaaaa'},
+                                    { id: '3', resourceId: 'c', start: '2025-02-14T17:00', end: '2025-02-14T18:00', title: 'C 주식회사'},
+                                ],
+                                eventContent: function(arg) {
+                                    // 이벤트 시작 & 종료 시간 포맷 변환 (HH:mm)
                                     let startTime = new Date(arg.event.start).toLocaleTimeString('ko-KR', { hour: '2-digit', minute: '2-digit', hour12: false });
-                                    let endTime = arg.event.end 
-                                        ? new Date(arg.event.end).toLocaleTimeString('ko-KR', { hour: '2-digit', minute: '2-digit', hour12: false }) 
-                                        : null;
-                                    let timeText = endTime ? `${startTime}~${endTime}` : `${startTime}`;
-                                    return { html: `
-                                        <div class="fc-daygrid-event-dot"></div>
-                                        <div class="fc-event-time">${timeText}</div>
-                                        <div class="fc-event-title">${arg.event.title}</div>
-                                    ` };
-                                },
+                                    let endTime = new Date(arg.event.end).toLocaleTimeString('ko-KR', { hour: '2-digit', minute: '2-digit', hour12: false });
 
-                                eventDidMount: function (info) {
-                                    // 팝오버가 열릴 때 실행
-                                    setTimeout(() => {
-                                        document.querySelectorAll('.fc-popover-title').forEach((el) => {
-                                        let rawDate = el.innerText; // 기본 날짜 (예: '2025년 2월 10일')
-                                        let date = new Date(info.event.start);
-                                        let month = String(date.getMonth() + 1).padStart(2, '0'); // MM
-                                        let day = String(date.getDate()).padStart(2, '0'); // DD
-                                        let dayNames = ['일', '월', '화', '수', '목', '금', '토']; // 요일 배열
-                                        let dayOfWeek = dayNames[date.getDay()]; // 요일 가져오기
-                                        el.innerText = `${month}.${day} (${dayOfWeek})`; // '02.10 (월)' 형식으로 변경
-                                        });
-                                    }, 10); // 딜레이를 주어 요소가 로드된 후 변경
-                                },
+                                    // 새로운 HTML 구조 반환
+                                    return {
+                                        html: `<div class="custom-event-content">
+                                                <p class="event-title">${arg.event.title}</p>
+                                                <p class="event-time">${startTime} ~ ${endTime}</p>
+                                            </div>`
+                                    };
+                                }
                             });
-                        
                             calendar.render();
                         });
-                        
+
                         $(function(){
                             $('.fc-toolbar-title').parent().addClass('headerToolBar');
-                            $('.fc-scrollgrid-sync-table').css({'height':777});
+                            $('.fc-timeline-event-harness a').attr('href', '').addClass('moreView');
+                            $('.moreView').hover(function(){
+                                let titleTxt = $(this).find('.event-title').text(),
+                                    timeTxt = $(this).find('.event-time').text();
+                                $(this).append(`
+                                    <div class="tooptip">
+                                        <p class="tit">${titleTxt}</p>
+                                        <p class="time">${timeTxt}</p>
+                                    </div>
+                                `);
+                            }, function(){
+                                $('.tooptip').remove();
+                            });
                         });
-                        </script>
+                    </script>
                 </div>
                 <!--// cont -->
             </div>
