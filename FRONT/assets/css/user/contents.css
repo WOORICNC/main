@@ -94,7 +94,7 @@ h3 {
 }
 
 .mb8 {
-  margin-bottom: 8 !important;
+  margin-bottom: 8px !important;
 }
 
 .mt10 {
@@ -1928,6 +1928,16 @@ button[class*=btn][type=button] {
 .tableDefault .tagB {
   color: #2768FF;
 }
+@media screen and (min-width: 1161px) {
+  .tableDefault .moV {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 1160px) {
+  .tableDefault .pcV {
+    display: none !important;
+  }
+}
 
 /* tableBaord */
 @media screen and (min-width: 1161px) {
@@ -2101,6 +2111,11 @@ button[class*=btn][type=button] {
 }
 [class*=table][class*=boardList] tbody tr td .email select {
   background: url(../../images/icon/ico-arrow-gray80-20.svg) no-repeat #fff calc(100% - 10px) center/auto;
+}
+@media screen and (min-width: 1161px) {
+  [class*=table][class*=boardList][class*=wideCell] tbody tr td {
+    padding: 18px;
+  }
 }
 
 /* tableBackground 2n custom */
@@ -3407,7 +3422,7 @@ input[disabled] {
 @media screen and (min-width: 1161px) {
   .consultingCont .topCont {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-between;
     gap: 112px;
     white-space: initial;
@@ -4427,6 +4442,7 @@ input[disabled] {
 @media screen and (min-width: 1161px) {
   .targetWrap .wrap {
     flex-direction: row;
+    align-items: flex-start;
   }
 }
 .targetWrap .wrap [class*=bgIco] {
@@ -4554,6 +4570,23 @@ input[disabled] {
 .targetWrap .wrap [class*=bgIco][class*=bgIco][class*=FileTarget]::after {
   background: url(../../images/icon/ico-file-target-80.svg) no-repeat center center/contain;
 }
+.targetWrap .wrap [class*=bgIco][class*=bgIco][class*=flexBox] {
+  padding: 40px 32px;
+}
+.targetWrap .wrap [class*=bgIco] .tit {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 8px;
+}
+.targetWrap .wrap [class*=bgIco] .tit .subTxt {
+  margin: 0;
+  line-height: 1.5;
+  letter-spacing: -0.03em;
+  font-size: 20px;
+  font-weight: var(--bold);
+  color: var(--color-dark);
+}
 .targetWrap .wrap [class*=bgIco] .num {
   position: relative;
   line-height: 1.5;
@@ -4571,6 +4604,11 @@ input[disabled] {
   font-size: 20px;
   font-weight: var(--regular);
   color: var(--color-text);
+  word-break: keep-all;
+}
+.targetWrap .wrap.stretch {
+  align-items: stretch;
+  margin: 0 0 32px;
 }
 
 .serviceWrap {

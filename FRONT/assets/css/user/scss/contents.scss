@@ -77,7 +77,7 @@ h3 {
 
 /* margin */
 .m0{margin:0!important}
-.mb8{margin-bottom:8!important}
+.mb8{margin-bottom:8px!important}
 .mt10{margin-top:10px!important}
 .mb16{margin-bottom:16px!important}
 .mb20{margin-bottom:20px}
@@ -1903,6 +1903,12 @@ button[class*="btn"][type="button"]{
     }
     .tagG{color:#008A1E;}
     .tagB{color:#2768FF;}
+    @media screen and (min-width:1161px) {
+        .moV{display:none!important;}
+    }
+    @media screen and (max-width:1160px) {
+        .pcV{display:none!important;}    
+    }
 }
 
 /* tableBaord */
@@ -2059,6 +2065,17 @@ button[class*="btn"][type="button"]{
                     }
                     select{
                         background:url(../../images/icon/ico-arrow-gray80-20.svg) no-repeat #fff calc(100% - 10px) center / auto;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (min-width:1161px) {
+        &[class*="wideCell"]{
+            tbody{
+                tr{
+                    td{
+                        padding:18px;
                     }
                 }
             }
@@ -3324,7 +3341,7 @@ input {
         margin:0 auto 24px;
         @media screen and (min-width:1161px) {
             display:flex;
-            align-items:center;
+            align-items:stretch;
             justify-content:space-between;
             gap:112px;
             white-space:initial;
@@ -4256,6 +4273,7 @@ input {
         padding:0;
         @media screen and (min-width:1161px) {
             flex-direction:row;
+            align-items:flex-start;
         }
         [class*="bgIco"]{
             position:relative;
@@ -4276,7 +4294,7 @@ input {
                 padding:40px 32px 30px;
                 @media screen and (min-width:1161px){
                     padding:40px 32px;
-                }
+                }                
                 p{
                     min-height:initial;
                 }
@@ -4413,6 +4431,23 @@ input {
                     }
                 }
             }
+            &[class*="bgIco"][class*="flexBox"]{
+                padding:40px 32px;
+            }
+            .tit{
+                display:flex;
+                align-items:flex-start;
+                justify-content:flex-start;
+                gap:8px;
+                .subTxt{
+                    margin:0;
+                    line-height:1.5;
+                    letter-spacing:-0.03em;
+                    font-size:20px;
+                    font-weight:var(--bold);
+                    color:var(--color-dark);
+                }
+            }
             .num{
                 position:relative;
                 line-height:1.5;
@@ -4430,7 +4465,12 @@ input {
                 font-size:20px;
                 font-weight:var(--regular);
                 color:var(--color-text);
+                word-break:keep-all;
             }
+        }
+        &.stretch{
+            align-items:stretch;
+            margin:0 0 32px;
         }
     }
 }
