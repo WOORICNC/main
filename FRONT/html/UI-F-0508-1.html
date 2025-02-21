@@ -60,7 +60,8 @@
                         <li>
                             <p class="icoLoca lg">
                                 <strong>위치</strong>
-                                경남 창원시
+                                경상남도 창원시 의창구 차룡로48번길 54 , 캠퍼스관경상남도 창원시 의창구 차룡로48번길 54 , 캠퍼스관
+                                경상남도 창원시 의창구 차룡로48번길 54 , 캠퍼스관경상남도 창원시 의창구 차룡로48번길 54 , 캠퍼스관
                             </p>
                         </li>
                         <li>
@@ -69,12 +70,7 @@
                                 평일 오전 9시 ~ 오후 6시
                             </p>
                         </li>
-                        <li>
-                            <p class="icoPerson lg">
-                                <strong>이용대상</strong>
-                                브릿지 입주기업만 이용가능
-                            </p>
-                        </li>
+                        <!-- 2025-02-21 이용대상 제거 -->
                     </ul>
 
                     <div class="btnBox">
@@ -86,21 +82,15 @@
                 <!-- 시설정보 -->
                 <div class="facilitiesWrap">
                     <!-- imgWrap -->
-                    <div class="infoDetailImgWrap swiper">
-                        <!-- Additional required wrapper -->
+                     <!-- 2025-02-21 시설 이미지 swiper 기능 제거 -->
+                    <div class="infoDetailImgWrap">
                         <div class="swiper-wrapper">
-                            <!-- Slides -->
-                            <div class="swiper-slide">
-                                <img src="../assets/images/visual-facility-detail-01.png" alt="">
-                            </div>
                             <div class="swiper-slide">
                                 <img src="../assets/images/visual-facility-detail-01.png" alt="">
                             </div>
                         </div>
-                    
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
                     </div>
+                     <!-- 2025-02-21 시설 이미지 swiper 기능 제거 -->
                     <!-- // imgWrap -->
                     
                     <!-- 기본정보 -->
@@ -199,15 +189,16 @@
     <script src="../assets/js/common.js"></script>
     <script src="../assets/js/main.js"></script>
     <script>
-        $(document).ready(()=>{
-            const swiper = new Swiper('.infoDetailImgWrap', {
-                spaceBetween:10,
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
-                },
-            })
-        })
+        // 2025-02-21 시설 이미지 swiper 기능 삭제
+        // $(document).ready(()=>{
+        //     const swiper = new Swiper('.infoDetailImgWrap', {
+        //         spaceBetween:10,
+        //         navigation: {
+        //             nextEl: ".swiper-button-next",
+        //             prevEl: ".swiper-button-prev",
+        //         },
+        //     })
+        // })
     </script>
 </body>
 

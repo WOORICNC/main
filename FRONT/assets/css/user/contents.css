@@ -5614,6 +5614,7 @@ input[disabled] {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 40px;
   }
 }
 .infoListBox.dk {
@@ -5687,9 +5688,10 @@ input[disabled] {
 }
 @media screen and (min-width: 1161px) {
   .infoListBox .descDeft {
+    flex: 1 1 100%;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    align-items: flex-start;
+    justify-content: space-between;
     gap: 40px;
   }
 }
@@ -5699,6 +5701,12 @@ input[disabled] {
 @media screen and (min-width: 1161px) {
   .infoListBox .descDeft li:not(:last-child) {
     margin: 0;
+    flex: 1 1 auto;
+  }
+}
+@media screen and (min-width: 1161px) {
+  .infoListBox .descDeft li:last-child {
+    flex-shrink: 0;
   }
 }
 .infoListBox .descDeft p {
@@ -5724,7 +5732,7 @@ input[disabled] {
 }
 @media screen and (min-width: 1161px) {
   .infoListBox .btnBox {
-    flex: 0 1 auto;
+    flex: 0 0 auto;
     margin: 0;
     width: auto;
   }
@@ -5744,7 +5752,7 @@ input[disabled] {
 }
 @media screen and (min-width: 1161px) {
   .facilitiesWrap .infoListWrap {
-    flex: 1 0 auto;
+    flex: 1 1 auto;
     margin: 0 0 30px;
   }
 }
@@ -5752,9 +5760,9 @@ input[disabled] {
 .infoDetailImgWrap {
   margin: 0 auto 24px;
   width: calc(100vw - 32px);
-  max-width: 520px;
+  max-width: 640px;
   height: calc(100vw - 32px);
-  max-height: 520px;
+  max-height: 640px;
 }
 @media screen and (min-width: 1161px) {
   .infoDetailImgWrap {

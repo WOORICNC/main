@@ -5425,6 +5425,7 @@ input {
         display:flex;
         align-items:center;
         justify-content:space-between;
+        gap:40px;
     }
     &.dk{
         padding:32px;
@@ -5489,9 +5490,10 @@ input {
     .descDeft{
         margin:0;
         @media screen and (min-width:1161px) {
+            flex:1 1 100%;
             display:flex;
-            align-items:center;
-            justify-content:flex-start;
+            align-items:flex-start;
+            justify-content:space-between;
             gap:40px;
         }
         li{
@@ -5499,6 +5501,12 @@ input {
                 margin:0 0 16px;
                 @media screen and (min-width:1161px) {
                     margin:0;
+                    flex:1 1 auto;
+                }
+            }
+            &:last-child{
+                @media screen and (min-width:1161px) {
+                    flex-shrink:0;
                 }
             }
         }
@@ -5521,7 +5529,7 @@ input {
     .btnBox{
         margin:20px 0 0;
         @media screen and (min-width:1161px) {
-            flex:0 1 auto;
+            flex:0 0 auto;
             margin:0;
             width:auto;
         }
@@ -5538,7 +5546,7 @@ input {
     .infoListWrap{
         margin:0 0 64px;
         @media screen and (min-width:1161px) {
-            flex:1 0 auto;
+            flex:1 1 auto;
             margin:0 0 30px;
         }
     }
@@ -5546,9 +5554,9 @@ input {
 .infoDetailImgWrap{
     margin:0 auto 24px;
     width:calc(100vw - 32px);
-    max-width:520px;
+    max-width:640px;
     height:calc(100vw - 32px);
-    max-height:520px;
+    max-height:640px;
     @media screen and (min-width:1161px) {
         flex:0 0 auto;
         margin:0;
