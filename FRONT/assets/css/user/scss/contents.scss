@@ -699,7 +699,6 @@ button[class*="btn"][type="button"]{
 /* flex box */
 [class*="flexBox"] {
     display: flex;
-
     /* Flex Wrap */
     &[class*="Wp"] {
         flex-wrap: wrap;
@@ -780,18 +779,12 @@ button[class*="btn"][type="button"]{
     &[class*="Gp10"]{
         gap:10px;
     }
-}
-/* Flex 컨테이너 */
-[class*="flexBox"] {
-    display: flex;
-    /* 컨테이너에 필요한 속성들만 남기기 */
     &[class*="Wp"] {
         flex-wrap: wrap;
     }
     &[class*="Col"] {
         flex-direction: column;
     }
-    /* ... 나머지 컨테이너 속성 */
 }
 
 /* 개별 자식 요소 */
@@ -1761,14 +1754,43 @@ button[class*="btn"][type="button"]{
                     font-weight:var(--regular);
                     color:var(--color-text);
                 }
+                .withFileInput{
+                    max-width:400px;
+                    &:not(:first-child){
+                        margin:8px 0 0;
+                    }
+                    &:last-child{
+                        .btn{
+                            @media screen and (max-width:1160px) {
+                                display:flex;
+                                margin:8px 0 0 auto;
+                            }
+                            @media screen and (min-width:1161px) {
+                                margin:0 0 0 8px;
+                            }
+                        }
+                    }
+                    @media screen and (min-width:1161px) {
+                        display:flex;
+                        align-items:center;
+                        justify-content:flex-start;
+                    }
+                }
                 .withFileBtn{
                     gap:0 8px;
                     position:relative;
+                    display:flex;
+                    align-items:center;
+                    justify-content:flex-start;
+                    width:auto;
                     .btnRed{
                         width:72px;
                     }
                     input{
                         max-width:320px;
+                        @media screen and (min-width:1161px) {
+                            width:320px;
+                        }
                     }
                     [type="file"]{
                         display:flex;

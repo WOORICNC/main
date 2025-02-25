@@ -803,13 +803,6 @@ button[class*=btn][type=button] {
 [class*=flexBox][class*=Gp10] {
   gap: 10px;
 }
-
-/* Flex 컨테이너 */
-[class*=flexBox] {
-  display: flex;
-  /* 컨테이너에 필요한 속성들만 남기기 */
-  /* ... 나머지 컨테이너 속성 */
-}
 [class*=flexBox][class*=Wp] {
   flex-wrap: wrap;
 }
@@ -1774,15 +1767,48 @@ button[class*=btn][type=button] {
   font-weight: var(--regular);
   color: var(--color-text);
 }
+.tableDefault tbody tr td .withFileInput {
+  max-width: 400px;
+}
+.tableDefault tbody tr td .withFileInput:not(:first-child) {
+  margin: 8px 0 0;
+}
+@media screen and (max-width: 1160px) {
+  .tableDefault tbody tr td .withFileInput:last-child .btn {
+    display: flex;
+    margin: 8px 0 0 auto;
+  }
+}
+@media screen and (min-width: 1161px) {
+  .tableDefault tbody tr td .withFileInput:last-child .btn {
+    margin: 0 0 0 8px;
+  }
+}
+@media screen and (min-width: 1161px) {
+  .tableDefault tbody tr td .withFileInput {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
 .tableDefault tbody tr td .withFileBtn {
   gap: 0 8px;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: auto;
 }
 .tableDefault tbody tr td .withFileBtn .btnRed {
   width: 72px;
 }
 .tableDefault tbody tr td .withFileBtn input {
   max-width: 320px;
+}
+@media screen and (min-width: 1161px) {
+  .tableDefault tbody tr td .withFileBtn input {
+    width: 320px;
+  }
 }
 .tableDefault tbody tr td .withFileBtn [type=file] {
   display: flex;
