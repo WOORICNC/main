@@ -780,6 +780,12 @@ input:not(.checkbox input, .btn, .void input, .date input, .ipt_datepicker) {
     font-weight: 700;
     color: var(--color-input);
 }
+.graphBox p span {
+    margin-left: 8px;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-base);
+}
 .graph_area {
     width: 445px !important;
 }
