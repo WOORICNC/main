@@ -2965,6 +2965,33 @@ input {
             font-size:24px;
         }
     }
+    .imgWrap{
+        margin:24px 0 0;
+        &.wideTop{
+            @media screen and (min-width:1161px) {
+                margin:40px 0 0;
+            }
+        }
+        img{
+            display:block;
+        }
+    }
+    .quarter{        
+        display:flex;
+        flex-wrap:wrap;
+        align-items:flex-start;
+        justify-content:center;
+        gap:16px;
+        @media screen and (min-width:1161px) {
+            display:grid;
+            grid-template-columns:repeat(2, 1fr);
+            grid-template-rows:repeat(2, 1fr);
+        }        
+        img{
+            width:100%;
+            max-width:362px;
+        }
+    }
 }
 /* 디지털 혁신 인프라 > 경남메타버스지원센터 운영 사업 */
 .vrCont{
