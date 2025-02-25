@@ -5613,7 +5613,7 @@ input[disabled] {
   .infoListBox {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 40px;
   }
 }
@@ -5691,8 +5691,13 @@ input[disabled] {
     flex: 1 1 100%;
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 40px;
+  }
+}
+@media screen and (min-width: 1161px) {
+  .infoListBox .descDeft li {
+    max-width: 50%;
   }
 }
 .infoListBox .descDeft li:not(:last-child) {
@@ -5760,9 +5765,9 @@ input[disabled] {
 .infoDetailImgWrap {
   margin: 0 auto 24px;
   width: calc(100vw - 32px);
-  max-width: 640px;
+  max-width: 520px;
   height: calc(100vw - 32px);
-  max-height: 640px;
+  max-height: 520px;
 }
 @media screen and (min-width: 1161px) {
   .infoDetailImgWrap {

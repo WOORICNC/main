@@ -5424,7 +5424,7 @@ input {
     @media screen and (min-width:1161px) {
         display:flex;
         align-items:center;
-        justify-content:space-between;
+        justify-content:flex-start;
         gap:40px;
     }
     &.dk{
@@ -5493,10 +5493,13 @@ input {
             flex:1 1 100%;
             display:flex;
             align-items:flex-start;
-            justify-content:space-between;
+            justify-content:flex-start;
             gap:40px;
         }
         li{
+            @media screen and (min-width:1161px) {
+                max-width:50%;
+            }
             &:not(:last-child){
                 margin:0 0 16px;
                 @media screen and (min-width:1161px) {
@@ -5554,9 +5557,9 @@ input {
 .infoDetailImgWrap{
     margin:0 auto 24px;
     width:calc(100vw - 32px);
-    max-width:640px;
+    max-width:520px;
     height:calc(100vw - 32px);
-    max-height:640px;
+    max-height:520px;
     @media screen and (min-width:1161px) {
         flex:0 0 auto;
         margin:0;
