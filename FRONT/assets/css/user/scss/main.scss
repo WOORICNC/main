@@ -1312,48 +1312,67 @@
 // }
 
 // 메인 팝업 
-.popupMain {
-    position: fixed;
+.popupWhole {
+    position: absolute;
     top: 0;
     left: 0;
     z-index: 999;
     display: flex;
+    flex-wrap:wrap;
     align-items: flex-start;
     justify-content: center;
     width: 100%;
     height: 100%;
 
     @media screen and (min-width:1161px) {
-        top: 100px;
-        left: 100px;
-        width: auto;
-        height: auto;
+        justify-content:flex-start;
+        padding:100px;
+        width: 100%;
+        height: fit-content;
+        box-sizing:border-box;
     }
-
+    &:has(.custom){
+        @media screen and (min-width:1161px) {
+            top:50%;
+            left:50%;
+            justify-content:center;
+            padding:0;
+            max-width:fit-content;
+            transform:translate(-50%, -50%);
+        }
+    }
     .popupCont {
-        position: relative;
+        position:absolute;
         overflow-y:auto;
         margin: 40px auto;
         width: calc(100vw - 32px);
-        max-width: 510px;
+        max-width: fit-content;
         height: calc(100vh - 80px);
         max-height: fit-content;
         @media screen and (min-width:1161px) {
+            position: relative;
             margin:0;
+            height: calc(100vh - 120px);
+        }
+        &.custom .popupInner{
+            background-image:
+            url(../../images/main/bg-popup-left.png),
+            url(../../images/main/bg-popup-right.png);
+            background-position: top left, top right;
+            background-size: 70%;
+            background-repeat: no-repeat;
+            background-color: #F7F7FF;
+            max-width:510px;
+            @media screen and (min-width:1161px) {
+                background-size: 50%;
+            }
         }
     }
 
     .popupInner {
-        background-image:
-            url(../../images/main/bg-popup-left.png),
-            url(../../images/main/bg-popup-right.png);
-        background-position: top left, top right;
-        background-size: 70%;
-        background-repeat: no-repeat;
-        background-color: #F7F7FF;
-
-        @media screen and (min-width:1161px) {
-            background-size: 50%;
+        background:#fff;        
+        img{
+            display:block;
         }
     }
 
@@ -1407,13 +1426,13 @@
         padding:8px 24px;
         background:var(--color-dark);
         @media screen and (min-width:1161px) {
-            position:static;
+            // position:static;
         }
         input[type=checkbox] + label{
             color:var(--color-white);
         }
         .btnTxtClose{
-            padding:4px;
+            // padding:4px;
             line-height:1.5;
             font-size:16px;
             font-weight:var(--medium);

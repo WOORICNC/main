@@ -182,7 +182,7 @@
     </header>
     <!--// header -->
     
-    <div id="container" style="height:calc(100vh - 100px - 332.5px);">
+    <div id="container" style="height:calc(200vh - 100px - 332.5px);">
         <!-- sitemap -->
         <div class="sitemap">
             <ul>
@@ -300,6 +300,120 @@
         <!--// inner -->
     </footer>
     <!--// footer -->
+
+    <!-- 2025-02-25 팝업 추가 -->
+    <!-- popup -->
+    <article class="popupWhole">
+
+        <!-- popupCont -->
+        <div class="popupCont">
+            <div class="popupInner">
+                <!-- 이미지 영역 -->
+                <img src="../assets/images/bg-ai-academy-img-title-mo.png" alt="">
+                <!-- 이미지 영역 -->
+            </div>
+            <div class="popupBot">
+                <div class="checkBox">
+                    <input type="checkbox" name="todayCheck" id="todayShow01">
+                    <label for="todayShow01">오늘 하루 그만보기</label>
+                </div>
+                <button type="button" class="btnTxtClose" onclick="popupClose(this)">닫기</button>
+            </div>
+            <button type="button" class="btnClose" onclick="popupClose(this)">닫기</button>
+        </div>   
+        <!-- // popupCont -->
+
+        <!-- popupCont -->
+        <div class="popupCont">
+            <div class="popupInner">
+                <!-- 이미지 영역 -->
+                <img src="../assets/images/visual-quality-rule-02.png" alt="">
+                <!-- 이미지 영역 -->
+            </div>
+            <div class="popupBot">
+                <div class="checkBox">
+                    <input type="checkbox" name="todayCheck" id="todayShow02">
+                    <label for="todayShow02">오늘 하루 그만보기</label>
+                </div>
+                <button type="button" class="btnTxtClose" onclick="popupClose(this)">닫기</button>
+            </div>
+            <button type="button" class="btnClose" onclick="popupClose(this)">닫기</button>
+        </div>   
+        <!-- // popupCont -->
+
+        <!-- popupCont -->
+        <div class="popupCont">
+            <div class="popupInner">
+                <!-- 이미지 영역 -->
+                <img src="../assets/images/visual-quality-rule-01.png" alt="">
+                <!-- 이미지 영역 -->
+            </div>
+            <div class="popupBot">
+                <div class="checkBox">
+                    <input type="checkbox" name="todayCheck" id="todayShow03">
+                    <label for="todayShow03">오늘 하루 그만보기</label>
+                </div>
+                <button type="button" class="btnTxtClose" onclick="popupClose(this)">닫기</button>
+            </div>
+            <button type="button" class="btnClose" onclick="popupClose(this)">닫기</button>
+        </div>   
+        <!-- // popupCont -->
+
+        <!-- popupCont -->
+        <div class="popupCont">
+            <div class="popupInner">
+                <!-- 이미지 영역 -->
+                <img src="../assets/images/visual-quality-rule-02.png" alt="">
+                <!-- 이미지 영역 -->
+            </div>
+            <div class="popupBot">
+                <div class="checkBox">
+                    <input type="checkbox" name="todayCheck" id="todayShow02">
+                    <label for="todayShow02">오늘 하루 그만보기</label>
+                </div>
+                <button type="button" class="btnTxtClose" onclick="popupClose(this)">닫기</button>
+            </div>
+            <button type="button" class="btnClose" onclick="popupClose(this)">닫기</button>
+        </div>
+        <!-- // popupCont -->
+
+
+        <!-- popupCont -->
+        <div class="popupCont">
+            <div class="popupInner">
+                <!-- 이미지 영역 -->
+                <img src="../assets/images/sample-product-lg.png" alt="">
+                <!-- 이미지 영역 -->
+            </div>
+            <div class="popupBot">
+                <div class="checkBox">
+                    <input type="checkbox" name="todayCheck" id="todayShow01">
+                    <label for="todayShow01">오늘 하루 그만보기</label>
+                </div>
+                <button type="button" class="btnTxtClose" onclick="popupClose(this)">닫기</button>
+            </div>
+            <button type="button" class="btnClose" onclick="popupClose(this)">닫기</button>
+        </div>
+        <!-- // popupCont -->
+
+        <!-- 팝업 1개 이상일 시 title, onclick, tabindex 제거 필요
+             단 기획 의도에 따라 유지 가능 -->
+        <div class="dim"></div>
+    </article>
+    <!-- popup -->
+     
+    <script>
+            const popupClose = (e) => {
+                const $popup = $(e).closest(".popupCont"); // 클릭된 버튼이 속한 popup** 찾기
+                $popup.hide(); // 해당 popup 숨기기
+                
+                // popupWhole 내부의 popup** 중에서 여전히 보여지는 것이 있는지 확인
+                if ($(".popupWhole").find(".popupCont:visible").length === 0) {
+                    $(".popupWhole").hide(); // 모든 popup이 숨겨졌다면 popupWhole도 숨김
+                }
+            }
+    </script>
+    <!-- 2025-02-25 팝업 추가 -->
 </div>
 <!--// wrap -->
 </body>
