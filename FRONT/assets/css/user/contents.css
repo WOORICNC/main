@@ -1773,22 +1773,19 @@ button[class*=btn][type=button] {
 .tableDefault tbody tr td .withFileInput:not(:first-child) {
   margin: 8px 0 0;
 }
-@media screen and (max-width: 1160px) {
-  .tableDefault tbody tr td .withFileInput:last-child .btn {
-    display: flex;
-    margin: 8px 0 0 auto;
-  }
-}
-@media screen and (min-width: 1161px) {
-  .tableDefault tbody tr td .withFileInput:last-child .btn {
-    margin: 0 0 0 8px;
-  }
-}
 @media screen and (min-width: 1161px) {
   .tableDefault tbody tr td .withFileInput {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+  }
+}
+.tableDefault tbody tr td .withFileInput .btnBox {
+  margin: 8px 0 0;
+}
+@media screen and (min-width: 1161px) {
+  .tableDefault tbody tr td .withFileInput .btnBox {
+    margin: 0 0 0 8px;
   }
 }
 .tableDefault tbody tr td .withFileBtn {

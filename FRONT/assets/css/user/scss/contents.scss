@@ -1759,21 +1759,16 @@ button[class*="btn"][type="button"]{
                     &:not(:first-child){
                         margin:8px 0 0;
                     }
-                    &:last-child{
-                        .btn{
-                            @media screen and (max-width:1160px) {
-                                display:flex;
-                                margin:8px 0 0 auto;
-                            }
-                            @media screen and (min-width:1161px) {
-                                margin:0 0 0 8px;
-                            }
-                        }
-                    }
                     @media screen and (min-width:1161px) {
                         display:flex;
                         align-items:center;
                         justify-content:flex-start;
+                    }
+                    .btnBox{
+                        margin:8px 0 0;
+                        @media screen and (min-width:1161px) {
+                            margin:0 0 0 8px;
+                        }
                     }
                 }
                 .withFileBtn{
