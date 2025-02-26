@@ -80,8 +80,8 @@ h3 {
 .mb8{margin-bottom:8px!important}
 .mt10{margin-top:10px!important}
 .mb16{margin-bottom:16px!important}
-.mb20{margin-bottom:20px}
-.mb24{margin-bottom:24px}
+.mb20{margin-bottom:20px!important}
+.mb24{margin-bottom:24px!important}
 .mb40{margin-bottom:40px!important}
 .mt120{margin-top:120px;}
 
@@ -2264,6 +2264,11 @@ button[class*="btn"][type="button"]{
 .pcW120{
     @media screen and (min-width:1161px) {
         width:120px;
+    }
+}
+.pcW220{
+    @media screen and (min-width:1161px) {
+        width:220px;
     }
 }
 .pcW240{

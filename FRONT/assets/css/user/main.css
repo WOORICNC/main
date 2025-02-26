@@ -980,60 +980,81 @@
     height: 100px;
   }
 }
-.popupMain {
-  position: fixed;
+.popupWhole {
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 999;
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: center;
   width: 100%;
   height: 100%;
 }
 @media screen and (min-width: 1161px) {
-  .popupMain {
-    top: 100px;
-    left: 100px;
-    width: auto;
-    height: auto;
+  .popupWhole {
+    justify-content: flex-start;
+    padding: 100px;
+    width: 100%;
+    height: fit-content;
+    box-sizing: border-box;
   }
 }
-.popupMain .popupCont {
-  position: relative;
+@media screen and (min-width: 1161px) {
+  .popupWhole:has(.custom) {
+    top: 50%;
+    left: 50%;
+    justify-content: center;
+    padding: 0;
+    max-width: fit-content;
+    transform: translate(-50%, -50%);
+  }
+}
+.popupWhole .popupCont {
+  position: absolute;
   overflow-y: auto;
   margin: 40px auto;
   width: calc(100vw - 32px);
-  max-width: 510px;
+  max-width: fit-content;
   height: calc(100vh - 80px);
   max-height: fit-content;
 }
 @media screen and (min-width: 1161px) {
-  .popupMain .popupCont {
+  .popupWhole .popupCont {
+    position: relative;
     margin: 0;
+    height: calc(100vh - 120px);
   }
 }
-.popupMain .popupInner {
+.popupWhole .popupCont.custom .popupInner {
   background-image: url(../../images/main/bg-popup-left.png), url(../../images/main/bg-popup-right.png);
   background-position: top left, top right;
   background-size: 70%;
   background-repeat: no-repeat;
   background-color: #F7F7FF;
+  max-width: 510px;
 }
 @media screen and (min-width: 1161px) {
-  .popupMain .popupInner {
+  .popupWhole .popupCont.custom .popupInner {
     background-size: 50%;
   }
 }
-.popupMain .popupTop {
+.popupWhole .popupInner {
+  background: #fff;
+}
+.popupWhole .popupInner img {
+  display: block;
+}
+.popupWhole .popupTop {
   padding: 32px 24px;
 }
 @media screen and (min-width: 1161px) {
-  .popupMain .popupTop {
+  .popupWhole .popupTop {
     padding: 40px;
   }
 }
-.popupMain .popupTop .popupTit {
+.popupWhole .popupTop .popupTit {
   font-family: "KOTRA_BOLD-Bold";
   /* cdn 연결 */
   line-height: 1.5;
@@ -1043,14 +1064,14 @@
   font-size: 28px;
   color: var(--color-dark);
 }
-.popupMain .popupMid {
+.popupWhole .popupMid {
   padding: 40px 24px;
   background: #fff;
   box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.1);
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
 }
-.popupMain .popupMid .popupTxt {
+.popupWhole .popupMid .popupTxt {
   margin: 0 auto 48px;
   text-align: center;
   word-break: keep-all;
@@ -1061,11 +1082,11 @@
   color: var(--gray80t);
 }
 @media screen and (min-width: 1161px) {
-  .popupMain .popupMid .popupTxt {
+  .popupWhole .popupMid .popupTxt {
     margin: 0 auto 60px;
   }
 }
-.popupMain .popupBot {
+.popupWhole .popupBot {
   position: sticky;
   bottom: 0;
   display: flex;
@@ -1074,23 +1095,17 @@
   padding: 8px 24px;
   background: var(--color-dark);
 }
-@media screen and (min-width: 1161px) {
-  .popupMain .popupBot {
-    position: static;
-  }
-}
-.popupMain .popupBot input[type=checkbox] + label {
+.popupWhole .popupBot input[type=checkbox] + label {
   color: var(--color-white);
 }
-.popupMain .popupBot .btnTxtClose {
-  padding: 4px;
+.popupWhole .popupBot .btnTxtClose {
   line-height: 1.5;
   font-size: 16px;
   font-weight: var(--medium);
   color: var(--color-white);
   background: transparent;
 }
-.popupMain .btnClose {
+.popupWhole .btnClose {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -1101,7 +1116,7 @@
   height: 24px;
   background: url(../../images/icon/ico-close.svg) no-repeat center center/contain;
 }
-.popupMain .dim {
+.popupWhole .dim {
   position: absolute;
   top: 0;
   left: 0;
@@ -1111,7 +1126,7 @@
   background: rgba(0, 0, 0, 0.8);
 }
 @media screen and (min-width: 1161px) {
-  .popupMain .dim {
+  .popupWhole .dim {
     display: none;
   }
 }

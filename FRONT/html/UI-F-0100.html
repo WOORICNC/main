@@ -919,8 +919,10 @@
 
     <!-- 2025-02-17 팝업 추가 -->
     <!-- popup -->
-    <article class="popupMain">
-        <div class="popupCont">
+    <article class="popupWhole">
+
+        <!-- popupCont -->
+        <div class="popupCont custom"> 
             <div class="popupInner">
                 <div class="popupTop">
                     <h5 class="popupTit">
@@ -949,16 +951,18 @@
                     <input type="checkbox" name="todayCheck" id="todayShow">
                     <label for="todayShow">오늘 하루 그만보기</label>
                 </div>
-                <button type="button" class="btnTxtClose" onclick="popupClose()">닫기</button>
+                <button type="button" class="btnTxtClose" onclick="popupClose(this)">닫기</button>
             </div>
-            <button type="button" class="btnClose" onclick="popupClose()">닫기</button>
+            <button type="button" class="btnClose" onclick="popupClose(this)">닫기</button>
         </div>
-        <div class="dim" title="클릭하여 팝업 닫기" onclick="popupClose()" tabindex="0"></div>
+        <!-- // popupCont -->
+
+        <div class="dim" title="클릭하여 팝업 닫기" onclick="popupClose(this)" tabindex="0"></div>
     </article>
     <!-- popup -->
     <script>
-        const popupClose = () =>{
-            $('.popupMain').hide();
+        const popupClose = (e) =>{
+            $(e).closest('.popupWhole').hide();
         }
     </script>
     <!-- 2025-02-17 팝업 추가 -->
