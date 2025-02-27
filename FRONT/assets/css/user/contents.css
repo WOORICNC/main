@@ -334,6 +334,7 @@ button[class*=btn][type=button] {
   text-indent: -9999px;
   background: url(../../images/icon/ico-file-remove.svg) no-repeat center center/contain;
   transform: translateY(-50%);
+  cursor: pointer;
 }
 
 .btnLocation {
@@ -1546,11 +1547,16 @@ button[class*=btn][type=button] {
   text-indent: -9999px;
   opacity: 0;
 }
+@media screen and (min-width: 1161px) {
+  .tableDefault.fix table {
+    table-layout: fixed;
+  }
+}
 .tableDefault table {
   border-top: 1px solid var(--table-top);
   width: 100%;
 }
-@media screen and (max-width: 1159px) {
+@media screen and (max-width: 1160px) {
   .tableDefault table {
     display: block;
   }
@@ -1566,6 +1572,11 @@ button[class*=btn][type=button] {
     background-color: initial;
   }
 }
+@media screen and (min-width: 1161px) {
+  .tableDefault table .fixSize {
+    width: calc(50% - 400px);
+  }
+}
 .tableDefault tbody {
   border-bottom: 1px solid var(--table-border);
   width: 100%;
@@ -1573,6 +1584,11 @@ button[class*=btn][type=button] {
 @media screen and (max-width: 1159px) {
   .tableDefault tbody {
     display: block;
+  }
+}
+@media screen and (min-width: 1161px) {
+  .tableDefault tbody:has(.th + .th) .th {
+    width: 150px;
   }
 }
 @media screen and (max-width: 1159px) {
@@ -1616,14 +1632,6 @@ button[class*=btn][type=button] {
     text-align: center;
     vertical-align: middle;
   }
-}
-@media screen and (min-width: 1161px) {
-  .tableDefault tbody tr:has(.th + .th) .th {
-    width: 150px;
-  }
-}
-.tableDefault tbody tr .th:first-child:not(:has([rowspa="2"])) {
-  width: 150px;
 }
 .tableDefault tbody tr .th {
   padding: 12px 8px;
@@ -1770,9 +1778,6 @@ button[class*=btn][type=button] {
 .tableDefault tbody tr td .withFileInput {
   max-width: 400px;
 }
-.tableDefault tbody tr td .withFileInput:not(:first-child) {
-  margin: 8px 0 0;
-}
 @media screen and (min-width: 1161px) {
   .tableDefault tbody tr td .withFileInput {
     display: flex;
@@ -1842,8 +1847,13 @@ button[class*=btn][type=button] {
   background: #D8D8D8;
 }
 .tableDefault tbody tr td a[download] {
+  display: block;
+  width: fit-content;
   line-height: 1.2;
   letter-spacing: -0.03em;
+}
+.tableDefault tbody tr td a[download]:not(:first-child) {
+  margin: 12px 0 0;
 }
 @media screen and (min-width: 1161px) {
   .tableDefault tbody tr td {
@@ -1944,6 +1954,9 @@ button[class*=btn][type=button] {
   .tableDefault tbody tr {
     display: table-row;
   }
+}
+.tableDefault tbody .fileInputWhole:not(:first-child) {
+  margin: 10px 0 0;
 }
 .tableDefault .tagG {
   color: #008A1E;
@@ -2301,6 +2314,12 @@ button[class*=btn][type=button] {
 @media screen and (min-width: 1161px) {
   .pcW120 {
     width: 120px;
+  }
+}
+
+@media screen and (min-width: 1161px) {
+  .pcW200 {
+    width: 200px;
   }
 }
 

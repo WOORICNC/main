@@ -277,6 +277,7 @@ button[class*="btn"][type="button"]{
     text-indent:-9999px;
     background:url(../../images/icon/ico-file-remove.svg) no-repeat center center / contain;
     transform:translateY(-50%);
+    cursor:pointer;
 }
 .btnLocation{
     display:inline-block;
@@ -1541,10 +1542,17 @@ button[class*="btn"][type="button"]{
         text-indent:-9999px;
         opacity:0;
     }
+    &.fix{
+        table{
+            @media screen and (min-width:1161px) {
+                table-layout:fixed;
+            }
+        }
+    }
     table{
         border-top:1px solid var(--table-top);
         width:100%;
-        @media screen and (max-width:1159px) {
+        @media screen and (max-width:1160px) {
             display:block;                
         }
         .bgTableThick{
@@ -1558,6 +1566,11 @@ button[class*="btn"][type="button"]{
                 }
             }
         }
+        .fixSize{
+            @media screen and (min-width:1161px) {
+                width:calc(100% / 2 - 400px);
+            }
+        }
     }
     tbody{
         border-bottom:1px solid var(--table-border);
@@ -1567,6 +1580,11 @@ button[class*="btn"][type="button"]{
         }
         @media screen and (min-width:1161px) {
             // display:inline-table;
+        }        
+        &:has(.th + .th) .th{
+            @media screen and (min-width:1161px) {
+                width:150px;
+            }
         }
         tr{
             @media screen and (max-width:1159px) {
@@ -1600,14 +1618,6 @@ button[class*="btn"][type="button"]{
                     text-align:center;
                     vertical-align:middle;
                 }
-            }
-            &:has(.th + .th) .th{
-                @media screen and (min-width:1161px) {
-                    width:150px;
-                }
-            }
-            .th:first-child:not(:has([rowspa="2"])){
-                width:150px;
             }
             .th{
                 padding:12px 8px;
@@ -1756,9 +1766,6 @@ button[class*="btn"][type="button"]{
                 }
                 .withFileInput{
                     max-width:400px;
-                    &:not(:first-child){
-                        margin:8px 0 0;
-                    }
                     @media screen and (min-width:1161px) {
                         display:flex;
                         align-items:center;
@@ -1830,8 +1837,13 @@ button[class*="btn"][type="button"]{
                     }
                 }
                 a[download]{
+                    display:block;
+                    width:fit-content;
                     line-height:1.2;
                     letter-spacing:-0.03em;
+                    &:not(:first-child){
+                        margin:12px 0 0;
+                    }
                 }
                 @media screen and (min-width:1161px){
                     width:auto;
@@ -1915,6 +1927,11 @@ button[class*="btn"][type="button"]{
             }
             @media screen and (min-width:1161px) {
                 display:table-row;
+            }
+        }
+        .fileInputWhole{
+            &:not(:first-child){
+                margin:10px 0 0;
             }
         }
     }
@@ -2259,6 +2276,11 @@ button[class*="btn"][type="button"]{
 .pcW120{
     @media screen and (min-width:1161px) {
         width:120px;
+    }
+}
+.pcW200{
+    @media screen and (min-width:1161px) {
+        width:200px;
     }
 }
 .pcW220{

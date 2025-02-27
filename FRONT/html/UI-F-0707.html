@@ -83,69 +83,91 @@
                                 <td>
                                     <!-- 2025-02-25 파일추가 창 ui 수정 -->
     
-                                    <!-- withFileInput -->
-                                    <div class="withFileInput">
-                                        <div class="withFileBtn">
-                                            <input type="file" title="파일 선택">
-                                            <input type="text" placeholder="파일을 선택해주세요." title="첨부파일명" readonly>                                 
-                                        </div>
-                                        <div class="btnBox sideRight">
-                                            <button type="button" class="btn btnDefault sm">삭제</button>
-                                        </div>
-                                    </div>
-                                    <!-- // withFileInput -->                                     
                                     
-                                    <!-- prevFileInput -->
-                                    <div class="prevFileInput">
-                                        <div class="pRel">
-                                            <input type="text" class="" value="자료실.pdf" title="첨부파일명" readonly>
-                                            <button class="btnRemove">삭제하기</button>
+                                    <!-- 
+                                        *** 2025-02-27 파일추가 마크업 수정 ***
+                                        - 기존 두개의 div.withFileInput과 div.prevFileInput을
+                                          히나의 div,fileInputWhole로 감싸는 형태로 수정
+                                        - button의 onclick이벤트는 샘플 스크립트로, 개발 시 삭제하셔도 됩니다.
+                                      -->
+                                    <div class="fileInputWhole">
+                                        <!-- withFileInput -->
+                                        <div class="withFileInput">
+                                            <div class="withFileBtn">
+                                                <input type="file" title="파일 선택">
+                                                <input type="text" placeholder="파일을 선택해주세요." title="첨부파일명" readonly>                                 
+                                            </div>
+                                            <div class="btnBox sideRight">
+                                                <button type="button" class="btn btnDefault sm" onclick="sampleInputDel(this)">삭제</button>
+                                            </div>
                                         </div>
-                                    </div> 
-                                    <!-- // prevFileInput -->
-    
-                                    <!-- withFileInput -->
-                                    <div class="withFileInput">
-                                        <div class="withFileBtn">
-                                            <input type="file" title="파일 선택">
-                                            <input type="text" placeholder="파일을 선택해주세요." title="첨부파일명" readonly>                                 
-                                        </div>
-                                        <div class="btnBox sideRight">
-                                            <button type="button" class="btn btnDefault sm">삭제</button>
-                                        </div>
+                                        <!-- // withFileInput -->                                     
+                                        
+                                        <!-- prevFileInput -->
+                                        <div class="prevFileInput">
+                                            <div class="pRel">
+                                                <input type="text" class="" value="자료실.pdf" title="첨부파일명" readonly>
+                                                <button class="btnRemove" onclick="sampleFileDel(this)">삭제하기</button>
+                                            </div>
+                                        </div> 
+                                        <!-- // prevFileInput -->
                                     </div>
-                                    <!-- // withFileInput -->    
-                                    
-                                    <!-- prevFileInput -->
-                                    <div class="prevFileInput">
-                                        <div class="pRel">
-                                            <input type="text" class="" value="자료실.pdf" title="첨부파일명" readonly>
-                                            <button class="btnRemove">삭제하기</button>
-                                        </div>
-                                    </div> 
-                                    <!-- // prevFileInput -->
+                                    <!-- // *** 2025-02-27 파일추가 마크업 수정 *** -->
 
-                                    <!-- withFileInput - 파일추가 버튼 O -->
-                                    <div class="withFileInput">
-                                        <div class="withFileBtn">
-                                            <input type="file" title="파일 선택">
-                                            <input type="text" placeholder="파일을 선택해주세요." title="첨부파일명" readonly>                                 
+
+                                    <!-- *** 2025-02-27 파일추가 마크업 수정 *** -->
+                                    <div class="fileInputWhole">
+                                        <!-- withFileInput -->
+                                        <div class="withFileInput">
+                                            <div class="withFileBtn">
+                                                <input type="file" title="파일 선택">
+                                                <input type="text" placeholder="파일을 선택해주세요." title="첨부파일명" readonly>                                 
+                                            </div>
+                                            <div class="btnBox sideRight">
+                                                <button type="button" class="btn btnDefault sm" onclick="sampleInputDel(this)">삭제</button>
+                                            </div>
                                         </div>
-                                        <div class="btnBox sideRight">
-                                            <button type="button" class="btn btnDefault sm">파일추가</button>
-                                            <button type="button" class="btn btnDefault sm">삭제</button>
-                                        </div>
+                                        <!-- // withFileInput -->    
+                                        
+                                        <!-- prevFileInput -->
+                                        <div class="prevFileInput">
+                                            <div class="pRel">
+                                                <input type="text" class="" value="자료실.pdf" title="첨부파일명" readonly>
+                                                <button class="btnRemove" onclick="sampleFileDel(this)">삭제하기</button>
+                                            </div>
+                                        </div> 
+                                        <!-- // prevFileInput -->
                                     </div>
+                                    <!-- // *** 2025-02-27 파일추가 마크업 수정 *** -->
+
                                     
-                                    <!-- prevFileInput -->
-                                    <div class="prevFileInput">
-                                        <div class="pRel">
-                                            <input type="text" class="" value="자료실.pdf" title="첨부파일명" readonly>
-                                            <button class="btnRemove">삭제하기</button>
+                                    <!-- *** 2025-02-27 파일추가 마크업 수정 *** -->
+                                    <div class="fileInputWhole">
+                                        <!-- withFileInput - 파일추가 버튼 O -->
+                                        <div class="withFileInput">
+                                            <div class="withFileBtn">
+                                                <input type="file" title="파일 선택">
+                                                <input type="text" placeholder="파일을 선택해주세요." title="첨부파일명" readonly>                                 
+                                            </div>
+                                            <div class="btnBox sideRight">
+                                                <button type="button" class="btn btnDefault sm">파일추가</button>
+                                                <button type="button" class="btn btnDefault sm" onclick="sampleInputDel(this)">삭제</button>
+                                            </div>
                                         </div>
-                                    </div> 
-                                    <!-- // prevFileInput -->
-                                    <!-- // withFileInput - 파일추가 버튼 O -->
+                                        
+                                        <!-- prevFileInput -->
+                                        <div class="prevFileInput">
+                                            <div class="pRel">
+                                                <input type="text" class="" value="자료실.pdf" title="첨부파일명" readonly>
+                                                <button class="btnRemove" onclick="sampleFileDel(this)">삭제하기</button>
+                                            </div>
+                                        </div> 
+                                        <!-- // prevFileInput -->
+                                        <!-- // withFileInput - 파일추가 버튼 O -->
+                                    </div>
+                                    <!-- // *** 2025-02-27 파일추가 마크업 수정 *** -->
+
+
                                     <!-- // 2025-02-25 파일추가 창 ui 수정 -->
                                 </td>
                         </tr>
@@ -181,6 +203,21 @@
             $('[type="file"]').click();
         }))
     })
+
+    const sampleInputDel = (e) =>{
+        const _btn = $(e);
+        const _inputBox = _btn.closest('.withFileInput');
+        const _prevBox = _btn.closest('.prevFileInput');
+        
+        // 혼자일 시 스크립트 종료
+        if(_inputBox.parent('div').siblings().length === 0) return false;
+        // input 삭제
+        $(e).closest('.withFileInput').parent('div').remove();
+    }
+
+    const sampleFileDel = (e) => {
+        $(e).prev('input').attr('value', '')
+    }
 </script> 
 </body>
 </html>
