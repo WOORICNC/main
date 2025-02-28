@@ -2378,6 +2378,12 @@ button[class*=btn][type=button] {
 }
 
 @media screen and (min-width: 1161px) {
+  .pcW640 {
+    width: 640px;
+  }
+}
+
+@media screen and (min-width: 1161px) {
   .pcW976 {
     width: 976px;
   }

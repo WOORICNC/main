@@ -2328,6 +2328,11 @@ button[class*="btn"][type="button"]{
         width:556px;
     }
 }
+.pcW640{
+    @media screen and (min-width:1161px) {
+        width:640px;
+    }
+}
 .pcW976{
     @media screen and (min-width:1161px) {
         width:976px;
