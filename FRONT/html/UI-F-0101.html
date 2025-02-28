@@ -301,9 +301,82 @@
     </footer>
     <!--// footer -->
 
+
+    
+
+
+    <article class="popupWhole z02">
+
+        <!-- popupCont -->
+        <div class="popupCont custom z02" style="--pop-bg-name:url(../../images/sample-img-cardList01.png)"> 
+            <div class="popupInner">
+                <div class="popupTop">
+                    <h5 class="popupTit">
+                        팝업 레이어 뎁스 확인용 01
+                    </h5>
+                </div>
+                <div class="popupMid">
+                    <p class="popupTxt">
+                        경로 작성법 - css경로를 기준으로 합니다.<br/>
+                        --pop-bg-name:url(../../images/이미지명);
+                    </p>
+                    <div class="btnBox">
+                        <a href="javascript:void(0)" class="btn btnRed lg full">참여하기</a>
+                    </div>
+                </div>
+            </div>
+            <div class="popupBot">
+                <div class="checkBox">
+                    <input type="checkbox" name="todayCheck" id="todayShow">
+                    <label for="todayShow">오늘 하루 그만보기</label>
+                </div>
+                <button type="button" class="btnTxtClose" onclick="popupClose(this)">닫기</button>
+            </div>
+            <button type="button" class="btnClose" onclick="popupClose(this)">닫기</button>
+        </div>
+        <!-- // popupCont -->
+
+        <!-- popupCont -->
+        <div class="popupCont custom z01" style="--pop-bg-name:url(../../images/sample-img-cardList06.png)"> 
+            <div class="popupInner">
+                <div class="popupTop">
+                    <h5 class="popupTit">
+                        팝업 레이어 뎁스 확인용
+                    </h5>
+                </div>
+                <div class="popupMid">
+                    <p class="popupTxt">
+                        팝업은 z0n 클래스가 없으면 아래에 위치할수록 상단에 노출됩니다.<br/>
+                        z0n의 n숫자가 클수록 위로 올라갑니다.<br/><br/>
+                        팝업 상단 배경이미지 변수타입으로 변경<br/>
+                        변수에 경로 기재하면 적용됩니다.<br/><br/>
+
+                        경로 작성법 - css경로를 기준으로 합니다.<br/>
+                        --pop-bg-name:url(../../images/이미지명);
+                        
+                    </p>
+                    <div class="btnBox">
+                        <a href="javascript:void(0)" class="btn btnRed lg full">참여하기</a>
+                    </div>
+                </div>
+            </div>
+            <div class="popupBot">
+                <div class="checkBox">
+                    <input type="checkbox" name="todayCheck" id="todayShow">
+                    <label for="todayShow">오늘 하루 그만보기</label>
+                </div>
+                <button type="button" class="btnTxtClose" onclick="popupClose(this)">닫기</button>
+            </div>
+            <button type="button" class="btnClose" onclick="popupClose(this)">닫기</button>
+        </div>
+        <!-- // popupCont -->
+        <div class="dib"></div>
+    </article>
+
+
     <!-- 2025-02-25 팝업 추가 -->
     <!-- popup -->
-    <article class="popupWhole">
+    <article class="popupWhole z01">
 
         <!-- popupCont -->
         <div class="popupCont">
@@ -408,8 +481,8 @@
                 $popup.hide(); // 해당 popup 숨기기
                 
                 // popupWhole 내부의 popup** 중에서 여전히 보여지는 것이 있는지 확인
-                if ($(".popupWhole").find(".popupCont:visible").length === 0) {
-                    $(".popupWhole").hide(); // 모든 popup이 숨겨졌다면 popupWhole도 숨김
+                if ($popup.closest(".popupWhole").find(".popupCont:visible").length === 0) {
+                    $popup.closest(".popupWhole").hide(); // 모든 popup이 숨겨졌다면 popupWhole도 숨김
                 }
             }
     </script>

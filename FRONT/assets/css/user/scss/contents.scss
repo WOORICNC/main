@@ -24,6 +24,9 @@
         display: none;
     }
 }
+#wrap:has(.popupWhole){
+    position:relative;
+}
 
 /* 타이틀 */
 h3 {
