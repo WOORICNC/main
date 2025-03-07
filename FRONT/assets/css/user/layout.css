@@ -588,7 +588,6 @@
   border: 1px solid var(--border-color);
   border-radius: 4px;
   border-radius: 6px;
-  width: -moz-max-content;
   width: max-content;
   background: var(--color-white);
 }
@@ -1005,3 +1004,5 @@
     margin: 80px auto 140px;
   }
 }
+
+/*# sourceMappingURL=layout.css.map */
