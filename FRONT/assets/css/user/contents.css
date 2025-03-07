@@ -200,6 +200,7 @@ button[class*=btn][type=button] {
   justify-content: center;
   padding: 16px 12px;
   border-radius: 8px;
+  width: -moz-max-content;
   width: max-content;
   height: 48px;
   line-height: 1.5;
@@ -461,7 +462,9 @@ button[class*=btn][type=button] {
 }
 .inputBox select {
   background: url(../../images/icon/ico-arrow-dark-24.svg) no-repeat #fff calc(100% - 10px) center/auto;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 .inputBox input {
   display: flex;
@@ -539,7 +542,9 @@ button[class*=btn][type=button] {
   width: 1px;
   height: 1px;
   opacity: 0;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 .radioBox [type=radio]:focus + label {
   outline: 2px solid #000;
@@ -607,7 +612,9 @@ button[class*=btn][type=button] {
   height: 1px;
   opacity: 0;
   border-style: none;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 .checkBox input[type=checkbox]:focus + label {
   outline: 2px solid #000;
@@ -1669,6 +1676,9 @@ button[class*=btn][type=button] {
   color: var(--color-dark);
   box-sizing: border-box;
 }
+.tableDefault tbody tr td input::-moz-placeholder, .tableDefault tbody tr td select::-moz-placeholder, .tableDefault tbody tr td textarea::-moz-placeholder {
+  color: var(--color-text);
+}
 .tableDefault tbody tr td input::placeholder,
 .tableDefault tbody tr td select::placeholder,
 .tableDefault tbody tr td textarea::placeholder {
@@ -1683,7 +1693,9 @@ button[class*=btn][type=button] {
 .tableDefault tbody tr td .timeInput {
   padding: 6px 10px;
   background: url(../../images/icon/ico-clock-20.svg) no-repeat calc(100% - 10px) center/auto;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 @media screen and (max-width: 1159px) {
   .tableDefault tbody tr td:has(.email) {
@@ -1824,7 +1836,9 @@ button[class*=btn][type=button] {
   width: 72px;
   height: 32px;
   border-style: none;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
 }
 .tableDefault tbody tr td .withFileBtn [type=file]::before {
   display: inline-flex;
@@ -2518,6 +2532,7 @@ input[disabled] {
     gap: 20px;
     padding: 54px 0;
     margin: 0 auto;
+    width: -moz-min-content;
     width: min-content;
   }
 }
@@ -2962,7 +2977,8 @@ input[disabled] {
 .bridgeCont .imgBox img {
   display: block;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .bridgeCont .txtBold {
   display: block;
@@ -3280,7 +3296,8 @@ input[disabled] {
   width: 100%;
   max-width: initial;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .card .imgWrap .linkWrap {
   display: flex;
@@ -3836,6 +3853,7 @@ input[disabled] {
 .consultingCont .arrowCont .grayBox {
   position: relative;
   margin: 0 auto;
+  max-width: -moz-fit-content;
   max-width: fit-content;
 }
 @media screen and (min-width: 1161px) {
@@ -5640,7 +5658,8 @@ input[disabled] {
   width: 100%;
   max-width: initial;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .facilityResWrap a .txtBox {
   position: absolute;
@@ -5874,7 +5893,8 @@ input[disabled] {
   max-width: initial;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .infoDetailImgWrap .swiper-button-prev {
   width: 40px;

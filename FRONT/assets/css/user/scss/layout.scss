@@ -832,6 +832,7 @@
         height: 30px;
         text-indent: -9999px;
         background: url(../../images/common/ico-menu-mo.svg) no-repeat center center / contain;
+        cursor: pointer;
     }
     &.scroll:not(.active) .mMenuBtn {
         background: url(../../images/common/ico-menu-mo-bk.svg) no-repeat center center / contain;
