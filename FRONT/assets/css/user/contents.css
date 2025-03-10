@@ -7865,3 +7865,14 @@ table tbody tr td .dateSelector {
   width: 100%;
   height: auto;
 }
+
+/*>>>>>>>>>> 추가 <<<<<<<<<<*/
+/* 공통 */
+.block {
+    display: block !important;
+}
+
+/* 페이지 */
+.descDeft.tag.colLine p a {
+    word-break: break-all;
+}
