@@ -152,6 +152,10 @@ h3 {
   width: 140px !important;
 }
 
+.wAuto {
+    width: auto !important;
+}
+
 .underline {
   text-decoration: underline;
   word-break: break-all;
@@ -461,7 +465,7 @@ button[class*=btn][type=button] {
   }
 }
 .inputBox select {
-  background: url(../../images/icon/ico-arrow-dark-24.svg) no-repeat #fff calc(100% - 10px) center/auto;
+  background: #fff url(../../images/icon/ico-arrow-dark-24.svg) no-repeat right/auto;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -7871,8 +7875,13 @@ table tbody tr td .dateSelector {
 .block {
     display: block !important;
 }
+.inputBox select {
+  padding: 0 30px 0 10px;
+}
 
 /* 페이지 */
 .descDeft.tag.colLine p a {
     word-break: break-all;
 }
+
+
