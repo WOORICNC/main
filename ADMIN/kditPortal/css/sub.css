@@ -186,6 +186,13 @@
     text-indent: -9999px;
     background: url("../../img/admin/ico-required.svg") no-repeat center left/8px auto;
 }
+.inputTable table td table {
+    width: 100% !important;
+}
+.inputTable table td table td {
+    height: auto !important;
+}
+
 /* 데이터 테이블 */
 .colTable {
     position: relative;

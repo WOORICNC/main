@@ -7883,5 +7883,9 @@ table tbody tr td .dateSelector {
 .descDeft.tag.colLine p a {
     word-break: break-all;
 }
-
-
+.tableDefault tbody tr .hMin240 table {
+    width: 100% !important;
+}
+.tableDefault tbody tr .hMin240 table td {
+    height: auto !important;
+}
