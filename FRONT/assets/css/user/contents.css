@@ -155,6 +155,11 @@ h3 {
 .wAuto {
     width: auto !important;
 }
+@media (max-width: 1160px) {
+    .wAuto {
+        width: 100% !important;
+    }
+}
 
 .underline {
   text-decoration: underline;
@@ -6453,6 +6458,7 @@ input[disabled] {
   }
   .opeGoalBox div[class^=goal] {
     gap: 24px;
+    height: inherit;
     font-size: 17px;
   }
   .opeGoalBox div[class^=goal0] {
@@ -7877,6 +7883,19 @@ table tbody tr td .dateSelector {
 }
 .inputBox select {
   padding: 0 30px 0 10px;
+}
+font {
+    display: block;
+}
+font * {
+    display: block;
+    white-space: pre-wrap;
+}
+.wrap .box {
+    width: 100%;
+}
+.wrap .box canvas {
+    width: 100%;
 }
 
 /* 페이지 */
