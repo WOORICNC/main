@@ -3058,6 +3058,13 @@ input[disabled] {
 }
 .conferencePhotoCont .photoWrap img {
   display: block;
+  border-radius: 20px;
+  width: 100%;
+}
+@media screen and (min-width: 1161px) {
+  .conferencePhotoCont .photoWrap img {
+    height: 328px;
+  }
 }
 
 /* 디지털 혁신 인프라 > SW 미래채움 */
@@ -3119,8 +3126,10 @@ input[disabled] {
   }
 }
 .axCont .quarter img {
+  border-radius: 20px;   
   width: 100%;
   max-width: 362px;
+  height: 200px;
 }
 
 /* 디지털 혁신 인프라 > 경남메타버스지원센터 운영 사업 */
@@ -7907,4 +7916,18 @@ font * {
 }
 .tableDefault tbody tr .hMin240 table td {
     height: auto !important;
+}
+.exImg img {
+    border-radius: 20px;
+    width: 100%;
+    height: 416px;
+}
+@media (max-width: 1160px) {
+    .exImg img {
+        width: auto;
+        height: auto;
+    }
+    .axCont .quarter img {
+        height: auto;
+    }
 }
