@@ -347,6 +347,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    overflow: hidden;
     line-height: normal;
     font-size: 22px;
     font-weight: var(--medium);
@@ -590,12 +591,16 @@
     background: #aaa;
   }
   .footerTop .familySite {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     position: relative;
-    width: 152px;
+    width: 200px;
   }
   .footerTop .familySite .site {
     display: block;
     overflow: hidden;
+    padding-right: 50px;
     line-height: 20px;
     font-size: 17px;
     font-weight: 700;
@@ -639,6 +644,11 @@
     -moz-transition: all 0.2s;
     -webkit-transition: all 0.2s;
     -o-transition: all 0.2s;
+  }
+  .footerTop .siteBtn {
+    border: 1px solid #fff;
+    color: #fff;
+    background: transparent;
   }
   
   .footerBottom {
