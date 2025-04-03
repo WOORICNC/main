@@ -70,45 +70,18 @@
 
                         <!-- timeSelecWrap -->
                         <div class="timeSelecWrap">
-                            <div class="radioBtn">
-                                <input type="checkbox" name="timeSlot" id="time1">
-                                <label for="time1" class="timeSelect">09:00 ~ 10:00</label>
-                            </div>
-                            <div class="radioBtn">
-                                <input type="checkbox" name="timeSlot" id="time2" disabled>
-                                <label for="time2" class="timeSelect">10:00 ~ 11:00</label>
-                            </div>
-                            <div class="radioBtn">
-                                <input type="checkbox" name="timeSlot" id="time3">
-                                <label for="time3" class="timeSelect">11:00 ~ 12:00</label>
-                            </div>
-                            <div class="radioBtn">
-                                <input type="checkbox" name="timeSlot" id="time5" checked>
-                                <label for="time5" class="timeSelect">12:00 ~ 13:00</label>
-                            </div>
-                            <div class="radioBtn">
-                                <input type="checkbox" name="timeSlot" id="time6">
-                                <label for="time6" class="timeSelect">13:00 ~ 14:00</label>
-                            </div>
-                            <div class="radioBtn">
-                                <input type="checkbox" name="timeSlot" id="time7">
-                                <label for="time7" class="timeSelect">14:00 ~ 15:00</label>
-                            </div>
-                            <div class="radioBtn">
-                                <input type="checkbox" name="timeSlot" id="time8">
-                                <label for="time8" class="timeSelect">15:00 ~ 16:00</label>
-                            </div>
-                            <div class="radioBtn">
-                                <input type="checkbox" name="timeSlot" id="time9" disabled>
-                                <label for="time9" class="timeSelect">16:00 ~ 17:00</label>
-                            </div>
-                            <div class="radioBtn">
-                                <input type="checkbox" name="timeSlot" id="time10">
-                                <label for="time10" class="timeSelect">17:00 ~ 18:00</label>
-                            </div>
+                            <a href="" class="radioBtn disabled"><span class="timeSelect">09:00 ~ 10:00</span></a>
+                            <a href="" class="radioBtn"><span class="timeSelect">10:00 ~ 11:00</span></a>
+                            <a href="" class="radioBtn"><span class="timeSelect">11:00 ~ 12:00</span></a>
+                            <a href="" class="radioBtn"><span class="timeSelect">12:00 ~ 13:00</span></a>
+                            <a href="" class="radioBtn"><span class="timeSelect">13:00 ~ 14:00</span></a>
+                            <a href="" class="radioBtn"><span class="timeSelect">14:00 ~ 15:00</span></a>
+                            <a href="" class="radioBtn"><span class="timeSelect">15:00 ~ 16:00</span></a>
+                            <a href="" class="radioBtn"><span class="timeSelect">16:00 ~ 17:00</span></a>
+                            <a href="" class="radioBtn"><span class="timeSelect">17:00 ~ 18:00</span></a>
                         </div>
                         <!-- // timeSelecWrap -->
-                        
+
                     </div>
                     <!-- // leftCont -->
 
@@ -296,8 +269,41 @@
             });
 
             observer.observe(document.body, { childList: true, subtree: true });
+
+            // 웹접근성 추가
+            $('.radioBtn.disabled').attr({
+                title: '선택불가',
+                tabindex: -1
+            })
+
+            $('.radioBtn').on('click', function(e){
+                e.preventDefault();
+                if($(this).hasClass('on')){
+                    $('.radioBtn').removeClass('on');
+                    $('.radioBtn').removeAttr('title');
+                }else{
+                    $('.radioBtn').removeClass('on');
+                    $('.radioBtn').removeAttr('title');
+                    $(this).addClass('on');
+                    $(this).attr('title', '선택됨');
+                }
+            });
+
+            $(document).ready(function() {
+                setTimeout(function() {
+                    $('.datepicker th.prev').each(function() {
+                        var content = $(this).html();
+                        $(this).html('<a href="#" class="prev-link">' + content + '</a>');
+                        $('.prev-link').attr('tabindex', -1);
+                    });
+                    $('.datepicker th.next').each(function() {
+                        var content = $(this).html();
+                        $(this).html('<a href="#" class="next-link">' + content + '</a>');
+                        $('.next-link').attr('tabindex', -1);
+                    });
+                }, 100);
+            });
         })
     </script>
 </body>
-
 </html>
