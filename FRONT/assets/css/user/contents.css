@@ -7952,7 +7952,7 @@ font * {
 .titHover .lock:before {
     content: "";
     position: absolute;
-    top: 0;
+    top: 5px;
     left: 0;
     width: 100%;
     height: 100%;
@@ -7961,14 +7961,51 @@ font * {
 .titHover:hover .lock:before {
     background-image: url("../../images/icon/ico-lock-hover.svg");
 }
-.newIn {
-    display: flex;
-    align-items: flex-end;
-}
-.newIn .new {
+.titHover .new {
     display: inline-block;
+    position: relative;
+    border-radius: 999px;
+    width: 45px;
+    height: 20px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    background: #1d1d1d;
+}
+.titHover .new:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: -6px;
+	width: 6px;
+	height: 100%;
+	background: #fff;
+}
+.detailWrap {
+	display: flex;
+	align-items: center;
+	gap: 3px;
+}
+.detailWrap .lock {
+	display: inline-block;
+    position: relative;
+    width: 20px;
+    height: 25px;
+    text-indent: -9999px;
+}
+.detailWrap .lock:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../../images/icon/ico-lock.svg") no-repeat center;
+}
+.detailWrap .new {
+	display: inline-block;
     flex-shrink: 0;
-    margin: 0 0 2px 2px;
     border-radius: 999px;
     width: 45px;
     height: 20px;
