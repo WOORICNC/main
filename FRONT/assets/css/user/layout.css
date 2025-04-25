@@ -714,6 +714,17 @@
     font-size: 15px;
     color: #aaa;
   }
+  .footerBottom .rt {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  .footerBottom .wa {
+    display: block;
+    width: 110px;
+    height: auto;
+  }
   .footerBottom .footerSns {
     display: flex;
     gap: 15px;
@@ -786,6 +797,13 @@
     }
     .footerBottom .footerInfo .copy {
       font-size: 13px;
+    }
+    .footerBottom .rt {
+        align-items: end;
+        margin-left: auto;
+    }
+    .footerBottom .wa {
+        width: 110px;
     }
     .footerBottom .footerSns {
       margin-left: auto;
