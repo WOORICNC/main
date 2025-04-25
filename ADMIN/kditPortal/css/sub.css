@@ -1051,3 +1051,76 @@ input:not(.checkbox input, .btn, .void input, .date input, .ipt_datepicker) {
 .fc-license-message {
    display: none;
 }
+
+/* 2025-04-25 */
+a .lock {
+    display: inline-block;
+    position: relative;
+    width: 20px;
+    height: 25px;
+    text-indent: -9999px;
+}
+a .lock:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../../img/admin/ico-lock.svg") no-repeat center;
+}
+a .new {
+    display: inline-block;
+    position: relative;
+    border-radius: 999px;
+    width: 45px;
+    height: 20px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    background: #1d1d1d;
+}
+a .new:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: -6px;
+	width: 6px;
+	height: 100%;
+	background: #fff;
+}
+.detailWrap {
+	display: flex;
+	align-items: center;
+	gap: 3px;
+}
+.detailWrap .lock {
+	display: inline-block;
+    position: relative;
+    width: 20px;
+    height: 25px;
+    text-indent: -9999px;
+}
+.detailWrap .lock:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../../img/admin/ico-lock.svg") no-repeat center;
+}
+.detailWrap .new {
+	display: inline-block;
+    flex-shrink: 0;
+    margin: 0 0 0 10px;
+    border-radius: 999px;
+    width: 45px;
+    height: 20px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    background: #1d1d1d;
+}
